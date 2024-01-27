@@ -1,35 +1,58 @@
-# One: Demystifying Our Planet from Above: Unveiling the World of Remote Sensing
+# Entering the World of Remote Sensing
 
-## 1. Summary:
+Remote Sensing is the use of satellites, planes, drones, etc. as our aerial eyes, piecing together a portrait of our planet through light and data and revolutionising the way we understand and interact with it.
 
-Welcome to the captivating world of remote sensing, where satellites and planes transform into our aerial eyes, piecing together a portrait of our planet through light and data. It's a realm where science and art collide, painting a mesmerizing picture of our environment and revolutionizing the way we understand and interact with it.
+## In a few words...
 
-Imagine sophisticated sensors mounted on these celestial spies, each whispering secrets about the Earth below. Some passively listen to sunlight reflected off our planet's surface, while others actively send their own signals and catch the echoes. These sensors decode a language of light, invisible and visible, known as the electromagnetic spectrum. Different materials sing unique tunes in this spectrum, allowing us to identify them - it's like having a magic decoder ring for Earth's whispers!
+Sensors, well, 'sense' Earth in two ways: Some passively listen to sunlight reflected off our planet's surface (i.e., *passive sensors*), while others actively send their own signals and capture the echoes (i.e., *active sensors*). By that definition, the human eye is a type of passive sensors!
 
-But information isn't just about color. Remote sensing data has its own "resolution" recipe, encompassing:
+![Active vs Passive Remote Sensing [@earthsciencedatasystemsWhatRemoteSensing2019].](images/clipboard-3270766478.png)
 
-Spectral: How many "voices" the sensor can hear, revealing more detail with each band.
-Spatial: The size of each pixel in the image, ranging from centimeters to kilometers.
-Temporal: How often the sensor revisits the same area, like a dedicated Earth paparazzi.
-Radiometric: The range of brightness levels captured, painting a vibrant picture.
-These resolutions work together, creating a nuanced snapshot of our planet.
+These sensors interpret a fascinating language of light, both invisible and visible, known as the *electromagnetic spectrum.*
 
-## 2. Applications:
+![The Electromagnetic Spectrum (EMS). Credit: NASA Science](images/EMS-Introduction_0.jpeg)
 
-Now, let's unleash the true magic of remote sensing: its applications! Think of it as a superhero with X-ray vision, revealing patterns invisible to the naked eye. It can:
+Electromagnetic radiation moves as waves as perpendicular electric and magnetic field with a wavelength: `λ = c/v` where:
 
-Become a guardian of our forests: By tracking deforestation, it helps combat illegal logging and protect our precious green guardians.
-Predict floods with foresight: Analyzing land cover and terrain, it anticipates where water will flow, safeguarding communities from harm.
-Empower farmers with wisdom: Mapping crop health allows them to optimize yields and fight food insecurity.
-Monitor the dance of glaciers: Witnessing how climate change impacts these icy giants, we gain invaluable insights into our evolving planet.
-These are just a glimpse into the endless possibilities of remote sensing. It's a tool for conservation, a shield against disaster, and a fountain of knowledge, guiding us towards a sustainable future.
+-   `λ` = **wavelength**, distance between two crests
 
-## 3. Reflection:
+-   `c` = velocity of light 3 x 10^8^ m/sec
 
-My first foray into this world was humbling and exhilarating. Processing vast amounts of data, juggling resolutions, and diving into the electromagnetic spectrum symphony - it was a challenging yet rewarding journey. Every step felt like decoding a new secret, like learning a new language of our planet.
+-   `v` = frequency, rate of oscillation (full oscillations in a time unit)
 
-Working with satellite imagery was unlike anything I'd experienced before. It shifted my perspective from high-resolution photographs to spectral dances, where each pixel held a universe of information. Building a true-color composite from RGB bands, analyzing plots in Cape Town, and unraveling the spectral signatures - it was like seeing the world through a brand-new lens.
+Different materials reflect unique wavelengths in this spectrum, allowing us to identify them, like decoding DNA! More on this later...
 
-This journey ignited a spark of curiosity that burns brighter with each step. I'm eager to delve deeper into Google Earth Engine, explore the intricate web of policy applications, and unlock the true potential of this technology.
+![Wavelength vs. Oscillation](images/clipboard-2930936668.png){width="458"}
 
-Join me on this thrilling expedition! Together, let's paint a new picture of our planet, pixel by pixel, and use remote sensing to write a better story for our shared futur
+But information that sensors receive isn't just about color. Remote sensing data has its own "resolution" recipe, encompassing:
+
+-   **Spectral:** How EMS bands (i.e., the range within the EMS) the sensor can hear, revealing more detail with each additional band.
+-   **Spatial:** The size of each pixel in the image, ranging from centimeters to kilometers, offering varying levels of detail.
+-   **Temporal:** How often the sensor revisits the same area, providing a dynamic view of changes over time.
+-   **Radiometric:** The range of brightness levels captured, painting a vibrant and accurate picture.
+
+In reality, depending on the purpose, each sensor is equip to have better resolution of one type over the other. For example, sensors with a high spatial resolution of 5m (i.e., each pixel is 10x10 on the ground) will have lower spectral resolution (i.e., capturing only narrow range of the EMS) [@RemoteSensingSatellite]
+
+## Applications
+
+Now, let's delve into the transformative applications of remote sensing, especially in the realm of Urban Analytics. Think of it as an X-ray for cities, revealing hidden patterns and empowering informed decision-making by city planners, urban designers, and public officials to make swift and informed decisions to improve the lives of millions of urban residents.
+
+The applications of remote sensing in urban analytics are endless. Here are some examples
+
+1.  **Mapping Urban Growth:** By tracking changes in the built environment over time, we can identify sprawling suburbs, monitor urban expansion, and plan for infrastructure needs.
+
+2.  **Predicting Floods with Foresight:** Analysing land cover and terrain, it anticipates where water will flow, safeguarding communities from harm.
+
+3.  **Energy Efficiency Champion:** Identifying heat island effects and understanding building energy consumption through thermal imaging empowers planners to design sustainable cities
+
+This is just the beginning. Remote sensing is transforming the way we understand and manage our cities, paving the way for a healthier, smarter, and more sustainable urban future.
+
+## Reflections
+
+My first foray into this world was both humbling and exhilarating. Processing vast amounts of data, juggling resolutions, and diving into the electromagnetic spectrum symphony - it was a challenging yet rewarding journey. Every step felt like decoding a new secret, like learning a new language of our planet.
+
+Working with satellite imagery was unlike anything I'd experienced before. It shifted my perspective from high-resolution photographs to spectral dances, where each pixel held a universe of information. Building a true-color composite from RGB bands, analysing plots in Cape Town, and unraveling the spectral signatures - it was like seeing the world through a brand-new lens.
+
+This journey ignited a spark of curiosity that burns brighter with each step. I'm eager to delve deeper into advanced platforms like Google Earth Engine, explore the intricate web of policy applications, and unlock the true potential of this technology for the betterment of our planet.
+
+Join me on this thrilling expedition! Together, let's paint a new picture of our planet, pixel by pixel, and use remote sensing to write a better story for our shared future.

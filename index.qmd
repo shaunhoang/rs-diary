@@ -1,9 +1,3 @@
-# Preface {.unnumbered}
+# A Novice's guide to Remote Sensing {.unnumbered}
 
-This is a Quarto book - edit.
-
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
-
-```{r}
-1 + 1
-```
+From another novice!
