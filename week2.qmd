@@ -2,4 +2,8 @@
 
 Hello,
 
-`{r echo = FALSE, out.width='40%'} xaringanExtra::embed_xaringan(   url = "PRESENTATION URL",   ratio = "16:9")`
+```{=html}
+<iframe class="slide-deck" height=500 width=800 src="slides/prez_wk2.html"> 
+
+</iframe>
+```
