@@ -1,6 +1,8 @@
-# Deep dive: Sensor A
+# Presenting LiDAR
 
-Hello,
+## **Or, how to make self-driving cars a reality** {.unnumbered}
+
+Having understood how sensors work in theory, we can now shift our view to appreciate how one of them in particular, [LiDAR](https://www.faro.com/en/Resource-Library/Article/What-is-Lidar) (**Li**ght **D**etection **a**nd **R**anging), is deployed in practice and can benefit us in an emerging sector: *Autonomous Vehicles.*
 
 ```{=html}
 <iframe class="slide-deck" height=500 width=800 src="slides/prez_wk2.html"> 

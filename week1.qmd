@@ -1,8 +1,10 @@
 # Entering the World of Remote Sensing
 
-Remote Sensing is the use of satellites, planes, drones, etc. as our aerial eyes, piecing together a portrait of our planet through light and data and revolutionising the way we understand and interact with it.
+![](images/clipboard-439232986.png){fig-align="center" width="646"}
 
-## In a few words...
+## In just a few words...
+
+Remote Sensing is the use of satellites, planes, drones, etc. as our aerial eyes, piecing together a portrait of our planet through light and data and revolutionising the way we understand and interact with it.
 
 Sensors, well, 'sense' Earth in two ways: Some passively listen to sunlight reflected off our planet's surface (i.e., *passive sensors*), while others actively send their own signals and capture the echoes (i.e., *active sensors*). By that definition, the human eye is a type of passive sensors!
 
@@ -33,27 +35,27 @@ But information that sensors receive isn't just about color. Remote sensing data
 
 In reality, depending on the purpose, each sensor is equip to have better resolution of one type over the other. For example, sensors with a high spatial resolution of 5m (i.e., each pixel is 10x10 on the ground) will have lower spectral resolution (i.e., capturing only narrow range of the EMS) [@RemoteSensingSatellite]
 
-## Applications
+## Applications in Urban Analytics
 
 Remote Sensing has many transformative applications in the realm of Urban Analytics. Think of it as an X-ray for cities, revealing hidden patterns and empowering informed decision-making by city planners, urban designers, and public officials to make swift and informed decisions to improve the lives of millions of urbanites.
 
 Here are some examples
 
-1.  **Mapping Urban Growth:** By tracking changes in the built environment over time, we can identify sprawling suburbs, monitor urban expansion, and plan for infrastructure needs.
+1.  **Mapping Urban Growth:** By tracking changes in the built environment over time, we can identify sprawling suburbs, monitor urban expansion, and plan for infrastructure needs. Remote sensing data are particularly rich sources to train classification models to extract features and identify unmapped communities.
 
-    ![Transferable built-up area extraction (TBUAE) framework to map urbanised areas [@wangUrbanDevelopmentAnalysis2021]](images/clipboard-3703486949.png)
+![Transferable built-up area extraction (TBUAE) framework to map urbanised areas [@wangUrbanDevelopmentAnalysis2021]](images/clipboard-3703486949.png){fig-align="center"}
 
-2.  **Predicting Floods with Foresight:** Analysing land cover and terrain, it anticipates where water will flow, safeguarding communities from harm.
+2.  **Predicting Floods with Foresight:** Analysing land cover and terrain, it anticipates where water will flow, safeguarding communities from harm, while also estimating potential damage. Here is an example of how insurance companies can make use of such data to assess risk and process claims.
 
-    ![Remote sensing data can be used to estimate flood extent, and to derive individual risk level damage estimates [@schumannFloodModelingPrediction2023]](images/clipboard-9241810.png)
+![Remote sensing data can be used to estimate flood extent, and to derive individual risk level damage estimates [@schumannFloodModelingPrediction2023]](images/clipboard-9241810.png){fig-align="center"}
 
-3.  **Energy Efficiency:** Identifying heat island effects and understanding building energy consumption through thermal imaging empowers planners to design sustainable cities
+3.  **Energy Efficiency:** Identifying heat island effects and understanding building energy consumption through thermal imaging empowers planners to design sustainable cities, and researchers to determine the best strategies to combat long term climate disasters.
 
-    ![Remote Sensing Analysis of the Surface Urban Heat Island Effect in Vitoria-Gasteiz, 1985 to 2021 [@erreaRemoteSensingAnalysis2023]](images/clipboard-1940323141.png)
+![Remote Sensing Analysis of the Surface Urban Heat Island Effect in Vitoria-Gasteiz, 1985 to 2021 [@erreaRemoteSensingAnalysis2023]](images/clipboard-1940323141.png){fig-align="center"}
 
 This is just the beginning. Remote sensing is transforming the way we understand and manage our cities, paving the way for a healthier, smarter, and more sustainable urban future.
 
-## Reflections
+## Personal Reflections
 
 My first foray into the world of Remote Sensing was eye-opening, to say the least. For the uninitiated, it is easy to assume that remote sensing purely means orthophotographic satellite images that one might see using platforms such as Google Maps, i.e., as if the only thing that sensors do were to snap a simple photo of the planet like a phone camera.
 

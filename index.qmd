@@ -1,5 +1,3 @@
-# A Novice's guide to Remote Sensing {.unnumbered}
+## Hello... {.unnumbered}
 
-From another novice!
-
-Intro \[TBD\]
+...from a novice to another!

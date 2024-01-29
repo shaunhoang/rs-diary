@@ -3,27 +3,55 @@ project:
   output-dir: docs
 
 book:
-  title: "Viewed from Above: A Learning Diary"
+  title: "Viewed from Above: An Learning Diary on Earth Observation"
   author: "The-Huan Hoang"
-  date: "16/01/2024"
+  favicon: "images/planet-earth.png"
+  navbar:
+    logo: "images/planet-earth.png"
+    collapse: true
+    background: dark
+    search: false
+    right: 
+      - icon: github
+
+  repo-url: https://github.com/hanukikanker/rs-diary
+  repo-actions: [issue]
+  
+  # google-analytics:
+  #   tracking-id: "G-5LZK055F2X"
+  #   anonymize-ip: true
+  # date: "1/19/2023"
+  
   chapters:
     - index.qmd
-    - week1.qmd
-    - week2.qmd
-    - week3.qmd
-    # - week4.qmd
-    # - week5.qmd
-    # - week6.qmd
-    # - week7.qmd
-    # - week8.qmd
-    - references.qmd
+    - part: "**Making sense of Remote Sensing**"
+      chapters:
+          - week1.qmd
+          - week2.qmd
+          - week3.qmd
+    # - part: "**Google Earth Engine**"
+    #   chapters:
+            # - week4.qmd
+            # - week5.qmd
+            # - week6.qmd
+            # - week7.qmd
+            # - week8.qmd
+    - part: "**Resources**"
+      chapters:
+          - glossary.qmd
+          - references.qmd
 
 bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    # title-block-banner: 'images/cover.jpeg'
+    # cover-image: 
+    theme: 
+        light: [journal]
+        dark: [journal,darkly]
+    code-link: true
   pdf:
-    documentclass: scrreprt
+    documentclass: scrbook
 
 editor: visual
