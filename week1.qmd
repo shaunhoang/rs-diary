@@ -35,24 +35,28 @@ In reality, depending on the purpose, each sensor is equip to have better resolu
 
 ## Applications
 
-Now, let's delve into the transformative applications of remote sensing, especially in the realm of Urban Analytics. Think of it as an X-ray for cities, revealing hidden patterns and empowering informed decision-making by city planners, urban designers, and public officials to make swift and informed decisions to improve the lives of millions of urban residents.
+Remote Sensing has many transformative applications in the realm of Urban Analytics. Think of it as an X-ray for cities, revealing hidden patterns and empowering informed decision-making by city planners, urban designers, and public officials to make swift and informed decisions to improve the lives of millions of urbanites.
 
-The applications of remote sensing in urban analytics are endless. Here are some examples
+Here are some examples
 
 1.  **Mapping Urban Growth:** By tracking changes in the built environment over time, we can identify sprawling suburbs, monitor urban expansion, and plan for infrastructure needs.
 
+    ![Transferable built-up area extraction (TBUAE) framework to map urbanised areas [@wangUrbanDevelopmentAnalysis2021]](images/clipboard-3703486949.png)
+
 2.  **Predicting Floods with Foresight:** Analysing land cover and terrain, it anticipates where water will flow, safeguarding communities from harm.
 
-3.  **Energy Efficiency Champion:** Identifying heat island effects and understanding building energy consumption through thermal imaging empowers planners to design sustainable cities
+    ![Remote sensing data can be used to estimate flood extent, and to derive individual risk level damage estimates [@schumannFloodModelingPrediction2023]](images/clipboard-9241810.png)
+
+3.  **Energy Efficiency:** Identifying heat island effects and understanding building energy consumption through thermal imaging empowers planners to design sustainable cities
+
+    ![Remote Sensing Analysis of the Surface Urban Heat Island Effect in Vitoria-Gasteiz, 1985 to 2021 [@erreaRemoteSensingAnalysis2023]](images/clipboard-1940323141.png)
 
 This is just the beginning. Remote sensing is transforming the way we understand and manage our cities, paving the way for a healthier, smarter, and more sustainable urban future.
 
 ## Reflections
 
-My first foray into this world was both humbling and exhilarating. Processing vast amounts of data, juggling resolutions, and diving into the electromagnetic spectrum symphony - it was a challenging yet rewarding journey. Every step felt like decoding a new secret, like learning a new language of our planet.
+My first foray into the world of Remote Sensing was eye-opening, to say the least. For the uninitiated, it is easy to assume that remote sensing purely means orthophotographic satellite images that one might see using platforms such as Google Maps, i.e., as if the only thing that sensors do were to snap a simple photo of the planet like a phone camera.
 
-Working with satellite imagery was unlike anything I'd experienced before. It shifted my perspective from high-resolution photographs to spectral dances, where each pixel held a universe of information. Building a true-color composite from RGB bands, analysing plots in Cape Town, and unraveling the spectral signatures - it was like seeing the world through a brand-new lens.
+In reality, it unlocks unseen depths of data beyond mere human perception, less high-resolution photographs and more spectral signatures, where each pixel holds a universe of information. Building a true-color composite from all these layers (so that our eyes can see) was like seeing the world through a brand-new lens.
 
-This journey ignited a spark of curiosity that burns brighter with each step. I'm eager to delve deeper into advanced platforms like Google Earth Engine, explore the intricate web of policy applications, and unlock the true potential of this technology for the betterment of our planet.
-
-Join me on this thrilling expedition! Together, let's paint a new picture of our planet, pixel by pixel, and use remote sensing to write a better story for our shared future.
+I am particularly excited to get started with Google Earth Engine later on as the primary gateway to access the wealth of remote sensing data and analytics with more ease in order to solve specific problems facing our world today.

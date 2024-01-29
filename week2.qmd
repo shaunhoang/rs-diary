@@ -1,0 +1,5 @@
+# Deep dive: Sensor A
+
+Hello,
+
+`{r echo = FALSE, out.width='40%'} xaringanExtra::embed_xaringan(   url = "PRESENTATION URL",   ratio = "16:9")`
