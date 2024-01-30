@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./glossary.html" rel="next">
+<link href="./week4.html" rel="next">
 <link href="./week2.html" rel="prev">
 <link href="./images/planet-earth.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -65,6 +65,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -139,13 +141,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Entering the World of Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Remote Sensing: To see the unseen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Deep dive: Sensor A</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -159,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
- <span class="menu-text"><strong>Resources</strong></span></a>
+ <span class="menu-text"><strong>Policy applications</strong></span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -167,8 +169,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week4.html</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text"><strong>Resources</strong></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./glossary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Demystifying the jargons</span></span></a>
+ <span class="menu-text">Glossary: Demystifying jargons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -185,7 +204,19 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#corrections" id="toc-corrections" class="nav-link active" data-scroll-target="#corrections"><span class="header-section-number">3.1</span> Corrections</a>
+  <ul class="collapse">
+  <li><a href="#radiometric-and-atmospheric-corrections" id="toc-radiometric-and-atmospheric-corrections" class="nav-link" data-scroll-target="#radiometric-and-atmospheric-corrections"><span class="header-section-number">3.1.1</span> Radiometric and Atmospheric corrections</a></li>
+  <li><a href="#geometric-and-topographic-corrections" id="toc-geometric-and-topographic-corrections" class="nav-link" data-scroll-target="#geometric-and-topographic-corrections"><span class="header-section-number">3.1.2</span> Geometric and topographic corrections</a></li>
+  </ul></li>
+  <li><a href="#in-practice" id="toc-in-practice" class="nav-link" data-scroll-target="#in-practice"><span class="header-section-number">3.2</span> In practice</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">3.3</span> Reflections</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -207,8 +238,57 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="corrections" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="corrections"><span class="header-section-number">3.1</span> Corrections</h2>
+<p>Raw data coming from sensors are rarely immediately usable without being corrected for various interferences and effects. Here is</p>
+<ol type="1">
+<li>Geometric correction</li>
+<li>Atmospheric correction</li>
+<li>Topographic correction</li>
+<li>Radiometric correction</li>
+</ol>
+<section id="radiometric-and-atmospheric-corrections" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="radiometric-and-atmospheric-corrections"><span class="header-section-number">3.1.1</span> Radiometric and Atmospheric corrections</h3>
+<p>These processes describe translating raw light data from the sensor into ‘true’ information on the surface’s reflectance property, without interference from the light source and the atmosphere.</p>
+<ul>
+<li><p><strong>Radiometric calibration</strong> is the conversion from raw Digital Number to Spectral Radiance via a linear transformation <span class="math inline">\(L_λ=Bias+(Gain∗DN)\)</span>. Radiance most often has units of watt/(steradian/square meter)</p></li>
+<li><p><strong>Atmospheric correction</strong> involves the next step:</p>
+<ul>
+<li><p><strong>TOA Radiance-to-Reflectance</strong> correction removes effects of the light source (e.g.&nbsp;the sun) by calibrating radiation going down (irradiance) and up (radiance). TOA Reflectance still has the effect of the atmosphere and the surface material. If irradiance = radiance, we call this <em>hemispheric reflectance</em></p>
+<p><img src="images/clipboard-3513886623.png" class="img-fluid"></p></li>
+<li><p><strong>TOA-to-BOA Reflectance</strong> correction removes effects of the atmospheric conditions, leaving us with just data on the surface materials. If shadows and directional effects on reflectance have been dealt with, we get what is called <em>true reflectance</em><strong>,</strong> if not then it is called <em>apparent reflectance.</em></p></li>
+</ul></li>
+</ul>
+<p>Atmospheric correction deserves out attention considering the effect of atmospheric scattering on the final results. Absorption and scattering create the haze which reduces the contrast, and can creates the “adjacency effect”, whereby radiance from pixels nearby mixed into pixel of interest. There are several types of atmospheric correction:</p>
+<ol type="1">
+<li><strong>Relative:</strong> normalise intensities of different bands within a single image, or from many dates to one date. This can be done via <em>Dark Object Subtraction (DOS)</em>, <em>Empirical Line Correction</em>, or <em>Pseudo-invariant Features (PIFs)</em></li>
+<li><strong>Absolute:</strong> change digital brightness values into scaled surface reflectance. We can then compare these scaled surface reflectance values across the planet, through <em>atmospheric radiative transfer models</em> (i.e.&nbsp;summer, tropical). To perform this correction, we also need local atmospheric visibility and image altitude. There are many tools for this purpose:
+<ul>
+<li>Paid: ACORN, FLAASH, QUAC, ATCOR</li>
+<li>Free: SMAC, Orfeo Toolbox</li>
+</ul></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2188628702.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">ample of LEDAPS atmospheric correction. (a) Top-of-atmosphere (TOA) reflectance composite (bands 3,2,1) for Landsat-7 ETM+ image of San Francisco Bay (July 7, 1999); (b) Surface reflectance composite.</figcaption>
+</figure>
+</div>
+<p>Finally, atmospheric correction to obtain true reflectance is not always necessary, for example, for classification of a single image, working on composite images, etc.</p>
+</section>
+<section id="geometric-and-topographic-corrections" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="geometric-and-topographic-corrections"><span class="header-section-number">3.1.2</span> Geometric and topographic corrections</h3>
+<p>Subsets of Georectification</p>
+</section>
+</section>
+<section id="in-practice" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="in-practice"><span class="header-section-number">3.2</span> In practice</h2>
+</section>
+<section id="reflections" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">3.3</span> Reflections</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -562,12 +642,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week2.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Deep dive: Sensor A</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./glossary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Demystifying the jargons</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week4.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week4.html</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -575,4 +655,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></div></div></footer></body></html>
+</body></html>

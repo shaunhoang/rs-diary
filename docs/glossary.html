@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Viewed from Above: An Learning Diary on Earth Observation - 4&nbsp; Glossary: Demystifying jargons</title>
+<title>Viewed from Above: An Learning Diary on Earth Observation - Glossary: Demystifying jargons</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./glossary.html"><strong>Resources</strong></a></li><li class="breadcrumb-item"><a href="./glossary.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Glossary: Demystifying jargons</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./glossary.html"><strong>Resources</strong></a></li><li class="breadcrumb-item"><a href="./glossary.html">Glossary: Demystifying jargons</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -139,13 +139,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Entering the World of Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Remote Sensing: To see the unseen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Deep dive: Sensor A</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -168,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./glossary.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Glossary: Demystifying jargons</span></span></a>
+ <span class="menu-text">Glossary: Demystifying jargons</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Glossary: Demystifying jargons</span></h1>
+<h1 class="title">Glossary: Demystifying jargons</h1>
 </div>
 
 
@@ -207,6 +207,18 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<ul>
+<li><p><strong>Digital Number (DN) :</strong> raw brightness data captured by sensors without having units for efficient storage</p></li>
+<li><p><strong>Radiance :</strong> how much light the instrument sees in meaningful units but still have effects of light source, atmosphere and surface material. Also known as Top of Atmosphere (TOA) radiance</p></li>
+<li><p><strong>Reflectance :</strong> a property of a material, it is a ratio of the amount of light leaving a target to the amount of light striking it. Its calculation is performed on radiance corrected data. Typically this comes as surface (BOA) reflectance but can also be Top of Atmosphere (TOA) reflectance if the atmospheric effect on radiance has not been accounted for.</p></li>
+<li><p><strong>Radiometric calibration :</strong> the process from converting DN to Radiance <code>Lλ=Bias+(Gain∗DN)</code></p></li>
+<li><p><strong>Dark object subtraction (DOS)</strong> <strong>:</strong> A relative Atmospheric correction technique. Searches each band for the darkest value then subtracts that from each pixel. This is appropriate when the visible bands have increased scattering vs.&nbsp;longer wavelengths. Also known as, Histogram Adjustment</p></li>
+</ul>
+<!-- -->
+<ul>
+<li><p><strong>Pseudo-invariant Features (PIFs) :</strong> A relative Atmospheric correction technique. Assume brightness pixels linearly related to a base image (linear regression) and adjust the image based on the regression result</p></li>
+<li><p><em>Atmospheric radiative transfer models.</em></p></li>
+</ul>
 
 
 

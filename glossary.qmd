@@ -1,1 +1,18 @@
 # Glossary: Demystifying jargons {.unnumbered}
+
+-   **Digital Number (DN) :** raw brightness data captured by sensors without having units for efficient storage
+
+-   **Radiance :** how much light the instrument sees in meaningful units but still have effects of light source, atmosphere and surface material. Also known as Top of Atmosphere (TOA) radiance
+
+-   **Reflectance :** a property of a material, it is a ratio of the amount of light leaving a target to the amount of light striking it. Its calculation is performed on radiance corrected data. Typically this comes as surface (BOA) reflectance but can also be Top of Atmosphere (TOA) reflectance if the atmospheric effect on radiance has not been accounted for.
+
+-   **Radiometric calibration :** the process from converting DN to Radiance `Lλ=Bias+(Gain∗DN)`
+
+-   **Dark object subtraction (DOS)** **:** A relative Atmospheric correction technique. Searches each band for the darkest value then subtracts that from each pixel. This is appropriate when the visible bands have increased scattering vs. longer wavelengths. Also known as, Histogram Adjustment
+
+```{=html}
+<!-- -->
+```
+-   **Pseudo-invariant Features (PIFs) :** A relative Atmospheric correction technique. Assume brightness pixels linearly related to a base image (linear regression) and adjust the image based on the regression result
+
+-   *Atmospheric radiative transfer models.*

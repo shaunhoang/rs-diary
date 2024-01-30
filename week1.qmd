@@ -1,4 +1,4 @@
-# Entering the World of Remote Sensing
+# Remote Sensing: To see the unseen
 
 ![](images/clipboard-439232986.png){fig-align="center" width="646"}
 
@@ -51,11 +51,11 @@ Here are some examples
 
 3.  **Energy Efficiency:** Identifying heat island effects and understanding building energy consumption through thermal imaging empowers planners to design sustainable cities, and researchers to determine the best strategies to combat long term climate disasters.
 
-![Remote Sensing Analysis of the Surface Urban Heat Island Effect in Vitoria-Gasteiz, 1985 to 2021 [@erreaRemoteSensingAnalysis2023]](images/clipboard-1940323141.png){fig-align="center"}
+![**Left:** Average 2m air temperature at 23h (moment of max UHI) during all summer months (June-August) of the years 1987- 2016. **Right:** UrbCLIM output field downscaled to 30-m resolution showing the average daily maximum urban heat island (UHI) intensity for a part of the city of Amsterdam. [@DestinEHumanHeat]](images/clipboard-1067784336.png){fig-align="center"}
 
 This is just the beginning. Remote sensing is transforming the way we understand and manage our cities, paving the way for a healthier, smarter, and more sustainable urban future.
 
-## Personal Reflections
+## Reflections
 
 My first foray into the world of Remote Sensing was eye-opening, to say the least. For the uninitiated, it is easy to assume that remote sensing purely means orthophotographic satellite images that one might see using platforms such as Google Maps, i.e., as if the only thing that sensors do were to snap a simple photo of the planet like a phone camera.
 
