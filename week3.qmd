@@ -30,7 +30,7 @@ Atmospheric correction deserves out attention considering the effect of atmosphe
     -   Paid: ACORN, FLAASH, QUAC, ATCOR
     -   Free: SMAC, Orfeo Toolbox
 
-![ample of LEDAPS atmospheric correction. (a) Top-of-atmosphere (TOA) reflectance composite (bands 3,2,1) for Landsat-7 ETM+ image of San Francisco Bay (July 7, 1999); (b) Surface reflectance composite.](images/clipboard-2188628702.png)
+![Example of LEDAPS atmospheric correction. (a) Top-of-atmosphere (TOA) reflectance composite (bands 3,2,1) for Landsat-7 ETM+ image of San Francisco Bay (July 7, 1999); (b) Surface reflectance composite.](images/clipboard-2188628702.png)
 
 Finally, atmospheric correction to obtain true reflectance is not always necessary, for example, for classification of a single image, working on composite images, etc.
 
