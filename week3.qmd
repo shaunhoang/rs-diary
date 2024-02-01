@@ -1,13 +1,10 @@
 # Corrections and Enhancements
 
-## Corrections
+## Summary
 
-Raw data coming from sensors are rarely immediately usable without being corrected for various interferences and effects. Here is
+Raw data coming from sensors are rarely immediately usable without being corrected for various interferences and effects. Common correction methods are geometric and topographic corrections, and radiometric and atmospheric corrections. Finally, enhancement methods help us highlight values of interest that pertain to our research scope. Good news: Standard Remote sensing products now come corrected, and are usually labeled "Analysis Ready Data" or ARD.
 
-1.  Geometric correction
-2.  Atmospheric correction
-3.  Topographic correction
-4.  Radiometric correction
+**Remember:** Radiometric/atmospheric corrections happen before geometric/topographic correction.
 
 ### Radiometric and Atmospheric corrections
 
@@ -19,25 +16,45 @@ These processes describe translating raw light data from the sensor into 'true' 
 
     -   **TOA Radiance-to-Reflectance** correction removes effects of the light source (e.g. the sun) by calibrating radiation going down (irradiance) and up (radiance). TOA Reflectance still has the effect of the atmosphere and the surface material. If irradiance = radiance, we call this *hemispheric reflectance*
 
-        ![](images/clipboard-3513886623.png)
-
     -   **TOA-to-BOA Reflectance** correction removes effects of the atmospheric conditions, leaving us with just data on the surface materials. If shadows and directional effects on reflectance have been dealt with, we get what is called *true reflectance***,** if not then it is called *apparent reflectance.*
 
-Atmospheric correction deserves out attention considering the effect of atmospheric scattering on the final results. Absorption and scattering create the haze which reduces the contrast, and can creates the “adjacency effect”, whereby radiance from pixels nearby mixed into pixel of interest. There are several types of atmospheric correction:
+*Atmospheric correction* deserves our attention considering the effect of atmospheric scattering on the final results. Absorption and scattering create the haze which reduces the contrast, and can creates the “adjacency effect”, whereby radiance from pixels nearby mixed into pixel of interest. Atmospheric correction to obtain true reflectance is not always necessary, for example, for classification of a single image, working on composite images, etc.
 
-1.  **Relative:** normalise intensities of different bands within a single image, or from many dates to one date. This can be done via *Dark Object Subtraction (DOS)*, *Empirical Line Correction*, or *Pseudo-invariant Features (PIFs)*
-2.  **Absolute:** change digital brightness values into scaled surface reflectance. We can then compare these scaled surface reflectance values across the planet, through *atmospheric radiative transfer models* (i.e. summer, tropical). To perform this correction, we also need local atmospheric visibility and image altitude. There are many tools for this purpose:
-    -   Paid: ACORN, FLAASH, QUAC, ATCOR
-    -   Free: SMAC, Orfeo Toolbox
+There are two types of atmospheric correction:
 
-![Example of LEDAPS atmospheric correction. (a) Top-of-atmosphere (TOA) reflectance composite (bands 3,2,1) for Landsat-7 ETM+ image of San Francisco Bay (July 7, 1999); (b) Surface reflectance composite.](images/clipboard-2188628702.png)
+1.  **Relative:** normalise intensities of different bands within a single image, or from many dates to one date. This can be done via *Dark Object Subtraction (DOS)*, or *Pseudo-invariant Features (PIFs)*
+2.  **Absolute:** change digital brightness values into scaled surface reflectance. We can then compare these scaled surface reflectance values across the planet, through *atmospheric radiative transfer models* (i.e. summer, tropical), or *Empirical Line Correction*
 
-Finally, atmospheric correction to obtain true reflectance is not always necessary, for example, for classification of a single image, working on composite images, etc.
+![Example of LEDAPS atmospheric correction. (a) Top-of-atmosphere (TOA) reflectance composite (bands 3,2,1) for Landsat-7 ETM+ image of San Francisco Bay (July 7, 1999); (b) Surface reflectance composite.](images/clipboard-2188628702.png){fig-align="center"}
 
 ### Geometric and topographic corrections
 
-Subsets of Georectification
+These are subsets of Georectification which gives coordinates to an image, and accounting for view angel, topography, wind disturbance, and rotation of the Earth, etc., which distort the geometry of the resultant image.
 
-## In practice
+*Topographic correction* corrects the view angle of the image so that it is nadir (i.e., directly top-down). Important concepts to get familiar with for orthorectification are:
 
-## Reflections
+-   *Solar azimuth:* compass angle of the sun (N =0°) 90° (E) at sunrise and 270° (W) at sunset.
+
+-   *Solar zenith:* angle of local zenith (above the point on ground) and sun from vertical (90° - elevation)
+
+![](images/clipboard-476425838.png){fig-align="center"}
+
+*Geometric correction* effectively 'grounds' the images into a georeferenced final product (i.e., with a coordinate). In order to do so, we identify Ground Control Points (GPS) to match known points in the image and a reference dataset. We then take the coordinates and model them to give geometric transformation coefficients (linear regression). It effectively resembles fitting old maps into a digital version.
+
+![](images/clipboard-1974488766.png){fig-align="center" width="485"}
+
+### Joining and Enhancements
+
+To join (i.e., 'mosaicking'), within the overlap area (20-30%) an representative sample is taken, a histogram is extracted from the base image which is then applied to other image to using a **histogram matching algorithm** to blend the brightness values of the two images ('feathering')
+
+Finally, after all the corrections, there are still many enhancements that can improve or accentuate the visual results depending on the purpose of the research:
+
+-   *Contrast enhancement* to accentuate reflectance values that are close to each other
+-   *Ratio calculation* calculates pixel value as a ratio of different band (e.g. Normalised Burn Ratio)
+-   *Filtering* is the use of low-pass filters that average (i.e., smooth) the data, or high-pass filters that enhance the variances between features. Filtering is used to perform texture and edge detection.
+-   *PCA* transforms multi-spectral data into uncorrelated dataset. Multi-date overlay PCA is a way to detect change efficiently.
+-   *Fusion* entails fusing image/data from multiple sensors in order to improve details, enable better classification, or downsample.
+
+## Application
+
+## Reflection

@@ -1,8 +1,8 @@
-# Remote Sensing: To see the unseen
+# Intro to Remote Sensing
 
 ![](images/clipboard-439232986.png){fig-align="center" width="646"}
 
-## In just a few words...
+## Summary
 
 Remote Sensing is the use of satellites, planes, drones, etc. as our aerial eyes, piecing together a portrait of our planet through light and data and revolutionising the way we understand and interact with it.
 
@@ -22,7 +22,7 @@ Electromagnetic radiation moves as waves as perpendicular electric and magnetic 
 
 -   `v` = frequency, rate of oscillation (full oscillations in a time unit)
 
-Different materials reflect unique wavelengths in this spectrum, allowing us to identify them, like decoding DNA! More on this later...
+Different materials reflect unique wavelengths in this spectrum, allowing us to identify them, like decoding DNA!
 
 ![Wavelength vs. Oscillation](images/clipboard-2930936668.png){width="458"}
 
@@ -35,30 +35,30 @@ But information that sensors receive isn't just about color. Remote sensing data
 
 In reality, depending on the purpose, each sensor is equip to have better resolution of one type over the other. For example, sensors with a high spatial resolution of 5m (i.e., each pixel is 10x10 on the ground) will have lower spectral resolution (i.e., capturing only narrow range of the EMS) [@RemoteSensingSatellite]
 
-## Applications in Urban Analytics
+## Application
 
-Remote Sensing has many transformative applications in the realm of Urban Analytics. Think of it as an X-ray for cities, revealing hidden patterns and empowering informed decision-making by city planners, urban designers, and public officials to make swift and informed decisions to improve the lives of millions of urbanites.
+Remote Sensing has many transformative applicatioicns in the realm of Urban Analytics. Think of it as an X-ray for cities, revealing hidden patterns and empowering informed decision-making by city planners, urban designers, and public officials to make swift and informed decisions to improve the lives of millions of urbanites.
 
-Here are some examples
+Here are some examples of the use of Remote Sensing in urban analytics research
 
-1.  **Mapping Urban Growth:** By tracking changes in the built environment over time, we can identify sprawling suburbs, monitor urban expansion, and plan for infrastructure needs. Remote sensing data are particularly rich sources to train classification models to extract features and identify unmapped communities.
+1.  **Mapping Urban Growth:** By tracking changes in the built environment over time, we can identify sprawling suburbs, monitor urban expansion, and plan for infrastructure needs. Recent works have made use of a diverse source of high-resolution Remote Sensing data (2m) to train machine-learning model to more robustly extract 'urbanised' areas compared to previous methodology using only medium-resolution images. [@wangUrbanDevelopmentAnalysis2021]
 
-![Transferable built-up area extraction (TBUAE) framework to map urbanised areas [@wangUrbanDevelopmentAnalysis2021]](images/clipboard-3703486949.png){fig-align="center"}
+![Transferable built-up area extraction (TBUAE) framework to map urbanised areas](images/clipboard-3703486949.png){fig-align="center"}
 
-2.  **Predicting Floods with Foresight:** Analysing land cover and terrain, it anticipates where water will flow, safeguarding communities from harm, while also estimating potential damage. Here is an example of how insurance companies can make use of such data to assess risk and process claims.
+2.  **Predicting Floods with Foresight:** Analysing land cover and terrain, it anticipates where water will flow, safeguarding communities from harm, while also estimating potential damage. This type of risk assessment is highly relevant not only in climate science and the public sector but also among insurance companies who make use of SAR satellite data (for through-cloud vision) combined with other spatial data sets to assess risk and process claims [@schumannFloodModelingPrediction2023]
 
-![Remote sensing data can be used to estimate flood extent, and to derive individual risk level damage estimates [@schumannFloodModelingPrediction2023]](images/clipboard-9241810.png){fig-align="center"}
+![Remote sensing data can be used to estimate flood extent, and to derive individual risk level damage estimates](images/clipboard-9241810.png){fig-align="center"}
 
-3.  **Energy Efficiency:** Identifying heat island effects and understanding building energy consumption through thermal imaging empowers planners to design sustainable cities, and researchers to determine the best strategies to combat long term climate disasters.
+3.  **Energy Efficiency:** Identifying heat island effects and understanding building energy consumption through thermal imaging empowers planners to design sustainable cities, and researchers. Remote Sensing data is a key component in Urban Climate Models such as UrbCLIM by VITO, a Belgian research organisation, who aims to create an interactive tool providing high resolution urban heat maps and predict their evolution under future climate conditions. [@DestinEHumanHeat]
 
-![**Left:** Average 2m air temperature at 23h (moment of max UHI) during all summer months (June-August) of the years 1987- 2016. **Right:** UrbCLIM output field downscaled to 30-m resolution showing the average daily maximum urban heat island (UHI) intensity for a part of the city of Amsterdam. [@DestinEHumanHeat]](images/clipboard-1067784336.png){fig-align="center"}
+![**Left:** Average 2m air temperature at 23h (moment of max Urban Heat Islands) during all summer months of the years 1987- 2016. **Right:** UrbCLIM climate model's output field showing the average daily maximum urban heat island intensity for Amsterdam](images/clipboard-1067784336.png){fig-align="center"}
 
 This is just the beginning. Remote sensing is transforming the way we understand and manage our cities, paving the way for a healthier, smarter, and more sustainable urban future.
 
-## Reflections
+## Reflection
 
 My first foray into the world of Remote Sensing was eye-opening, to say the least. For the uninitiated, it is easy to assume that remote sensing purely means orthophotographic satellite images that one might see using platforms such as Google Maps, i.e., as if the only thing that sensors do were to snap a simple photo of the planet like a phone camera.
 
-In reality, it unlocks unseen depths of data beyond mere human perception, less high-resolution photographs and more spectral signatures, where each pixel holds a universe of information. Building a true-color composite from all these layers (so that our eyes can see) was like seeing the world through a brand-new lens.
+In reality, it unlocks unseen depths of data beyond mere human perception, not just high-resolution photographs and more spectral signatures, where each pixel holds a universe of information. Building a true-color composite from all these layers (so that our limited human vision can perceive them) was like seeing the world through a brand-new lens.
 
 I am particularly excited to get started with Google Earth Engine later on as the primary gateway to access the wealth of remote sensing data and analytics with more ease in order to solve specific problems facing our world today.

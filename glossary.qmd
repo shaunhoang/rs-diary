@@ -10,9 +10,8 @@
 
 -   **Dark object subtraction (DOS)** **:** A relative Atmospheric correction technique. Searches each band for the darkest value then subtracts that from each pixel. This is appropriate when the visible bands have increased scattering vs. longer wavelengths. Also known as, Histogram Adjustment
 
-```{=html}
 <!-- -->
-```
+
 -   **Pseudo-invariant Features (PIFs) :** A relative Atmospheric correction technique. Assume brightness pixels linearly related to a base image (linear regression) and adjust the image based on the regression result
 
 -   *Atmospheric radiative transfer models.*
