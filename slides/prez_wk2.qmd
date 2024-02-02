@@ -1,42 +1,85 @@
 ---
-title: "Week 2 Presentation"
+title: Introducing LiDAR
+title-slide-attributes:
+    data-background-image: "https://media.licdn.com/dms/image/C5612AQHw_BfrN9qndA/article-inline_image-shrink_1000_1488/0/1616623754802?e=1712188800&v=beta&t=AxjGBDN929YCwGSePBxwjogcexrQOvGqzh9XQjabNP0"
+    data-background-size: stretch
+    data-background-opacity: "0.5"
 format:
   revealjs:
+    theme: night
     embed-resources: true
     slide-number: true
     preview-links: auto
-resource:
-  - demo.pdf
+    
+bibliography: ../references.bib
 ---
 
-## Hello, There
+## LiDAR 101 {.center background-image="https://media.licdn.com/dms/image/C5612AQEQEuxtoMi9qw/article-inline_image-shrink_1000_1488/0/1616623031202?e=1712188800&v=beta&t=nMF2mGpAhNdKi1vd0Si1lXMv3MdS1InLoyHItRogdm0" background-opacity="0.3" style="text-align: center;"}
 
-This presentation will show you examples of what you can do with Quarto and [Reveal.js](https://revealjs.com), including:
+LiDAR (**li**ght **d**etection **a**nd **r**anging) uses laser beams to “see” the world in 3D, providing machines and computers with an accurate representation of the surveyed environment.
 
--   Presenting code and LaTeX equations
--   Including computations in slide output
--   Image, video, and iframe backgrounds
--   Fancy transitions and animations
--   Printing to PDF
+## How Does LiDAR Work? {.smaller}
 
-...and much more
+::: columns
+::: {.column width="50%"}
+-   LiDAR sensor emits pulsed light waves into the environment which bounce off objects and return to the sensor. The sensor uses the time it took for each pulse to return to the sensor to calculate the distance.
+-   Going through this process millions of times per second creates a precise, real-time 3D map of the environment. This 3D map is called a **point cloud**.
+-   LiDAR sensors can be mounted on aircrafts to 3D-map entire areas, but are currently most associated with autonomous vehicles and other smart city IoT initiatives.
+:::
 
-## Pretty Code {auto-animate="true"}
-
--   Over 20 syntax highlighting themes available
--   Default theme optimized for accessibility
-
-``` r
-# Define a server for the Shiny app
-function(input, output) {
-  
-  # Fill in the spot we created for a plot
-  output$phonePlot <- renderPlot({
-    # Render a barplot
-  })
-}
-```
+::: {.column width="50%"}
+![](images/clipboard-6669788.png){fig-align="center" width="432"} ![](images/clipboard-3405695669.png)
+:::
 
 ::: footer
-Learn more: [Syntax Highlighting](https://quarto.org/docs/output-formats/html-code.html#highlighting)
+Source: [Velodyne Lidar](https://velodynelidar.com/downloads/)
 :::
+:::
+
+## LiDAR in Urban Planning {.smaller}
+
+::: panel-tabset
+### Spatial data generation
+
+An advantage of LiDAR is the provision of detailed data especially in areas not reachable by other means, such as underground. In Singapore where the Urban Redevelopment Authority plans to have a master plan of Singapore's underground spaces, LiDAR technology could be the enabler [@primeSingaporeGoesUnderground2020]
+
+![](images/clipboard-3804156272.png){fig-align="center" width="950"}
+
+### Disaster response
+
+::: columns
+::: {.column width="60%"}
+![](images/clipboard-4004162598.png)
+:::
+
+::: {.column width="40%"}
+In a large-scale disaster, acquiring highly accurate information becomes crucial to relief work and resilience. Three-dimensional visualization of terrain mobility and building allows emergency responders to easily identify areas most affected by the disaster. [@HowLiDARUsed2020]
+:::
+:::
+
+### Tracking urban change
+
+LiDAR can be valuable in helping urban planners monitor urban growth in cases where building height increase is of interest [@Monitoring3DUrban]
+
+::: columns
+::: {.column style="text-align: center;"}
+![Building points extracted from 2005 Lidar data](images/clipboard-729720915.png){fig-align="center" width="700" height="300"}
+:::
+
+::: {.column style="text-align: center;"}
+![Building points extracted from 2008 Lidar data](images/clipboard-3074047612.png){fig-align="center" width="700" height="300"}
+:::
+:::
+:::
+
+## Reflections on challenges {.smaller}
+
+The implementation of LiDAR has its own set of challenges
+
+-   **Data Overload:** LiDAR sensors generate millions of data points per second, leading to massive datasets that are demanding to store, process, and analyze, creating logistical and budgetary hurdles.
+-   **Quality Inconsistency:** Environmental factors, sensor calibration, and inherent uncertainties can introduce errors and inconsistencies in LiDAR data, impacting its accuracy and reliability, demanding careful interpretation.
+-   **Format Complexity:** LiDAR data's point cloud format, while information-rich, poses visualization and analysis challenges, often requiring specialized software and expertise, limiting accessibility for non-experts.
+
+Each of the challenges above is associated with a high investment and operation cost that may make LiDAR harder to be adopted despite its advantages.
+
+## References {.smaller}

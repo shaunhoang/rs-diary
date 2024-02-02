@@ -1,4 +1,6 @@
-# Glossary: Demystifying jargons {.unnumbered}
+# Glossary \[unfinished\]  {.unnumbered}
+
+### Demystifying jargons {.unnumbered}
 
 -   **Digital Number (DN) :** raw brightness data captured by sensors without having units for efficient storage
 
