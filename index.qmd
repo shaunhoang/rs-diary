@@ -1,3 +1,15 @@
-# Hello...\[unfinished\] {.unnumbered}
+## About me {.unnumbered}
 
-...from a novice to another!
+![](images/clipboard-3780173312.png){fig-align="center"}
+
+### Hello!
+
+My name is The-Huan, although I also go by Huan or Shaun, depending on where in the world you see me. Hailing from Vietnam, I have lived, studied, and worked in many countries. Most recently though, I can be found thrift-shopping in London.
+
+As if it was not enough, I wanted to see more of the world in ways I have not been to previously. So this is it, a learning diary about my journey venturing into Remote Sensing and Earth Observation.
+
+I love talking about languages, travel, data science, maps, trains, and music. Hopefully, I can add Remote Sensing to this list by the end of this.
+
+### **Get in touch!**
+
+[Email](mailto:shaun.hoang@gmail.com), [LinkedIn](https://www.linkedin.com/in/shaunhoang/)
