@@ -47,8 +47,6 @@ bibliography: references.bib
 
 format:
   html:
-    # title-block-banner: 'images/cover.jpeg'
-    # cover-image: 
     theme: 
         light: [journal]
         dark: [journal,darkly]
