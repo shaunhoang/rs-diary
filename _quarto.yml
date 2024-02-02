@@ -40,7 +40,7 @@ book:
           # - week8.qmd
     - part: "**Resources**"
       chapters:
-          - glossary.qmd
+          # - glossary.qmd
           - references.qmd
 
 bibliography: references.bib
