@@ -42,7 +42,7 @@ Installed in an aircraft or helicopter, the infrared light is emitted toward the
 
 ::: columns
 ::: {.column width="50%"}
-#### Topographic
+#### Topographic {.smaller}
 
 ![](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/GUID-DAC09D61-6A8E-4F1D-B164-DB5AECFF2A5C-web.png){fig-align="left" width="364"}
 
@@ -50,7 +50,7 @@ Used to derive surface models for use in many applications, such as forestry, hy
 :::
 
 ::: {.column width="50%"}
-#### Bathymetric
+#### Bathymetric {.smaller}
 
 ![](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/GUID-A93C964C-F417-4523-B391-4931C05AFF31-web.png){fig-align="left" width="366"}
 
@@ -68,7 +68,7 @@ Mounted on a moving vehicle or a tripod or stationary device, the LiDAR sensors 
 
 ::: columns
 ::: {.column width="50%"}
-#### Mobile
+#### Mobile {.smaller}
 
 Mounted on moving vehicles, mobile LiDAR data can be used to analyze roads and locate overhead wires, light poles, and road signs, making them integral for self-driving cars
 
@@ -76,7 +76,7 @@ Mounted on moving vehicles, mobile LiDAR data can be used to analyze roads and l
 :::
 
 ::: {.column width="50%"}
-#### Static
+#### Static {.smaller}
 
 Mounted on a tripod, static LiDAR can collect point clouds inside buildings as well as exteriors. Common applications for this type of LiDAR are engineering, mining, surveying, and archaeology
 

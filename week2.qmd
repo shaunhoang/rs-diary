@@ -1,7 +1,5 @@
 # A peek into the LiDAR technology
 
-## **Or, how to 3D print a city** {.unnumbered}
-
 Having understood how sensors work in theory, we can now shift our view to appreciate how one of them in particular, [LiDAR](https://www.faro.com/en/Resource-Library/Article/What-is-Lidar) (**Li**ght **D**etection **a**nd **R**anging), is deployed in practice and can benefit us not only in an emerging sector like Autonomous Vehicles but also in Urban Planning
 
 ```{=html}
