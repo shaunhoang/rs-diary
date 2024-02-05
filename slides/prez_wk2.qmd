@@ -36,6 +36,58 @@ Source: [Velodyne Lidar](https://velodynelidar.com/downloads/)
 :::
 :::
 
+## Types of LiDAR - Airborne {.smaller}
+
+Installed in an aircraft or helicopter, the infrared light is emitted toward the ground and returned to the LiDAR sensor
+
+::: columns
+::: {.column width="50%"}
+#### Topographic
+
+![](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/GUID-DAC09D61-6A8E-4F1D-B164-DB5AECFF2A5C-web.png){fig-align="left" width="364"}
+
+Used to derive surface models for use in many applications, such as forestry, hydrology, urban planning, landscape ecology, coastal engineering, etc.
+:::
+
+::: {.column width="50%"}
+#### Bathymetric
+
+![](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/GUID-A93C964C-F417-4523-B391-4931C05AFF31-web.png){fig-align="left" width="366"}
+
+Provides an airborne survey of the land-water interfac to establish water depths and shoreline elevations.
+:::
+
+::: footer
+Source: [Esri](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/types-of-lidar.htm)
+:::
+:::
+
+## Types of LiDAR - Terrestrial {.smaller}
+
+Mounted on a moving vehicle or a tripod or stationary device, the LiDAR sensors consist of eye-safe lasers.
+
+::: columns
+::: {.column width="50%"}
+#### Mobile
+
+Mounted on moving vehicles, mobile LiDAR data can be used to analyze roads and locate overhead wires, light poles, and road signs, making them integral for self-driving cars
+
+![](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/GUID-728FDD39-C25A-4464-96F8-DB6A0EED68CC-web.png)
+:::
+
+::: {.column width="50%"}
+#### Static
+
+Mounted on a tripod, static LiDAR can collect point clouds inside buildings as well as exteriors. Common applications for this type of LiDAR are engineering, mining, surveying, and archaeology
+
+![](https://www.mdpi.com/remotesensing/remotesensing-12-00290/article_deploy/html/images/remotesensing-12-00290-g004-550.jpg)
+:::
+
+::: footer
+Source: [Esri](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/types-of-lidar.htm)
+:::
+:::
+
 ## LiDAR in Urban Planning {.smaller}
 
 ::: panel-tabset
