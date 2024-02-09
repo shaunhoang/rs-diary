@@ -1,0 +1,77 @@
+### 
+
+### Land Use / Land Cover (LULC)
+
+Sensors / data
+
+-   Landsat
+
+-   Sentinel
+
+Studies:
+
+-   Accessibility to urban green spaces
+
+-   Types of veg
+
+-   Street View
+
+-   GEE
+
+-   Veg helath
+
+-   Landcape Index
+
+### Disaster Response / Preparedness
+
+Sensor: Sentinel-2 spectral imagery
+
+-   Change in war zone
+
+-   Line of sight analysis
+
+### Synthetic Aperture Radar (SAR)
+
+-   Active sensor, have surface texture dat, see through weather and clouds. Different wavelengths - different applications
+
+-   Also different polarisations = orientations of the plane. VV, VH, HH interprets different properties
+
+    -   Single
+
+    -   Dual
+
+    -   HH
+
+-   Scattering can change based on wavelength.
+
+SAR signal has both amplitude (backscatter) and phase
+
+-   Backscatter is the portion of the outgoing radar signal that the target redirects directly back towards the radar antenna. Examples:
+
+    -   Corner reflections in urban enci
+
+    -   Shadowing
+
+    -   Speckles
+
+-   Phase data
+
+InSAR = 2 SAR phases subtracted
+
+-   Coherence Map
+
+-   DInSAR
+
+Policy applications
+
+-   Global policy documents, such as New Urban Agenda, have stipulations that can be solved with Earth Observation Data
+
+-   Sustainable Development Guidance: Goal -\> Target -\> Monitoring -\> Data
+
+    -   Goal / Target - O
+
+    -   Monitoring - KR
+
+    -   Data -
+
+-   Metropolitan policy documents

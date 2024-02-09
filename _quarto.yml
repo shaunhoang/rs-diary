@@ -29,10 +29,10 @@ book:
           - week1.qmd
           - week2.qmd
           - week3.qmd
-    # - part: "**Policy applications**"
-    #   chapters:
-          # - week4.qmd
-          # - week5.qmd
+    - part: "**Implications and Applications to Policy**"
+      chapters:
+          - week4.qmd
+          - week5.qmd
     # - part: "**Google Earth Engine**"
     #   chapters:
           # - week6.qmd

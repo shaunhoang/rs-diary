@@ -56,6 +56,48 @@
     "text": "3.3 Reflection\nMy initial knowledge of remote sensing was limited, but this exploration proved insightful and rewarding. The vast amount of information obtainable from raw multi-spectral data is impressive and somewhat little-appreciated outside of the geospatial community.\nTherefore, democratising remote sensing data and technological advancements will empower research on Earth’s surface, surpassing local data collection, which is uneven and ununified by nature. Instead, remote sensing can be performed globally if the correct adjustments for the atmosphere and enhancements to fit the objectives are made.\nHowever, while this is an untapped data source, there are two hurdles to overcome before they may be fully utilised.\n\nTechnical competence: Remote sensing is jargon-filled, with each discipline adopting its best practice to harness the data, making the barrier to entry higher than that of other types of data analysis work. Standardisation of industry-agnostic workflow and training may be vital to upskilling geospatial analysts to work more natively with remote sensing data.\nHigh-resolution EO data are mostly not free and reserved for governmental/military use. High-quality EO data (multispectral, high spatial resolution, frequent, etc.) also depends on localities. Sophisticated enhancement techniques may help bridge the gap by fusing existing datasets.\n\n\n\n\n\nColuzzi, Rosa, Vito Imbrenda, Maria Lanfredi, and Tiziana Simoniello. 2018. “A First Assessment of the Sentinel-2 Level 1-C Cloud Mask Product to Support Informed Surface Analyses.” Remote Sensing of Environment 217 (November): 426–43. https://doi.org/10.1016/j.rse.2018.08.009.\n\n\nLi, Wangbin, Kaimin Sun, Hepeng Zhao, Wenzhuo Li, Jinjiang Wei, and Song Gao. 2022. “Extracting Buildings from High-Resolution Remote Sensing Images by Deep ConvNets Equipped with Structural-Cue-Guided Feature Alignment.” International Journal of Applied Earth Observation and Geoinformation 113 (September): 102970. https://doi.org/10.1016/j.jag.2022.102970.\n\n\nMacedo, Fabrício L., Adélia M. O. Sousa, Ana Cristina Gonçalves, José R. Marques da Silva, Paulo A. Mesquita, and Ricardo A. F. Rodrigues. 2018. “Above-Ground Biomass Estimation for Quercus Rotundifolia Using Vegetation Indices Derived from High Spatial Resolution Satellite Images.” European Journal of Remote Sensing 51 (1): 932–44. https://doi.org/10.1080/22797254.2018.1521250."
   },
   {
+    "objectID": "week4.html#summary",
+    "href": "week4.html#summary",
+    "title": "4  From Policies to Realities (wip)",
+    "section": "4.1 Summary",
+    "text": "4.1 Summary"
+  },
+  {
+    "objectID": "week4.html#application",
+    "href": "week4.html#application",
+    "title": "4  From Policies to Realities (wip)",
+    "section": "4.2 Application",
+    "text": "4.2 Application"
+  },
+  {
+    "objectID": "week4.html#reflection",
+    "href": "week4.html#reflection",
+    "title": "4  From Policies to Realities (wip)",
+    "section": "4.3 Reflection",
+    "text": "4.3 Reflection"
+  },
+  {
+    "objectID": "week5.html#summary",
+    "href": "week5.html#summary",
+    "title": "5  From Policies to Realities - Continued (wip)",
+    "section": "5.1 Summary",
+    "text": "5.1 Summary"
+  },
+  {
+    "objectID": "week5.html#application",
+    "href": "week5.html#application",
+    "title": "5  From Policies to Realities - Continued (wip)",
+    "section": "5.2 Application",
+    "text": "5.2 Application"
+  },
+  {
+    "objectID": "week5.html#reflection",
+    "href": "week5.html#reflection",
+    "title": "5  From Policies to Realities - Continued (wip)",
+    "section": "5.3 Reflection",
+    "text": "5.3 Reflection"
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
