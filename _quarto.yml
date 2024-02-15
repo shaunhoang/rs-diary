@@ -32,7 +32,7 @@ book:
     - part: "**Implications and Applications to Policy**"
       chapters:
           - week4.qmd
-          - week5.qmd
+          # - week5.qmd
     # - part: "**Google Earth Engine**"
     #   chapters:
           # - week6.qmd

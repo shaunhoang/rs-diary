@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 4&nbsp; From Policies to Realities (wip)</title>
+<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 4&nbsp; In practice: Tracking Soil Organic Carbon</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week5.html" rel="next">
+<link href="./references.html" rel="next">
 <link href="./week3.html" rel="prev">
 <link href="./images/planet-earth.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -101,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html"><strong>Implications and Applications to Policy</strong></a></li><li class="breadcrumb-item"><a href="./week4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">From Policies to Realities (wip)</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week4.html"><strong>Implications and Applications to Policy</strong></a></li><li class="breadcrumb-item"><a href="./week4.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">In practice: Tracking Soil Organic Carbon</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -168,13 +187,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week4.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">From Policies to Realities (wip)</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">From Policies to Realities - Continued (wip)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">In practice: Tracking Soil Organic Carbon</span></span></a>
   </div>
 </li>
       </ul>
@@ -207,7 +220,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">4.1</span> Summary</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">4.2</span> Application</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">4.2</span> Application</a>
+  <ul class="collapse">
+  <li><a href="#from-academia" id="toc-from-academia" class="nav-link" data-scroll-target="#from-academia"><span class="header-section-number">4.2.1</span> From academia…</a></li>
+  <li><a href="#to-the-public" id="toc-to-the-public" class="nav-link" data-scroll-target="#to-the-public"><span class="header-section-number">4.2.2</span> …to the public</a></li>
+  </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">4.3</span> Reflection</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -217,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">From Policies to Realities (wip)</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">In practice: Tracking Soil Organic Carbon</span></h1>
 </div>
 
 
@@ -234,14 +251,105 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
+<p>The amount of carbon in the atmosphere has increased by 30% in the past two centuries from high levels of fossil fuel combustion and deforestation, leading to rising global temperatures.</p>
+<p>Among many well-known strategies to reduce our carbon footprints, such as developing energy-efficient fuels and reducing greenhouse gas emissions, there are also strategies such as soil carbon sequestration, tree planting, and ocean carbon sequestration.</p>
+<p>How carbon is captured within soil:</p>
+<ul>
+<li>Plants capture carbon through photosynthesis, and some remain as plant tissue. Dead plant tissue enters the soil as litter and decomposes.</li>
+<li>Decomposition creates soil organic matter (SOM), the main carbon stored in soil. SOM can hold carbon for a long time or release it back into the atmosphere.</li>
+<li>Various factors like climate, vegetation, texture, and drainage influence carbon storage.</li>
+</ul>
+<p>Direct human intervention (on-farm activities) could also enhance soil carbon sequestration.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3131779874.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">On-farm activities to enhance soil carbon sequestration <span class="citation" data-cites="barbatoFarmerPerspectivesCarbon2023">(<a href="references.html#ref-barbatoFarmerPerspectivesCarbon2023" role="doc-biblioref">Barbato and Strong 2023</a>)</span></figcaption>
+</figure>
+</div>
+<p>Globally, there are policies in place to incentivise farmers to undertake on-farm activities that sequester soil carbon.</p>
+<p>For example, in California’s Cap-and-Trade Program, the private sector can buy carbon credits for their offset targets. Downstream, rice farmers, for instance, may volunteer to implement one of three methods included in the protocol to sequester carbon: dry seeding, early drainage, or alternative wetting or drying at the price per ton CO2e was $7. <span class="citation" data-cites="CarbonFarmingOpportunities">(<a href="references.html#ref-CarbonFarmingOpportunities" role="doc-biblioref"><span>“Carbon <span>Farming</span>: <span>Opportunities</span> for <span>Agriculture</span> and <span>Farmers</span> to <span>Gain From Decarbonization</span>”</span> n.d.</a>)</span></p>
+<p>Adoption challenges for these markets include (1) ensuring accurate carbon measurement and (2) verifying “additionality” - that carbon sequestration wouldn’t have happened without the market incentive. Between the two main challenges, Remote Sensing technology has the most potential in tackling the first at scale, rather than relying on local field work that is labour-intensive and limited by nature, albeit more precise.</p>
 </section>
 <section id="application" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="application"><span class="header-section-number">4.2</span> Application</h2>
+<section id="from-academia" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="from-academia"><span class="header-section-number">4.2.1</span> From academia…</h3>
+<p>There has only been a recently increasing academic focus on the application of Remote Sensing and Earth Observation technologies to map and Monitor Soil Organic Carbon, with much credit to the free and open availability of satellite imagery, such as that of Sentinel missions, facilitated by the Copernicus program. Here are some notable works in this realm and their significance to the state-of-the-art:</p>
+<p><span class="citation" data-cites="tziolasEarthObservationDataDriven2021">Tziolas et al. (<a href="references.html#ref-tziolasEarthObservationDataDriven2021" role="doc-biblioref">2021</a>)</span> is a formative article that provided insights into the usage of AI techniques and other data pipeline rigour and innovations to increase resolutions and better harness EO data. In the article, they aptly pointed out that ‘an EO data-driven approach should be prioritized if progress towards the soil policy and economic strategic goals is to be accelerated’ which reveals the current disconnect between academia and actual adoption of this technology, perhaps due to non-standardised SOC monitoring methodology and a lack of focus on the end-user experience.</p>
+<p>Indeed, a further review of current literature showcases the vast complexity that analysts must contend with in order to reliably measure SOC. For example, <span class="citation" data-cites="vanwesemaelRemoteSensingSoil2023">van Wesemael et al. (<a href="references.html#ref-vanwesemaelRemoteSensingSoil2023" role="doc-biblioref">2023</a>)</span> highlighted the need for bare soil conditions and recommended temporal mosaicking to remove irrelevant spectral variations to arrive at a robust SOC prediction model. Upon that conclusion, other researchers delved deeper into diverging techniques to extract bare soil pixels from Sentinel and Landsat data.</p>
+<ol type="1">
+<li><span class="citation" data-cites="urbina-salazarUsingSentinel2Images2021">Urbina-Salazar et al. (<a href="references.html#ref-urbina-salazarUsingSentinel2Images2021" role="doc-biblioref">2021</a>)</span> showed that Sentinel 1/2 soil moisture products were helpful in extracting bare and dry soil pixels</li>
+<li><span class="citation" data-cites="zeppEstimationSoilOrganic2021">Zepp et al. (<a href="references.html#ref-zeppEstimationSoilOrganic2021" role="doc-biblioref">2021</a>)</span> used multitemporal (30+ years) satellite images as an alternative to retrieve exposed soils from a soil reflectance composite</li>
+<li><span class="citation" data-cites="dvorakovaSentinel2ExposedSoil2021">Dvorakova, Heiden, and van Wesemael (<a href="references.html#ref-dvorakovaSentinel2ExposedSoil2021" role="doc-biblioref">2021</a>)</span> instead focused on a particular period based on a time series of normalised difference vegetation index (NDVI), and concluded that the best SOC prediction could already be achieved for this particular period by using a strict normalised burn ratio 2 (NBR2) threshold.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2371845066.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Using Sentinel-2 Images for Soil Organic Carbon Content Mapping in Croplands <span class="citation" data-cites="urbina-salazarUsingSentinel2Images2021">(<a href="references.html#ref-urbina-salazarUsingSentinel2Images2021" role="doc-biblioref">Urbina-Salazar et al. 2021</a>)</span></figcaption>
+</figure>
+</div>
+<p>Other works focused on improving the prediction model further with higher spatial resolution input data to correspond with average field size <span class="citation" data-cites="mollerScaleSpecificPredictionTopsoil2022">(<a href="references.html#ref-mollerScaleSpecificPredictionTopsoil2022" role="doc-biblioref">Möller et al. 2022</a>)</span>, and techniques to overcome vegetation cover <span class="citation" data-cites="heidenSoilReflectanceComposites2022">(<a href="references.html#ref-heidenSoilReflectanceComposites2022" role="doc-biblioref">Heiden et al. 2022</a>)</span></p>
+<p>On the other hand, depth matters when it comes to SOC mapping <span class="citation" data-cites="DepthMattersSoil">(<a href="references.html#ref-DepthMattersSoil" role="doc-biblioref"><span>“Depth Matters for Soil Carbon Accounting – <span>CarbonPlan</span>”</span> n.d.</a>)</span>, with best practices requiring soil sampling that encompasses the full crop-rooting zone of a minimum of 30 cm. Therefore, 3D mapping is another frontier where many innovations have emerged. <em>The pseudo-3D technique</em> is the building of separate models for individual depth intervals, whose interval predictions are integrated to get the full profile of SOC.</p>
+</section>
+<section id="to-the-public" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="to-the-public"><span class="header-section-number">4.2.2</span> …to the public</h3>
+<p>The first <a href="https://data.apps.fao.org/glosis/?share=f-6756da2a-5c1d-4ac9-9b94-297d1f105e83&amp;lang=en">Global Soil Organic Matter map</a> was launched on World Soil Day in 2017), by the United Nations Food and Agriculture Organisation (FAO). The map is produced on a common grid for 100 countries, allowing scientists and policymakers to identify degraded areas and explore the potential for soils to capture soil carbon. The map also helps set restoration targets, support the greenhouse gas emission reporting under the United Nations Framework Convention on Climate Change, and make evidence-based decisions to mitigate and adapt. <span class="citation" data-cites="HuttonSoilScientists">(<a href="references.html#ref-HuttonSoilScientists" role="doc-biblioref"><span>“Hutton Soil Scientists Help Develop First <span>Global Soil Organic Carbon Map</span> | <span>The James Hutton Institute</span>”</span> n.d.</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-673964401.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Screenshot of the GSOCMap. <strong>Left:</strong> Relative Soil Organic Carbon Sequestration Rates. <strong>Right:</strong> Projected Soil Organic Carbon Stocks</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2972257247.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Structure of the Implementation process for the Global Soil Partnership (GSP)</figcaption>
+</figure>
+</div>
+</section>
 </section>
 <section id="reflection" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">4.3</span> Reflection</h2>
+<p>A precise and reliable global view of SOC is needed under different UN conventions, such as the UN Convention on Climate Change and Desertification (UNCCD) and the Sustainable Development Goals (SDG). At the national level, such data can be used as reference soil carbon stocks, with the aim of refining national greenhouse gas inventories and assessing the sensitivity of soils to degradation and climate change.</p>
+<p>That said, scant evidence has been found to show further applications using the GSOC map, or Level-3 EO SOC mapping products, either at the national level at finer spatial resolution or by the private or public sector, as an active component to incentivise stakeholders to take action. In most cases, what GSP was able to produce was a series of guidelines for national stakeholders without imposing shared deliverables and timelines. Instead, the original GSOC maps are used to determine the status quo and rally political interest at the national level and do not possess the spatial resolution needed to make them effective monitoring tools.</p>
+<p>Possible reasons may lie in technical competency to effectively produce national soil maps with the right open data policy to allow the public and other innovators to tap into this data.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-barbatoFarmerPerspectivesCarbon2023" class="csl-entry" role="listitem">
+Barbato, Clare T., and Aaron L. Strong. 2023. <span>“Farmer Perspectives on Carbon Markets Incentivizing Agricultural Soil Carbon Sequestration.”</span> <em>Npj Climate Action</em> 2 (1, 1): 1–9. <a href="https://doi.org/10.1038/s44168-023-00055-4">https://doi.org/10.1038/s44168-023-00055-4</a>.
+</div>
+<div id="ref-CarbonFarmingOpportunities" class="csl-entry" role="listitem">
+<span>“Carbon <span>Farming</span>: <span>Opportunities</span> for <span>Agriculture</span> and <span>Farmers</span> to <span>Gain From Decarbonization</span>.”</span> n.d. Accessed February 15, 2024. <a href="https://www.spglobal.com/esg/insights/topics/carbon-farming-opportunities-for-agriculture-and-farmers-to-gain-from-decarbonization">https://www.spglobal.com/esg/insights/topics/carbon-farming-opportunities-for-agriculture-and-farmers-to-gain-from-decarbonization</a>.
+</div>
+<div id="ref-DepthMattersSoil" class="csl-entry" role="listitem">
+<span>“Depth Matters for Soil Carbon Accounting – <span>CarbonPlan</span>.”</span> n.d. Accessed February 15, 2024. <a href="https://carbonplan.org/research/soil-depth-sampling">https://carbonplan.org/research/soil-depth-sampling</a>.
+</div>
+<div id="ref-dvorakovaSentinel2ExposedSoil2021" class="csl-entry" role="listitem">
+Dvorakova, Klara, Uta Heiden, and Bas van Wesemael. 2021. <span>“Sentinel-2 <span>Exposed Soil Composite</span> for <span>Soil Organic Carbon Prediction</span>.”</span> <em>Remote Sensing</em> 13 (9, 9): 1791. <a href="https://doi.org/10.3390/rs13091791">https://doi.org/10.3390/rs13091791</a>.
+</div>
+<div id="ref-heidenSoilReflectanceComposites2022" class="csl-entry" role="listitem">
+Heiden, Uta, Pablo d’Angelo, Peter Schwind, Paul Karlshöfer, Rupert Müller, Simone Zepp, Martin Wiesmeier, and Peter Reinartz. 2022. <span>“Soil <span>Reflectance Composites</span>—<span>Improved Thresholding</span> and <span>Performance Evaluation</span>.”</span> <em>Remote Sensing</em> 14 (18, 18): 4526. <a href="https://doi.org/10.3390/rs14184526">https://doi.org/10.3390/rs14184526</a>.
+</div>
+<div id="ref-HuttonSoilScientists" class="csl-entry" role="listitem">
+<span>“Hutton Soil Scientists Help Develop First <span>Global Soil Organic Carbon Map</span> | <span>The James Hutton Institute</span>.”</span> n.d. Accessed February 15, 2024. <a href="https://www.hutton.ac.uk/news/hutton-soil-scientists-help-develop-first-global-soil-organic-carbon-map">https://www.hutton.ac.uk/news/hutton-soil-scientists-help-develop-first-global-soil-organic-carbon-map</a>.
+</div>
+<div id="ref-mollerScaleSpecificPredictionTopsoil2022" class="csl-entry" role="listitem">
+Möller, Markus, Simone Zepp, Martin Wiesmeier, Heike Gerighausen, and Uta Heiden. 2022. <span>“Scale-<span>Specific Prediction</span> of <span>Topsoil Organic Carbon Contents Using Terrain Attributes</span> and <span>SCMaP Soil Reflectance Composites</span>.”</span> <em>Remote Sensing</em> 14 (10, 10): 2295. <a href="https://doi.org/10.3390/rs14102295">https://doi.org/10.3390/rs14102295</a>.
+</div>
+<div id="ref-tziolasEarthObservationDataDriven2021" class="csl-entry" role="listitem">
+Tziolas, Nikolaos, Nikolaos Tsakiridis, Sabine Chabrillat, José A. M. Demattê, Eyal Ben-Dor, Asa Gholizadeh, George Zalidis, and Bas van Wesemael. 2021. <span>“Earth <span>Observation Data-Driven Cropland Soil Monitoring</span>: <span>A Review</span>.”</span> <em>Remote Sensing</em> 13 (21, 21): 4439. <a href="https://doi.org/10.3390/rs13214439">https://doi.org/10.3390/rs13214439</a>.
+</div>
+<div id="ref-urbina-salazarUsingSentinel2Images2021" class="csl-entry" role="listitem">
+Urbina-Salazar, Diego, Emmanuelle Vaudour, Nicolas Baghdadi, Eric Ceschia, Anne C. Richer-de-Forges, Sébastien Lehmann, and Dominique Arrouays. 2021. <span>“Using <span>Sentinel-2 Images</span> for <span>Soil Organic Carbon Content Mapping</span> in <span>Croplands</span> of <span>Southwestern France</span>. <span>The Usefulness</span> of <span>Sentinel-1</span>/2 <span>Derived Moisture Maps</span> and <span>Mismatches</span> Between <span>Sentinel Images</span> and <span>Sampling Dates</span>.”</span> <em>Remote Sensing</em> 13 (24, 24): 5115. <a href="https://doi.org/10.3390/rs13245115">https://doi.org/10.3390/rs13245115</a>.
+</div>
+<div id="ref-vanwesemaelRemoteSensingSoil2023" class="csl-entry" role="listitem">
+Wesemael, Bas van, Sabine Chabrillat, Adrian Sanz Dias, Michael Berger, and Zoltan Szantoi. 2023. <span>“Remote <span>Sensing</span> for <span>Soil Organic Carbon Mapping</span> and <span>Monitoring</span>.”</span> <em>Remote Sensing</em> 15 (14, 14): 3464. <a href="https://doi.org/10.3390/rs15143464">https://doi.org/10.3390/rs15143464</a>.
+</div>
+<div id="ref-zeppEstimationSoilOrganic2021" class="csl-entry" role="listitem">
+Zepp, Simone, Uta Heiden, Martin Bachmann, Martin Wiesmeier, Michael Steininger, and Bas van Wesemael. 2021. <span>“Estimation of <span>Soil Organic Carbon Contents</span> in <span>Croplands</span> of <span>Bavaria</span> from <span>SCMaP Soil Reflectance Composites</span>.”</span> <em>Remote Sensing</em> 13 (16, 16): 3141. <a href="https://doi.org/10.3390/rs13163141">https://doi.org/10.3390/rs13163141</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -600,8 +708,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week5.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">From Policies to Realities - Continued (wip)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
