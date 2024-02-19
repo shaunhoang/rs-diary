@@ -42,7 +42,7 @@ Other works focused on improving the prediction model further with higher spatia
 
 On the other hand, depth matters when it comes to SOC mapping [@DepthMattersSoil], with best practices requiring soil sampling that encompasses the full crop-rooting zone of a minimum of 30 cm. Therefore, 3D mapping is another frontier where many innovations have emerged. *The pseudo-3D technique* is the building of separate models for individual depth intervals, whose interval predictions are integrated to get the full profile of SOC.
 
-### ...to the public
+### ...to the public domain
 
 The first [Global Soil Organic Matter map](https://data.apps.fao.org/glosis/?share=f-6756da2a-5c1d-4ac9-9b94-297d1f105e83&lang=en) was launched on World Soil Day in 2017), by the United Nations Food and Agriculture Organisation (FAO). The map is produced on a common grid for 100 countries, allowing scientists and policymakers to identify degraded areas and explore the potential for soils to capture soil carbon. The map also helps set restoration targets, support the greenhouse gas emission reporting under the United Nations Framework Convention on Climate Change, and make evidence-based decisions to mitigate and adapt. [@HuttonSoilScientists].
 
