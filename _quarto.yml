@@ -24,24 +24,17 @@ book:
   
   chapters:
     - index.qmd
-    - part: "**Making sense of Remote Sensing**"
-      chapters:
-          - week1.qmd
-          - week2.qmd
-          - week3.qmd
-    - part: "**Implications and Applications to Policy**"
-      chapters:
-          - week4.qmd
-          # - week5.qmd
-    # - part: "**Google Earth Engine**"
-    #   chapters:
-          # - week6.qmd
-          # - week7.qmd
-          # - week8.qmd
-    - part: "**Resources**"
-      chapters:
-          # - glossary.qmd
-          - references.qmd
+    - week1.qmd
+    - week2.qmd
+    - week3.qmd
+    - week4.qmd
+    # - week5.qmd # No journal this week
+    # - week6.qmd # GEE
+    # - week7.qmd # Classification pt 1
+    # - week8.qmd # Classification pt 2
+    # - week9.qmd # 
+    # - glossary.qmd
+    - references.qmd
 
 bibliography: references.bib
 
