@@ -53,12 +53,14 @@ Here are some examples of the use of Remote Sensing in urban analytics research
 
 ![**Left:** Average 2m air temperature at 23h (moment of max Urban Heat Islands) during all summer months of 1987- 2016. **Right:** UrbCLIM climate model's output field showing the average daily maximum urban heat island intensity for Amsterdam](images/clipboard-1067784336.png){fig-align="center"}
 
-This is just the beginning. Remote sensing transforms how we understand and manage our cities, paving the way for a healthier, smarter, and more sustainable urban future.
+Lastly, it is worth noting that depending on the objective of the research, different sensors or types of remote sensing data can be used, purely or mixed and matched.
+
+![Different techniques to characterize Urban Green Space according to the type of remotely-sensed data. Source: @shahtahmassebi2021](images/clipboard-3868830033.png){alt="sd" fig-align="center"}
 
 ## Reflection
 
-My first foray into the world of Remote Sensing was eye-opening. For the uninitiated, it is easy to assume that remote sensing purely means orthophotography satellite images that one might see using platforms such as Google Maps, i.e. as if the only thing that sensors do were to snap a simple photo of the planet like a phone camera.
+My first foray into the world of Remote Sensing was eye-opening. For the uninitiated, it is easy to assume that remote sensing purely means orthophotography satellite images that one might see using platforms such as Google Maps, as if the only thing sensors do is snap a simple photo of the planet like a phone camera.
 
 In reality, it unlocks unseen depths of data beyond mere human perception, not just high-resolution photographs and more spectral signatures, where each pixel holds a universe of information. Building a true-colour composite from all these layers (so that our limited human vision can perceive them) was like seeing the world through a brand-new lens.
 
-I am particularly excited to get started with Google Earth Engine later on as the primary gateway to access the wealth of remote sensing data and analytics with more ease to solve specific problems facing our world today.
+I am particularly excited to get started with Google Earth Engine later on as the primary gateway to access the wealth of remote sensing data and analytics more easily and solve specific problems facing our world today.

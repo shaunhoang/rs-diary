@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 2&nbsp; A peek into the LiDAR technology</title>
+<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 5&nbsp; Discovering Google Earth Engine</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week3.html" rel="next">
-<link href="./week1.html" rel="prev">
+<link href="./week7.html" rel="next">
+<link href="./week4.html" rel="prev">
 <link href="./images/planet-earth.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -101,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week6.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Discovering Google Earth Engine</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -135,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></span></a>
   </div>
 </li>
@@ -153,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week6.html" class="sidebar-item-text sidebar-link">
+  <a href="./week6.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Discovering Google Earth Engine</span></span></a>
   </div>
 </li>
@@ -187,14 +206,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">5.1</span> Summary</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">5.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.3</span> Reflection</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Discovering Google Earth Engine</span></h1>
 </div>
 
 
@@ -209,12 +236,84 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Having understood how sensors work in theory, we can now shift our view to appreciate how one of them in particular, <a href="https://www.faro.com/en/Resource-Library/Article/What-is-Lidar">LiDAR</a> (<strong>Li</strong>ght <strong>D</strong>etection <strong>a</strong>nd <strong>R</strong>anging), is deployed in practice and can benefit us not only in an emerging sector like Autonomous Vehicles but also in Urban Planning</p>
-<iframe class="slide-deck" height="800" width="800" src="slides/prez_wk2.html"> 
+<section id="summary" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
+<p>Google Earth Engine is a cloud-based geospatial processing platform with incredible capabilities for environmental monitoring and analysis. It is well-appreciated for its ability to analyse large-scale remote sensing data within seconds without relying on local computers’ storage and memory. Data processing in GEE is facilitated by utilizing JavaScript within the platform’s web interface (or <a href="https://code.earthengine.google.com/">Code Editor</a>) or with Google Colab notebook, employing Python API (combined with the visualisation power of the <code>geemap</code> library) for a more familiar data science computing environment.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2882732228.png" class="img-fluid figure-img" width="596"></p>
+<figcaption class="figure-caption">Source: <span class="citation" data-cites="googlee">(<a href="references.html#ref-googlee" role="doc-biblioref"><strong>googlee?</strong></a>)</span></figcaption>
+</figure>
+</div>
+<p>In summary, the Google Earth Engine (GEE) platform provides users with:</p>
+<ul>
+<li><p><strong>Extensive data access:</strong> Explore <a href="https://developers.google.com/earth-engine/datasets/catalog">petabytes</a> of free, ready-to-use remote sensing imagery and other products, not to mention many more contributed by the <a href="https://gee-community-catalog.org/">Awesome GEE Community</a>.</p></li>
+<li><p><strong>Powerful processing:</strong> Leverage Google’s computational infrastructure for high-speed parallel processing and advanced machine learning algorithms.</p></li>
+<li><p><strong>Scale and Projection automation:</strong> GEE automatically populates the appropriate pixels depending on the scale of the analysis and resamples if needed when producing the output. It also automatically converts all data into the Mercator projection when displayed.</p></li>
+<li><p><strong>Flexible development environment:</strong> Utilize a library of Application Programming Interfaces (APIs) with coding support for popular languages like JavaScript and Python. However, the GEE Python API currently lacks robust documentation and comprehensive interactive visualization capabilities compared to the JavaScript API. The <code>geemap</code> Python package bridges this gap. Built upon open-source libraries like <code>earthengine-api</code>, <code>folium</code>, <code>ipyleaflet</code>, and <code>ipywidgets</code>, it empowers users to conduct interactive analysis and visualization of Earth Engine datasets within a Jupyter environment through intuitive coding.</p></li>
+</ul>
+<p>Here are a few things one can accomplish with Google Earth Engine:</p>
+<ol type="1">
+<li><p>Joins with <code>ee.Filter() and join.apply()</code></p></li>
+<li><p>Zonal statistics with <code>reduceRegion()</code> or <code>reduceNeighborhood()</code>.</p></li>
+<li><p>Linear regression with <code>linearFit()</code> and <code>linearRegression()</code></p></li>
+<li><p>Machine Learning including supervised/unsupervised classification and deep learning with TensorFlow to be covered in subsequent weeks</p></li>
+<li><p>Visualisation and web geospatial <a href="https://github.com/philippgaertner/awesome-earth-engine-apps">applications with GEE data</a>. Some prominent applications will be discussed below</p></li>
+</ol>
+</section>
+<section id="application" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="application"><span class="header-section-number">5.2</span> Application</h2>
+<p>While Google Earth Engine’s potential applications have not fundamentally changed the field of remote sensing analysis, its impact lies in revolutionizing the accessibility and scale of such work. Previously, researchers faced significant hurdles in downloading massive datasets and processing cumbersome raster files. Earth Engine eliminates these obstacles, allowing for faster, more efficient, and ultimately more creative analysis of potentially planet-level scale.</p>
+<p>An investigation into the literature that used GEE in its methodology revealed that the most popular applications are Water Resources, Land Use, Agriculture, and Natural Hazards <span class="citation" data-cites="perez-cutillasWhatGoingGoogle2023">(<a href="references.html#ref-perez-cutillasWhatGoingGoogle2023" role="doc-biblioref">Pérez-Cutillas et al. 2023</a>)</span>. It is interesting to see that climate change and urban spatial research seem to be trailing behind other fields in employing GEE, but it is possible that the author’s classification obscures the fact that a piece of research could belong to two or more application areas (e.g.&nbsp;flood risk analysis could be considered Natural Hazards or Climate Change).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-592104279.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Distribution of cases by application area. Applications: Agriculture (A); Climate change (CC); Natural hazards (NH); Forestry (F); Water Resources (WR); Soils (S); Urban (U); Land use (LU). <span class="citation" data-cites="perez-cutillasWhatGoingGoogle2023">(<a href="references.html#ref-perez-cutillasWhatGoingGoogle2023" role="doc-biblioref">Pérez-Cutillas et al. 2023</a>)</span></figcaption>
+</figure>
+</div>
+<p>Here are some application areas of GEE, along with specific research examples.</p>
+<ol type="1">
+<li><p><strong>Flood risk assessment and mitigation:</strong> Example: “Urban flood risk assessment using Sentinel-1 on the Google Earth engine: A case study in Thai Nguyen city, Vietnam” by <span class="citation" data-cites="maisyUrbanFloodRisk2023">Mai Sy et al. (<a href="references.html#ref-maisyUrbanFloodRisk2023" role="doc-biblioref">2023</a>)</span></p></li>
+<li><p><strong>Land Use/Land Cover and Change Detection:</strong> Example: “Characterizing annual dynamics of urban form at the horizontal and vertical dimensions using long-term Landsat time series data” by <span class="citation" data-cites="wangCharacterizingAnnualDynamics2023">Wang et al. (<a href="references.html#ref-wangCharacterizingAnnualDynamics2023" role="doc-biblioref">2023</a>)</span></p></li>
+<li><p><strong>Agriculture and Food Security:</strong> Example: “Drought Monitoring Using Landsat Derived Indices and Google Earth Engine Platform: A Case Study from Al-Lith Watershed, Kingdom of Saudi Arabia” by <span class="citation" data-cites="ejazDroughtMonitoringUsing2023">Ejaz et al. (<a href="references.html#ref-ejazDroughtMonitoringUsing2023" role="doc-biblioref">2023</a>)</span></p></li>
+<li><p><strong>Climate Disaster Monitoring:</strong> Example: “A google earth engine approach for anthropogenic forest fire assessment with remote sensing data in Rema-Kalenga wildlife sanctuary, Bangladesh” by <span class="citation" data-cites="mohammedGoogleEarthEngine2023">Mohammed et al. (<a href="references.html#ref-mohammedGoogleEarthEngine2023" role="doc-biblioref">2023</a>)</span></p></li>
+<li><p><strong>Urban Heat Island Monitoring:</strong> Example: “Monitoring the Impact of Land Cover Change on Surface Urban Heat Island through Google Earth Engine: Proposal of a Global Methodology, First Applications and Problems” by <span class="citation" data-cites="ravanelliMonitoringImpactLand2018">Ravanelli et al. (<a href="references.html#ref-ravanelliMonitoringImpactLand2018" role="doc-biblioref">2018</a>)</span></p></li>
+</ol>
+<p>It is worth noting that in much of the research literature I have encountered, GEE is often highlighted and used prominently for applications in regions of the Global South. This is possibly due to various reasons:</p>
+<ul>
+<li><p>Lack of reliable up-to-date geospatial datasets for urgent local issues (flood, drought, deforestation, etc.), motivating the public sector and researchers to be resourceful by using freely available Remote Sensing data.</p></li>
+<li><p>Low reliance on the old geospatial tech stack, thus can nimbly adopt GEE without much issue.</p></li>
+<li><p>Consequently, low/No computing costs compared to traditional methods.</p></li>
+</ul>
+<p>It would be interesting to see how the developing world will pioneer more ground-breaking research methodologies leveraging GEE.</p>
+</section>
+<section id="reflection" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
+<p>Working with Google Earth Engine (GEE) was a revelation. Compared to traditional methods like SNAP or accessing data from Copernicus Open Access Hub, GEE offered exceptional efficiency in acquiring satellite imagery.</p>
+<p>This introduction to GEE came with a crash course in JavaScript programming, which I had not been exposed to before. There were also concepts such as client vs server-side functions that are particular to GEE that one has to wrestle with when programming. In the future, I will explore how to replicate what will be introduced in both CASA0023 and CASA0025 regarding Google Earth Engine in a Python environment, either via the API or via <code>geemap</code> library, to integrate it with other data science workflows. I’m particularly interested in exploring GEE’s capabilities for studying and predicting temporal changes, specifically aiming to showcase the impact of global warming, flooding, droughts, etc. Therefore, leveraging GEE and being able to tap into Python Machine Learning libraries will be a powerful combination.</p>
 
-</iframe>
 
-
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-ejazDroughtMonitoringUsing2023" class="csl-entry" role="listitem">
+Ejaz, Nuaman, Jarbou Bahrawi, Khalid Mohammed Alghamdi, Khalil Ur Rahman, and Songhao Shang. 2023. <span>“Drought <span>Monitoring Using Landsat Derived Indices</span> and <span>Google Earth Engine Platform</span>: <span>A Case Study</span> from <span>Al-Lith Watershed</span>, <span>Kingdom</span> of <span>Saudi Arabia</span>.”</span> <em>Remote Sensing</em> 15 (4, 4): 984. <a href="https://doi.org/10.3390/rs15040984">https://doi.org/10.3390/rs15040984</a>.
+</div>
+<div id="ref-maisyUrbanFloodRisk2023" class="csl-entry" role="listitem">
+Mai Sy, Hung, Chinh Luu, Quynh Duy Bui, Hang Ha, and Dinh Quoc Nguyen. 2023. <span>“Urban Flood Risk Assessment Using <span>Sentinel-1</span> on the Google Earth Engine: <span>A</span> Case Study in <span>Thai Nguyen</span> City, <span>Vietnam</span>.”</span> <em>Remote Sensing Applications: Society and Environment</em> 31 (August): 100987. <a href="https://doi.org/10.1016/j.rsase.2023.100987">https://doi.org/10.1016/j.rsase.2023.100987</a>.
+</div>
+<div id="ref-mohammedGoogleEarthEngine2023" class="csl-entry" role="listitem">
+Mohammed, Ariful Khan, Angana Kuri, Sohag Ahammed, Kazi Al Muqtadir Abir, and Mohammed A. S. Arfin-Khan. 2023. <span>“A Google Earth Engine Approach for Anthropogenic Forest Fire Assessment with Remote Sensing Data in <span>Rema-Kalenga</span> Wildlife Sanctuary, <span>Bangladesh</span>.”</span> <em>Geology, Ecology, and Landscapes</em> 0 (0): 1–22. <a href="https://doi.org/10.1080/24749508.2023.2165297">https://doi.org/10.1080/24749508.2023.2165297</a>.
+</div>
+<div id="ref-perez-cutillasWhatGoingGoogle2023" class="csl-entry" role="listitem">
+Pérez-Cutillas, Pedro, Alberto Pérez-Navarro, Carmelo Conesa-García, Demetrio Antonio Zema, and Jesús Pilar Amado-Álvarez. 2023. <span>“What Is Going on Within Google Earth Engine? <span>A</span> Systematic Review and Meta-Analysis.”</span> <em>Remote Sensing Applications: Society and Environment</em> 29 (January): 100907. <a href="https://doi.org/10.1016/j.rsase.2022.100907">https://doi.org/10.1016/j.rsase.2022.100907</a>.
+</div>
+<div id="ref-ravanelliMonitoringImpactLand2018" class="csl-entry" role="listitem">
+Ravanelli, Roberta, Andrea Nascetti, Raffaella Valeria Cirigliano, Clarissa Di Rico, Giovanni Leuzzi, Paolo Monti, and Mattia Crespi. 2018. <span>“Monitoring the <span>Impact</span> of <span>Land Cover Change</span> on <span>Surface Urban Heat Island</span> Through <span>Google Earth Engine</span>: <span>Proposal</span> of a <span>Global Methodology</span>, <span>First Applications</span> and <span>Problems</span>.”</span> <em>Remote Sensing</em> 10 (9, 9): 1488. <a href="https://doi.org/10.3390/rs10091488">https://doi.org/10.3390/rs10091488</a>.
+</div>
+<div id="ref-wangCharacterizingAnnualDynamics2023" class="csl-entry" role="listitem">
+Wang, Yixuan, Xuecao Li, Peiyi Yin, Guojiang Yu, Wenting Cao, Jinxiu Liu, Lin Pei, et al. 2023. <span>“Characterizing Annual Dynamics of Urban Form at the Horizontal and Vertical Dimensions Using Long-Term <span>Landsat</span> Time Series Data.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 203 (September): 199–210. <a href="https://doi.org/10.1016/j.isprsjprs.2023.07.025">https://doi.org/10.1016/j.isprsjprs.2023.07.025</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -567,13 +666,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to Remote Sensing</span></span>
+      <a href="./week4.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">In practice: Tracking Soil Organic Carbon</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week3.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week7.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I: Making sense of the pixel</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -581,4 +680,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></div></div></footer></body></html>
+</body></html>

@@ -1,0 +1,39 @@
+# Classification I: Making sense of the pixel
+
+## Summary
+
+We continue the journey in Remote Sensing and Earth Observation analysis by exploring various ways to derive insights from this data and imagery using Machine Learning. These insights may come from Classification and Regression Trees (CART) to Random Forests and more cutting-edge Object-based Image Analysis (OBIA) methods. Many of these methods can be deployable natively within Google Earth Engine, further enhancing the platform's attractiveness to geospatial data scientists.
+
+For this entry, we will examine a few key supervised and unsupervised classification methods specific to remote sensing to classify every pixel in the image into one of the pre-defined categories. Then, in the next entry, we will discuss advanced image classification methods such as OBIA and model validation and calibrationcla#.
+
+### Unsupervised classification
+
+Identifying land cover classes unknown beforehand by clustering and labelling based on the spectral info it has. It is most suitable for exploratory analysis when examining an unfamiliar feature space. Three popular algorithms are K-mean, DGSCAN clustering and ISODATA.
+
+-   **K-means:** centroid-based clustering method. It groups pixels/objects into pre-defined numbers of groups based on their spectral properties and predetermined distance metrics.
+
+-   **DBSCAN:** a density-based spatial clustering method. It helps identify clusters of objects or features in an image where the number of classes is unknown.
+
+-   **ISODATA**stands for “Iterative Self-Organizing Data Analysis Technique.” It is an iterative method for clustering data elements into different classes while allowing the merging of too similar clusters or elongated clusters in the feature space.
+
+![An example of LULC classification using ISODATA clustering. Clusters are then to be labelled according to cluster properties. [@kganyagoEvaluatingPerformancePixelbased2014]](images/clipboard-3004766091.png){fig-align="center" width="357"}
+
+### Supervised classification
+
+Teaching classifiers to learn to recognise patterns so that they can place labels on new data. It could be pixels, objects, or textures. My impression is that supervised algorithms are more popular than unsupervised ones in the realm of remote sensing for Land Use and Land Cover classification because of their deterministic nature.
+
+-   **Classification and Regression Tree (CART):** Takes and predicts discrete values by putting all values through a series of splits with the goal of minimising GINI impurity within each leaf node until a stopping criteria (min members, max depth).
+
+-   **Random Forest:** basically an ensemble of CART (hence, a forest) from various bootstrap samples of the data (hence, random). Data are classified through a majority decision from all trees.
+
+-   **Maximum Likelihood:** assumes that each class in each band are normally distributed and calculates the probability that a given pixel belongs to a specific class. We can set a prior probability threshold to support the classification.
+
+-   **Support Vector Machine:** A linear binary classifier. Essentially, this method tries to construct a linear divider (or 'support vector') in the feature space to separate the data points into different classes by maximising the margin between the two classes or minimising wrongly classified points ('soft margin')
+
+![Example of tuning SVM to improve accuracy in multi-temporal remote sensing imagery classification [@guoDomaintransferSupportVector2017]](images/clipboard-2448726348.png){fig-align="center" width="428"}
+
+It is worth noting that classification in remote sensing requires some extra considerations. Besides the fact that there are trade-offs between interpretability and accuracy, just like in other realms, analysts also have to decide whether to perform fuzzy classification (partial membership in multiple classes) and whether we are classifying pixels or objects.
+
+## Application
+
+## Reflection

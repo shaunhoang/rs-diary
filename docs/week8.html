@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 2&nbsp; A peek into the LiDAR technology</title>
+<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 7&nbsp; Classification II: Beyond the pixel and Accuracy Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week3.html" rel="next">
-<link href="./week1.html" rel="prev">
+<link href="./glossary.html" rel="next">
+<link href="./week7.html" rel="prev">
 <link href="./images/planet-earth.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -101,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -135,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></span></a>
   </div>
 </li>
@@ -165,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+  <a href="./week8.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></span></a>
   </div>
 </li>
@@ -187,14 +206,27 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#advanced-image-classification-methods" id="toc-advanced-image-classification-methods" class="nav-link" data-scroll-target="#advanced-image-classification-methods"><span class="header-section-number">7.1.1</span> Advanced image classification methods</a></li>
+  <li><a href="#accuracy-assessment" id="toc-accuracy-assessment" class="nav-link" data-scroll-target="#accuracy-assessment"><span class="header-section-number">7.1.2</span> Accuracy Assessment</a></li>
+  <li><a href="#spatial-autocorrelation-in-machine-learning" id="toc-spatial-autocorrelation-in-machine-learning" class="nav-link" data-scroll-target="#spatial-autocorrelation-in-machine-learning"><span class="header-section-number">7.1.3</span> Spatial Autocorrelation in Machine Learning</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">7.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.3</span> Reflection</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></h1>
 </div>
 
 
@@ -209,12 +241,94 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Having understood how sensors work in theory, we can now shift our view to appreciate how one of them in particular, <a href="https://www.faro.com/en/Resource-Library/Article/What-is-Lidar">LiDAR</a> (<strong>Li</strong>ght <strong>D</strong>etection <strong>a</strong>nd <strong>R</strong>anging), is deployed in practice and can benefit us not only in an emerging sector like Autonomous Vehicles but also in Urban Planning</p>
-<iframe class="slide-deck" height="800" width="800" src="slides/prez_wk2.html"> 
+<section id="summary" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
+<p>So far, we have examined various methods to classify pixels into different classes via supervised and unsupervised learning. However, for remote sensing data (or geospatial data in general), reality doesn’t just stop at the single-pixel level. This week, we will be looking at two image classification methods before diving into assessing the accuracy of a spatial classification model.</p>
+<section id="advanced-image-classification-methods" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="advanced-image-classification-methods"><span class="header-section-number">7.1.1</span> Advanced image classification methods</h3>
+<ul>
+<li><p><strong>Object-Based Image Analysis (aka OBIA or Super-pixel Analysis):</strong> before being fed into a classification algorithm, pixels are first clustered into super-pixels. There are many clustering methods:</p>
+<ul>
+<li><p><strong>SLIC</strong> (Simple Linear Iterative Clustering) clusters pixels into superpixels based on the spatial distance among the pixels and colour difference.</p></li>
+<li><p><strong>Supercells</strong> clusters using any dissimilarity measure not just Euclidean distance and based on LAB colour space</p></li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1833619009.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">An example of the classification pipeline that involves OBIA <span class="citation" data-cites="blaschkeGeographicObjectBasedImage2014">(<a href="references.html#ref-blaschkeGeographicObjectBasedImage2014" role="doc-biblioref">Blaschke et al. 2014</a>)</span></figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Sub-pixel Analysis:</strong> In similar veins but in the opposite direction, sometimes pixels contain more than one class (especially low-resolution data). Therefore, our analysis may benefit from assigning a pixel partial membership with a certain weight for each class. Sub-pixel analysis can be standardised to make the analysis in certain contexts more efficient and interpretable, such as leveraging the V-I-S model in urban areas (three endmembers). On the other hand, it can also be expanded in complexity in the form of Multiple Endmember Spectral Mixture Analysis (MESMA) in which many possible mixture models are examined to produce the best fit</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3331556101.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">An example of MESMA in action classifying urban land cover <span class="citation" data-cites="degerickxEnhancingPerformanceMultiple2019">(<a href="references.html#ref-degerickxEnhancingPerformanceMultiple2019" role="doc-biblioref">Degerickx, Roberts, and Somers 2019</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="accuracy-assessment" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="accuracy-assessment"><span class="header-section-number">7.1.2</span> Accuracy Assessment</h3>
+<p>There are many ways to measure the accuracy of an ML model. However, some of the most popular ones frequently employed in literature are user’s accuracy, producer’s accuracy, overall accuracy and F1 score</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-4177226107.png" class="img-fluid figure-img" width="407"></p>
+<figcaption class="figure-caption">Source: <span class="citation" data-cites="tutorials">(<a href="references.html#ref-tutorials" role="doc-biblioref"><strong>tutorials?</strong></a>)</span></figcaption>
+</figure>
+</div>
+<ul>
+<li><p><strong>Producer’s accuracy (recall)</strong> is defined as the fraction of correctly classified pixels <code>TP</code> compared to ground truth data <code>TP+FN</code>, loosely how many % of the actual values are correctly classified. <em>Error of omission</em> is the inverse of this.</p></li>
+<li><p><strong>User’s accuracy (precision)</strong> is defined as the fraction of correctly classified pixels <code>TP</code> relative to all others classified as a particular land cover <code>TP+FP</code>, loosely how many % of the predicted values are correctly classified. <em>Error of commission</em> is the inverse of this.</p></li>
+<li><p><strong>Overall accuracy</strong> that represents the combined fraction of correctly classified pixels <code>TP+TN</code> across all land cover types <code>TP+TN+FP+FN</code></p></li>
+<li><p><strong>F1 score</strong> combines PA and UA into one measure <code>TP / TP + 0.5*(FP+FN)</code>. F1 score penalises FP and FN, while overall accuracy also awards TN.</p></li>
+</ul>
+<p>However, optimising F1-score only may obscure <code>TN</code>, while optimising OA alone conflates <code>TP</code> and <code>TN</code>. In cases where <code>TN</code> is as important (e.g.&nbsp;when there are many classes of different distributions and correctly predicting negatives of each class is necessary), we could use <em>Area under the Receiver Operating Characteristic Curve (AUROC)</em> which essentially both maximises <code>TP</code> and minimises <code>FP</code> (thus, increasing <code>TN</code> rate). AUROC can be used to compare different models more effectively.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-1530564762.png" class="img-fluid figure-img" width="338"></p>
+<figcaption class="figure-caption">Source: <span class="citation" data-cites="MeasuringPerformanceAUC">(<a href="references.html#ref-MeasuringPerformanceAUC" role="doc-biblioref"><span>“Measuring <span>Performance</span>: <span>AUC</span> (<span>AUROC</span>) – <span>Glass Box</span>”</span> n.d.</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="spatial-autocorrelation-in-machine-learning" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="spatial-autocorrelation-in-machine-learning"><span class="header-section-number">7.1.3</span> Spatial Autocorrelation in Machine Learning</h3>
+<p>One interesting detail from this topic is that machine learning on spatial systems has a distinct issue of <em>spatial correlation</em> that may not be present in other applications. One consequence of this is that the train/test split needs extra care in case the data in each are close to each other spatially, thus causing data leakage, and affecting the accuracy assessment of the model (i.e., making it unfair)</p>
+<ul>
+<li><p>One method is to perform ML using <em>OBIA</em> instead of pixels since the process of creating superpixels already reduces spatial correlation (pixels close to each other are already bundled into one bigger object different from the one adjecent to it)</p></li>
+<li><p>Another method to apply is <em>spatial cross-validation</em>, where Train/Test splitting is done in a spatially-aware manner, establishing a required boundary between them to minimise the leakage mentioned above. This could also be done using k-means clustering or using SVM.[</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-795351742.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Schematic of hyperparameter tuning and performance estimation levels in Cross-Validation. <span class="citation" data-cites="schratzHyperparameterTuningPerformance2019">(<a href="references.html#ref-schratzHyperparameterTuningPerformance2019" role="doc-biblioref">Schratz et al. 2019</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="application" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
+</section>
+<section id="reflection" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
 
-</iframe>
 
-
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-blaschkeGeographicObjectBasedImage2014" class="csl-entry" role="listitem">
+Blaschke, Thomas, Geoffrey J. Hay, Maggi Kelly, Stefan Lang, Peter Hofmann, Elisabeth Addink, Raul Queiroz Feitosa, et al. 2014. <span>“Geographic <span>Object-Based Image Analysis</span> – <span>Towards</span> a New Paradigm.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 87 (January): 180–91. <a href="https://doi.org/10.1016/j.isprsjprs.2013.09.014">https://doi.org/10.1016/j.isprsjprs.2013.09.014</a>.
+</div>
+<div id="ref-degerickxEnhancingPerformanceMultiple2019" class="csl-entry" role="listitem">
+Degerickx, J., D. A. Roberts, and B. Somers. 2019. <span>“Enhancing the Performance of <span>Multiple Endmember Spectral Mixture Analysis</span> (<span>MESMA</span>) for Urban Land Cover Mapping Using Airborne Lidar Data and Band Selection.”</span> <em>Remote Sensing of Environment</em> 221 (February): 260–73. <a href="https://doi.org/10.1016/j.rse.2018.11.026">https://doi.org/10.1016/j.rse.2018.11.026</a>.
+</div>
+<div id="ref-MeasuringPerformanceAUC" class="csl-entry" role="listitem">
+<span>“Measuring <span>Performance</span>: <span>AUC</span> (<span>AUROC</span>) – <span>Glass Box</span>.”</span> n.d. Accessed March 12, 2024. <a href="https://glassboxmedicine.com/2019/02/23/measuring-performance-auc-auroc/">https://glassboxmedicine.com/2019/02/23/measuring-performance-auc-auroc/</a>.
+</div>
+<div id="ref-schratzHyperparameterTuningPerformance2019" class="csl-entry" role="listitem">
+Schratz, Patrick, Jannes Muenchow, Eugenia Iturritxa, Jakob Richter, and Alexander Brenning. 2019. <span>“Hyperparameter Tuning and Performance Assessment of Statistical and Machine-Learning Algorithms Using Spatial Data.”</span> <em>Ecological Modelling</em> 406 (August): 109–20. <a href="https://doi.org/10.1016/j.ecolmodel.2019.06.002">https://doi.org/10.1016/j.ecolmodel.2019.06.002</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -567,13 +681,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to Remote Sensing</span></span>
+      <a href="./week7.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I: Making sense of the pixel</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week3.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./glossary.html" class="pagination-link">
+        <span class="nav-page-text">Glossary</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -581,4 +695,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></div></div></footer></body></html>
+</body></html>

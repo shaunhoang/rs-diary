@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 2&nbsp; A peek into the LiDAR technology</title>
+<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - Glossary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week3.html" rel="next">
-<link href="./week1.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./week8.html" rel="prev">
 <link href="./images/planet-earth.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./glossary.html">Glossary</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></span></a>
   </div>
 </li>
@@ -171,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Glossary</span></a>
   </div>
 </li>
@@ -187,14 +187,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#data-characteristics" id="toc-data-characteristics" class="nav-link active" data-scroll-target="#data-characteristics"><strong>Data Characteristics:</strong></a></li>
+  <li><a href="#pre-processing" id="toc-pre-processing" class="nav-link" data-scroll-target="#pre-processing"><strong>Pre-processing:</strong></a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><strong>Analysis:</strong></a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></h1>
+<h1 class="title">Glossary</h1>
 </div>
 
 
@@ -209,12 +217,63 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Having understood how sensors work in theory, we can now shift our view to appreciate how one of them in particular, <a href="https://www.faro.com/en/Resource-Library/Article/What-is-Lidar">LiDAR</a> (<strong>Li</strong>ght <strong>D</strong>etection <strong>a</strong>nd <strong>R</strong>anging), is deployed in practice and can benefit us not only in an emerging sector like Autonomous Vehicles but also in Urban Planning</p>
-<iframe class="slide-deck" height="800" width="800" src="slides/prez_wk2.html"> 
+<section id="data-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="data-characteristics"><strong>Data Characteristics:</strong></h2>
+<ul>
+<li><p><strong>Albedo:</strong> The proportion of electromagnetic radiation reflected by a surface.</p></li>
+<li><p><strong>Anisotropy:</strong> Variation in reflectance/emissivity depending on viewing angle.</p></li>
+<li><p><strong>Azimuth:</strong> Horizontal direction of an object relative to an observer (degrees from north).</p></li>
+<li><p><strong>Biosignature:</strong> Spectral signature indicative of biological activity.</p></li>
+<li><p><strong>DEM (Digital Elevation Model):</strong> Digital representation of terrain elevation.</p></li>
+<li><p><strong>Geospatial Data:</strong> Data referenced to a specific location on Earth.</p></li>
+<li><p><strong>Geometric Correction:</strong> Correcting distortions in image geometry.</p></li>
+<li><p><strong>Hyperspectral Imagery:</strong> Imagery with a very high number of spectral bands.</p></li>
+<li><p><strong>Incidence Angle:</strong> The angle at which radiation strikes a surface.</p></li>
+<li><p><strong>LiDAR (Light Detection and Ranging):</strong> Remote sensing technique using lasers to measure distance.</p></li>
+<li><p><strong>Look Angle:</strong> The angle between the sensor’s line of sight and vertical direction.</p></li>
+<li><p><strong>Nadir:</strong> The point directly below an observer, on the opposite side of the Earth.</p></li>
+<li><p><strong>Radiance:</strong> Total electromagnetic energy emitted per unit area, solid angle, and time.</p></li>
+<li><p><strong>Reflectance:</strong> The proportion of electromagnetic radiation reflected by a surface.</p></li>
+<li><p><strong>Resolution:</strong></p>
+<ul>
+<li><p><strong>Spatial:</strong> Size of an area represented by a single pixel.</p></li>
+<li><p><strong>Spectral:</strong> Number and width of wavelength bands used in an image.</p></li>
+<li><p><strong>Temporal:</strong> Frequency with which an area is revisited by a satellite sensor.</p></li>
+</ul></li>
+<li><p><strong>Sensor:</strong> A device that detects and measures electromagnetic radiation.</p></li>
+<li><p><strong>Spectral Band:</strong> A specific range of wavelengths within the electromagnetic spectrum.</p></li>
+<li><p><strong>Spectral Reflectance:</strong> The proportion of electromagnetic radiation reflected by a surface at different wavelengths.</p></li>
+<li><p><strong>Spectral Signature:</strong> The unique way an object reflects or emits radiation across different wavelengths.</p></li>
+<li><p><strong>Synthetic Aperture Radar (SAR):</strong> A type of radar that creates high-resolution images by processing reflected signals.</p></li>
+<li><p><strong>Zenith Angle:</strong> The angle between the vertical direction and a point in the sky.</p></li>
+</ul>
+</section>
+<section id="pre-processing" class="level2">
+<h2 class="anchored" data-anchor-id="pre-processing"><strong>Pre-processing:</strong></h2>
+<ul>
+<li><p><strong>Calibration:</strong> Correcting for systematic errors in satellite imagery.</p></li>
+<li><p><strong>Radiometric Correction:</strong> Correcting for variations in sensor response and atmospheric effects.</p></li>
+<li><p><strong>Geometric Correction:</strong> Correcting distortions in image geometry caused by sensor perspective and Earth’s curvature.</p></li>
+<li><p><strong>Atmospheric Correction:</strong> Correcting for the effects of atmospheric gases and aerosols on the spectral signature of objects in an image.</p></li>
+<li><p><strong>Contrast Stretching:</strong> Enhancing the visual contrast between features in an image.</p></li>
+<li><p><strong>Filtering:</strong> Techniques for manipulating and enhancing image data based on specific criteria (e.g., spatial filtering to sharpen edges, spectral filtering to isolate specific wavelengths).</p></li>
+<li><p><strong>Band Indices:</strong> Mathematical transformations of spectral bands used to highlight specific features (e.g., NDVI for vegetation health).</p></li>
+<li><p><strong>Data Fusion:</strong> Combining data from multiple sources (e.g., satellite imagery, LiDAR) for more comprehensive analysis.</p></li>
+</ul>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis"><strong>Analysis:</strong></h2>
+<ul>
+<li><p><strong>Classification:</strong> Assigning categories (e.g., forest, water) to pixels in an image based on their spectral characteristics.</p></li>
+<li><p><strong>Clustering:</strong> Grouping pixels with similar spectral characteristics together, without predefined classes.</p></li>
+<li><p><strong>Change Detection:</strong> Identifying and analyzing modifications in land cover or features over time using multi-temporal imagery.</p></li>
+<li><p><strong>Object-Based Image Analysis (OBIA):</strong> Analyzing imagery based on segmented objects rather than individual pixels, allowing for incorporation of shape and spatial relationships.</p></li>
+<li><p><strong>Spectral Mixture Analysis (SMA):</strong> Estimating the fractional abundance of different materials within a pixel based on their spectral signatures.</p></li>
+<li><p><strong>Principal Component Analysis (PCA):</strong> A technique for reducing data dimensionality while preserving most of the information, often used for visualization and feature extraction.</p></li>
+</ul>
 
-</iframe>
 
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -567,13 +626,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to Remote Sensing</span></span>
+      <a href="./week8.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week3.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -581,4 +640,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></div></div></footer></body></html>
+</body></html>

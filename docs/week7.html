@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 2&nbsp; A peek into the LiDAR technology</title>
+<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 6&nbsp; Classification I: Making sense of the pixel</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week3.html" rel="next">
-<link href="./week1.html" rel="prev">
+<link href="./week8.html" rel="next">
+<link href="./week6.html" rel="prev">
 <link href="./images/planet-earth.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -101,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week7.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I: Making sense of the pixel</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -135,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></span></a>
   </div>
 </li>
@@ -159,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week7.html" class="sidebar-item-text sidebar-link">
+  <a href="./week7.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I: Making sense of the pixel</span></span></a>
   </div>
 </li>
@@ -187,14 +206,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#unsupervised-classification" id="toc-unsupervised-classification" class="nav-link" data-scroll-target="#unsupervised-classification"><span class="header-section-number">6.1.1</span> Unsupervised classification</a></li>
+  <li><a href="#supervised-classification" id="toc-supervised-classification" class="nav-link" data-scroll-target="#supervised-classification"><span class="header-section-number">6.1.2</span> Supervised classification</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">6.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.3</span> Reflection</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I: Making sense of the pixel</span></h1>
 </div>
 
 
@@ -209,12 +240,59 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Having understood how sensors work in theory, we can now shift our view to appreciate how one of them in particular, <a href="https://www.faro.com/en/Resource-Library/Article/What-is-Lidar">LiDAR</a> (<strong>Li</strong>ght <strong>D</strong>etection <strong>a</strong>nd <strong>R</strong>anging), is deployed in practice and can benefit us not only in an emerging sector like Autonomous Vehicles but also in Urban Planning</p>
-<iframe class="slide-deck" height="800" width="800" src="slides/prez_wk2.html"> 
+<section id="summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
+<p>We continue the journey in Remote Sensing and Earth Observation analysis by exploring various ways to derive insights from this data and imagery using Machine Learning. These insights may come from Classification and Regression Trees (CART) to Random Forests and more cutting-edge Object-based Image Analysis (OBIA) methods. Many of these methods can be deployable natively within Google Earth Engine, further enhancing the platform’s attractiveness to geospatial data scientists.</p>
+<p>For this entry, we will examine a few key supervised and unsupervised classification methods specific to remote sensing to classify every pixel in the image into one of the pre-defined categories. Then, in the next entry, we will discuss advanced image classification methods such as OBIA and model validation and calibrationcla#.</p>
+<section id="unsupervised-classification" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="unsupervised-classification"><span class="header-section-number">6.1.1</span> Unsupervised classification</h3>
+<p>Identifying land cover classes unknown beforehand by clustering and labelling based on the spectral info it has. It is most suitable for exploratory analysis when examining an unfamiliar feature space. Three popular algorithms are K-mean, DGSCAN clustering and ISODATA.</p>
+<ul>
+<li><p><strong>K-means:</strong> centroid-based clustering method. It groups pixels/objects into pre-defined numbers of groups based on their spectral properties and predetermined distance metrics.</p></li>
+<li><p><strong>DBSCAN:</strong> a density-based spatial clustering method. It helps identify clusters of objects or features in an image where the number of classes is unknown.</p></li>
+<li><p><strong>ISODATA</strong>stands for “Iterative Self-Organizing Data Analysis Technique.” It is an iterative method for clustering data elements into different classes while allowing the merging of too similar clusters or elongated clusters in the feature space.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3004766091.png" class="img-fluid figure-img" width="357"></p>
+<figcaption class="figure-caption">An example of LULC classification using ISODATA clustering. Clusters are then to be labelled according to cluster properties. <span class="citation" data-cites="kganyagoEvaluatingPerformancePixelbased2014">(<a href="references.html#ref-kganyagoEvaluatingPerformancePixelbased2014" role="doc-biblioref">Kganyago and Sibandze 2014</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="supervised-classification" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="supervised-classification"><span class="header-section-number">6.1.2</span> Supervised classification</h3>
+<p>Teaching classifiers to learn to recognise patterns so that they can place labels on new data. It could be pixels, objects, or textures. My impression is that supervised algorithms are more popular than unsupervised ones in the realm of remote sensing for Land Use and Land Cover classification because of their deterministic nature.</p>
+<ul>
+<li><p><strong>Classification and Regression Tree (CART):</strong> Takes and predicts discrete values by putting all values through a series of splits with the goal of minimising GINI impurity within each leaf node until a stopping criteria (min members, max depth).</p></li>
+<li><p><strong>Random Forest:</strong> basically an ensemble of CART (hence, a forest) from various bootstrap samples of the data (hence, random). Data are classified through a majority decision from all trees.</p></li>
+<li><p><strong>Maximum Likelihood:</strong> assumes that each class in each band are normally distributed and calculates the probability that a given pixel belongs to a specific class. We can set a prior probability threshold to support the classification.</p></li>
+<li><p><strong>Support Vector Machine:</strong> A linear binary classifier. Essentially, this method tries to construct a linear divider (or ‘support vector’) in the feature space to separate the data points into different classes by maximising the margin between the two classes or minimising wrongly classified points (‘soft margin’)</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2448726348.png" class="img-fluid figure-img" width="428"></p>
+<figcaption class="figure-caption">Example of tuning SVM to improve accuracy in multi-temporal remote sensing imagery classification <span class="citation" data-cites="guoDomaintransferSupportVector2017">(<a href="references.html#ref-guoDomaintransferSupportVector2017" role="doc-biblioref">Guo, Jia, and Paull 2017</a>)</span></figcaption>
+</figure>
+</div>
+<p>It is worth noting that classification in remote sensing requires some extra considerations. Besides the fact that there are trade-offs between interpretability and accuracy, just like in other realms, analysts also have to decide whether to perform fuzzy classification (partial membership in multiple classes) and whether we are classifying pixels or objects.</p>
+</section>
+</section>
+<section id="application" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
+</section>
+<section id="reflection" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
 
-</iframe>
 
-
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-guoDomaintransferSupportVector2017" class="csl-entry" role="listitem">
+Guo, Yiqing, Xiuping Jia, and David Paull. 2017. <span>“A Domain-Transfer Support Vector Machine for Multi-Temporal Remote Sensing Imagery Classification.”</span> <em>2017 IEEE International Geoscience and Remote Sensing Symposium (IGARSS)</em>, July, 2215–18. <a href="https://doi.org/10.1109/IGARSS.2017.8127428">https://doi.org/10.1109/IGARSS.2017.8127428</a>.
+</div>
+<div id="ref-kganyagoEvaluatingPerformancePixelbased2014" class="csl-entry" role="listitem">
+Kganyago, Mahlatse, and Phila Sibandze. 2014. <em>Evaluating the Performance of <span class="nocase">Pixel-based</span> Vs. <span class="nocase">Object-based</span> Classifiers for <span>Extracting High Resolution Land</span> Cover Product from <span>SPOT</span> 6 Imagery (<span class="nocase">Non-peer</span> Reviewed)</em>. <a href="https://doi.org/10.13140/2.1.4177.6002">https://doi.org/10.13140/2.1.4177.6002</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -567,13 +645,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to Remote Sensing</span></span>
+      <a href="./week6.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Discovering Google Earth Engine</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week3.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections and Enhancements</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week8.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -581,4 +659,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></div></div></footer></body></html>
+</body></html>

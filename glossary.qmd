@@ -1,19 +1,83 @@
-# Glossary \[unfinished\]  {.unnumbered}
+# Glossary {.unnumbered}
 
-### Demystifying jargons {.unnumbered}
+## **Data Characteristics:**
 
--   **Digital Number (DN) :** raw brightness data captured by sensors without having units for efficient storage
+-   **Albedo:** The proportion of electromagnetic radiation reflected by a surface.
 
--   **Radiance :** how much light the instrument sees in meaningful units but still have effects of light source, atmosphere and surface material. Also known as Top of Atmosphere (TOA) radiance
+-   **Anisotropy:** Variation in reflectance/emissivity depending on viewing angle.
 
--   **Reflectance :** a property of a material, it is a ratio of the amount of light leaving a target to the amount of light striking it. Its calculation is performed on radiance corrected data. Typically this comes as surface (BOA) reflectance but can also be Top of Atmosphere (TOA) reflectance if the atmospheric effect on radiance has not been accounted for.
+-   **Azimuth:** Horizontal direction of an object relative to an observer (degrees from north).
 
--   **Radiometric calibration :** the process from converting DN to Radiance `Lλ=Bias+(Gain∗DN)`
+-   **Biosignature:** Spectral signature indicative of biological activity.
 
--   **Dark object subtraction (DOS)** **:** A relative Atmospheric correction technique. Searches each band for the darkest value then subtracts that from each pixel. This is appropriate when the visible bands have increased scattering vs. longer wavelengths. Also known as, Histogram Adjustment
+-   **DEM (Digital Elevation Model):** Digital representation of terrain elevation.
 
-<!-- -->
+-   **Geospatial Data:** Data referenced to a specific location on Earth.
 
--   **Pseudo-invariant Features (PIFs) :** A relative Atmospheric correction technique. Assume brightness pixels linearly related to a base image (linear regression) and adjust the image based on the regression result
+-   **Geometric Correction:** Correcting distortions in image geometry.
 
--   *Atmospheric radiative transfer models.*
+-   **Hyperspectral Imagery:** Imagery with a very high number of spectral bands.
+
+-   **Incidence Angle:** The angle at which radiation strikes a surface.
+
+-   **LiDAR (Light Detection and Ranging):** Remote sensing technique using lasers to measure distance.
+
+-   **Look Angle:** The angle between the sensor's line of sight and vertical direction.
+
+-   **Nadir:** The point directly below an observer, on the opposite side of the Earth.
+
+-   **Radiance:** Total electromagnetic energy emitted per unit area, solid angle, and time.
+
+-   **Reflectance:** The proportion of electromagnetic radiation reflected by a surface.
+
+-   **Resolution:**
+
+    -   **Spatial:** Size of an area represented by a single pixel.
+
+    -   **Spectral:** Number and width of wavelength bands used in an image.
+
+    -   **Temporal:** Frequency with which an area is revisited by a satellite sensor.
+
+-   **Sensor:** A device that detects and measures electromagnetic radiation.
+
+-   **Spectral Band:** A specific range of wavelengths within the electromagnetic spectrum.
+
+-   **Spectral Reflectance:** The proportion of electromagnetic radiation reflected by a surface at different wavelengths.
+
+-   **Spectral Signature:** The unique way an object reflects or emits radiation across different wavelengths.
+
+-   **Synthetic Aperture Radar (SAR):** A type of radar that creates high-resolution images by processing reflected signals.
+
+-   **Zenith Angle:** The angle between the vertical direction and a point in the sky.
+
+## **Pre-processing:**
+
+-   **Calibration:** Correcting for systematic errors in satellite imagery.
+
+-   **Radiometric Correction:** Correcting for variations in sensor response and atmospheric effects.
+
+-   **Geometric Correction:** Correcting distortions in image geometry caused by sensor perspective and Earth's curvature.
+
+-   **Atmospheric Correction:** Correcting for the effects of atmospheric gases and aerosols on the spectral signature of objects in an image.
+
+-   **Contrast Stretching:** Enhancing the visual contrast between features in an image.
+
+-   **Filtering:** Techniques for manipulating and enhancing image data based on specific criteria (e.g., spatial filtering to sharpen edges, spectral filtering to isolate specific wavelengths).
+
+-   **Band Indices:** Mathematical transformations of spectral bands used to highlight specific features (e.g., NDVI for vegetation health).
+
+-   **Data Fusion:** Combining data from multiple sources (e.g., satellite imagery, LiDAR) for more comprehensive analysis.
+
+## **Analysis:**
+
+-   **Classification:** Assigning categories (e.g., forest, water) to pixels in an image based on their spectral characteristics.
+
+-   **Clustering:** Grouping pixels with similar spectral characteristics together, without predefined classes.
+
+-   **Change Detection:** Identifying and analyzing modifications in land cover or features over time using multi-temporal imagery.
+
+-   **Object-Based Image Analysis (OBIA):** Analyzing imagery based on segmented objects rather than individual pixels, allowing for incorporation of shape and spatial relationships.
+
+-   **Spectral Mixture Analysis (SMA):** Estimating the fractional abundance of different materials within a pixel based on their spectral signatures.
+
+-   **Principal Component Analysis (PCA):** A technique for reducing data dimensionality while preserving most of the information, often used for visualization and feature extraction.

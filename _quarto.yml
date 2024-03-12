@@ -23,17 +23,17 @@ book:
   # date: "1/19/2023"
   
   chapters:
-    - index.qmd
-    - week1.qmd
-    - week2.qmd
-    - week3.qmd
-    - week4.qmd
+    - index.qmd # About me
+    - week1.qmd # Intro to RS
+    - week2.qmd # A peak into LiDAR
+    - week3.qmd # Corrections and Enhancements 
+    - week4.qmd # In Practice: Soil Carbon Capture
     # - week5.qmd # No journal this week
-    # - week6.qmd # GEE
-    # - week7.qmd # Classification pt 1
-    # - week8.qmd # Classification pt 2
-    # - week9.qmd # 
-    # - glossary.qmd
+    - week6.qmd # GEE
+    - week7.qmd # Classification pt 1
+    - week8.qmd # Classification pt 2
+    # - week9.qmd # SAR
+    - glossary.qmd
     - references.qmd
 
 bibliography: references.bib

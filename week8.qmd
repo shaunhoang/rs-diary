@@ -1,0 +1,51 @@
+# Classification II: Beyond the pixel and Accuracy Assessment
+
+## Summary
+
+So far, we have examined various methods to classify pixels into different classes via supervised and unsupervised learning. However, for remote sensing data (or geospatial data in general), reality doesn't just stop at the single-pixel level. This week, we will be looking at two image classification methods before diving into assessing the accuracy of a spatial classification model.
+
+### Advanced image classification methods
+
+-   **Object-Based Image Analysis (aka OBIA or Super-pixel Analysis):** before being fed into a classification algorithm, pixels are first clustered into super-pixels. There are many clustering methods:
+
+    -   **SLIC** (Simple Linear Iterative Clustering) clusters pixels into superpixels based on the spatial distance among the pixels and colour difference.
+
+    -   **Supercells** clusters using any dissimilarity measure not just Euclidean distance and based on LAB colour space
+
+![An example of the classification pipeline that involves OBIA [@blaschkeGeographicObjectBasedImage2014]](images/clipboard-1833619009.png){fig-align="center"}
+
+-   **Sub-pixel Analysis:** In similar veins but in the opposite direction, sometimes pixels contain more than one class (especially low-resolution data). Therefore, our analysis may benefit from assigning a pixel partial membership with a certain weight for each class. Sub-pixel analysis can be standardised to make the analysis in certain contexts more efficient and interpretable, such as leveraging the V-I-S model in urban areas (three endmembers). On the other hand, it can also be expanded in complexity in the form of Multiple Endmember Spectral Mixture Analysis (MESMA) in which many possible mixture models are examined to produce the best fit
+
+![An example of MESMA in action classifying urban land cover [@degerickxEnhancingPerformanceMultiple2019]](images/clipboard-3331556101.png){fig-align="center"}
+
+### Accuracy Assessment
+
+There are many ways to measure the accuracy of an ML model. However, some of the most popular ones frequently employed in literature are user's accuracy, producer's accuracy, overall accuracy and F1 score
+
+![Source: [@tutorials]](images/clipboard-4177226107.png){fig-align="center" width="407"}
+
+-   **Producer’s accuracy (recall)** is defined as the fraction of correctly classified pixels `TP` compared to ground truth data `TP+FN`, loosely how many % of the actual values are correctly classified. *Error of omission* is the inverse of this.
+
+-   **User’s accuracy (precision)** is defined as the fraction of correctly classified pixels `TP` relative to all others classified as a particular land cover `TP+FP`, loosely how many % of the predicted values are correctly classified. *Error of commission* is the inverse of this.
+
+-   **Overall accuracy** that represents the combined fraction of correctly classified pixels `TP+TN` across all land cover types `TP+TN+FP+FN`
+
+-   **F1 score** combines PA and UA into one measure `TP / TP + 0.5*(FP+FN)`. F1 score penalises FP and FN, while overall accuracy also awards TN.
+
+However, optimising F1-score only may obscure `TN`, while optimising OA alone conflates `TP` and `TN`. In cases where `TN` is as important (e.g. when there are many classes of different distributions and correctly predicting negatives of each class is necessary), we could use *Area under the Receiver Operating Characteristic Curve (AUROC)* which essentially both maximises `TP` and minimises `FP` (thus, increasing `TN` rate). AUROC can be used to compare different models more effectively.
+
+![Source: [@MeasuringPerformanceAUC]](images/clipboard-1530564762.png){fig-align="center" width="338"}
+
+### Spatial Autocorrelation in Machine Learning
+
+One interesting detail from this topic is that machine learning on spatial systems has a distinct issue of *spatial correlation* that may not be present in other applications. One consequence of this is that the train/test split needs extra care in case the data in each are close to each other spatially, thus causing data leakage, and affecting the accuracy assessment of the model (i.e., making it unfair)
+
+-   One method is to perform ML using *OBIA* instead of pixels since the process of creating superpixels already reduces spatial correlation (pixels close to each other are already bundled into one bigger object different from the one adjecent to it)
+
+-   Another method to apply is *spatial cross-validation*, where Train/Test splitting is done in a spatially-aware manner, establishing a required boundary between them to minimise the leakage mentioned above. This could also be done using k-means clustering or using SVM.\[
+
+![Schematic of hyperparameter tuning and performance estimation levels in Cross-Validation. [@schratzHyperparameterTuningPerformance2019]](images/clipboard-795351742.png){fig-align="center"}
+
+## Application
+
+## Reflection
