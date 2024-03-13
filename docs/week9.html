@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 1&nbsp; Intro to Remote Sensing</title>
+<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 8&nbsp; Synthetic Aperture Radar (SAR)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,8 +49,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week2.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./glossary.html" rel="next">
+<link href="./week8.html" rel="prev">
 <link href="./images/planet-earth.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -120,7 +120,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to Remote Sensing</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week9.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Synthetic Aperture Radar (SAR)</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -148,7 +148,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week1.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to Remote Sensing</span></span></a>
   </div>
 </li>
@@ -190,7 +190,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week9.html" class="sidebar-item-text sidebar-link">
+  <a href="./week9.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Synthetic Aperture Radar (SAR)</span></span></a>
   </div>
 </li>
@@ -216,9 +216,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">1.2</span> Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">8.1</span> Summary</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">8.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.3</span> Reflection</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/hanukikanker/rs-diary/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -227,7 +227,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Intro to Remote Sensing</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Synthetic Aperture Radar (SAR)</span></h1>
 </div>
 
 
@@ -242,111 +242,56 @@ div.csl-indent {
 
 </header>
 
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
+<p>Synthetic Aperture Radar in active sensor that can ‘see’ through the atmosphere including clouds and gives our surface texture data. It emits an electromagnetic signal and records the amount of signal that bounces back.</p>
+<p>It is able to capture a large area while moving by imaging pixels in swath multiple times (sweeping and moving), the collection of which will be combined to make ‘synthetic aperture’. Different wavelengths are used for different applications because it can affect scattering (3cm - 65 cm)</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-439232986.png" class="img-fluid figure-img" width="646"></p>
+<p><img src="images/clipboard-2405371711.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Different wavelengths for different applications. Source: <span class="citation" data-cites="earthsciencedatasystemsWhatSyntheticAperture2020">Earth Science Data Systems (<a href="references.html#ref-earthsciencedatasystemsWhatSyntheticAperture2020" role="doc-biblioref">2020</a>)</span></figcaption>
 </figure>
 </div>
-<section id="summary" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
-<p>Remote Sensing uses satellites, planes, drones, etc., as our aerial eyes, piecing together a portrait of our planet through light and data and revolutionising how we understand and interact with it.</p>
-<p>Sensors, well, ‘sense’ Earth in two ways: Some passively listen to sunlight reflected off our planet’s surface (i.e., <em>passive sensors</em>), while others actively send their own signals and capture the echoes (i.e., <em>active sensors</em>). By that definition, the human eye is a type of passive sensors!</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-3270766478.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Active vs Passive Remote Sensing <span class="citation" data-cites="earthsciencedatasystemsWhatRemoteSensing2019">(<a href="references.html#ref-earthsciencedatasystemsWhatRemoteSensing2019" role="doc-biblioref">Earth Science Data Systems 2019</a>)</span>.</figcaption>
-</figure>
-</div>
-<p>These sensors interpret a fascinating language of light, both invisible and visible, known as the <em>electromagnetic spectrum.</em></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/EMS-Introduction_0.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The Electromagnetic Spectrum (EMS). Credit: NASA Science</figcaption>
-</figure>
-</div>
-<p>Electromagnetic radiation moves as waves as perpendicular electric and magnetic field with a wavelength: <code>λ = c/v</code> where:</p>
-<ul>
-<li><p><code>λ</code> = <strong>wavelength</strong>, the distance between two crests</p></li>
-<li><p><code>c</code> = velocity of light 3 x 10<sup>8</sup> m/sec</p></li>
-<li><p><code>v</code> = frequency, rate of oscillation (full oscillations in a time unit)</p></li>
-</ul>
-<p>Different materials reflect unique wavelengths in this spectrum, allowing us to identify them, like decoding DNA!</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-2930936668.png" class="img-fluid figure-img" width="458"></p>
-<figcaption class="figure-caption">Wavelength vs.&nbsp;Oscillation</figcaption>
-</figure>
-</div>
-<p>But the information that sensors receive isn’t just about colour. Remote sensing data has its own “resolution” recipe, encompassing:</p>
-<ul>
-<li><strong>Spectral:</strong> How EMS bands (i.e., the range within the EMS) the sensor can hear, revealing more detail with each additional band.</li>
-<li><strong>Spatial:</strong> The size of each pixel in the image, ranging from centimetres to kilometres, offers varying detail levels.</li>
-<li><strong>Temporal:</strong> How often the sensor revisits the same area, providing a dynamic view of changes over time.</li>
-<li><strong>Radiometric:</strong> The range of brightness levels captured, painting a vibrant and accurate picture.</li>
-</ul>
-<p>Depending on the purpose, each sensor is equipped to have better resolution of one type over the other. For example, sensors with a high spatial resolution of 5m (i.e., each pixel is 10x10 on the ground) will have a lower spectral resolution (i.e., capturing only a narrow range of the EMS) <span class="citation" data-cites="RemoteSensingSatellite">(<a href="references.html#ref-RemoteSensingSatellite" role="doc-biblioref"><span>“Remote <span>Sensing</span>, <span>Satellite Imaging Technology</span> | <span>Satellite Imaging Corp</span>”</span> n.d.</a>)</span></p>
-</section>
-<section id="application" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
-<p>Remote Sensing has many transformative applications in the realm of Urban Analytics. Think of it as an X-ray for cities, revealing hidden patterns and empowering informed decision-making by city planners, urban designers, and public officials to make swift and informed decisions to improve the lives of millions of urbanites.</p>
-<p>Here are some examples of the use of Remote Sensing in urban analytics research</p>
+<p>SAR signal contains two types of data: Amplitude and Phase</p>
 <ol type="1">
-<li><strong>Mapping Urban Growth:</strong> By tracking changes in the built environment over time, we can identify sprawling suburbs, monitor urban expansion, and plan for infrastructure needs. Recent works have used a diverse source of high-resolution Remote Sensing data (2m) to train a machine-learning model to extract ‘urbanised’ areas more robustly compared to a previous methodology using only medium-resolution images. <span class="citation" data-cites="wangUrbanDevelopmentAnalysis2021">(<a href="references.html#ref-wangUrbanDevelopmentAnalysis2021" role="doc-biblioref">Wang et al. 2021</a>)</span></li>
+<li><p>For <strong>Amplitude</strong>, besides the ‘strength’ and the wavelength of the backscatter it receives, polarisation is taken into accounts, that is, the orientation of the plane of transmission and that of reception. It could be single (Horizontal or Vertical only), Dual, Mixed (HV, VH). Different surfaces respond differently to the polarizations:</p>
+<ul>
+<li><p>Rough scattering (e.g.&nbsp;bare earth) is most sensitive to VV</p></li>
+<li><p>Volume scattering (e.g.&nbsp;leaves) is most sensitive to mixed, VH or HV</p></li>
+<li><p>Double bounce (e.g.&nbsp;trees / buildings) is most sensitive to HH.</p></li>
+</ul></li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-3703486949.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Transferable built-up area extraction (TBUAE) framework to map urbanised areas</figcaption>
+<p><img src="images/clipboard-3677836511.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Source: <span class="citation" data-cites="earthsciencedatasystemsWhatSyntheticAperture2020">Earth Science Data Systems (<a href="references.html#ref-earthsciencedatasystemsWhatSyntheticAperture2020" role="doc-biblioref">2020</a>)</span></figcaption>
 </figure>
 </div>
 <ol start="2" type="1">
-<li><strong>Predicting Floods with Foresight:</strong> Analysing land cover and terrain, it anticipates where water will flow, safeguarding communities from harm while also estimating potential damage. This type of risk assessment is highly relevant not only in climate science and the public sector but also among insurance companies who make use of SAR satellite data (for through-cloud vision) combined with other spatial data sets to assess risk and process claims <span class="citation" data-cites="schumannFloodModelingPrediction2023">(<a href="references.html#ref-schumannFloodModelingPrediction2023" role="doc-biblioref">Schumann et al. 2023</a>)</span></li>
+<li>For <strong>phase</strong>, it records the location of wave on the cycle when the comes back to the sensor to determine elevation. Manipulating phase data using InSAR, essentially combines more SAR images over the same region, can reveal topography or motion (the filed is called <em>interferometry</em>). If phase shift comes from topography, and we would like to remove the effect of this, we are looking at DInSAR (the field is called differential inteferometry).</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-9241810.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Remote sensing data can be used to estimate flood extent and to derive individual risk level damage estimates.</figcaption>
+<p><img src="images/clipboard-3814161217.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Source: <span class="citation" data-cites="InterferometryGetKnow"><span>“Interferometry | <span>Get</span> to <span>Know SAR</span> – <span>NASA-ISRO SAR Mission</span> (<span>NISAR</span>)”</span> (<a href="references.html#ref-InterferometryGetKnow" role="doc-biblioref">n.d.</a>)</span></figcaption>
 </figure>
 </div>
-<ol start="3" type="1">
-<li><strong>Energy Efficiency:</strong>&nbsp;Identifying heat island effects and understanding building energy consumption through thermal imaging empowers planners to design sustainable cities and researchers. Remote Sensing data is a key component in Urban Climate Models such as UrbCLIM by VITO, a Belgian research organisation, which aims to create an interactive tool providing high-resolution urban heat maps and predict their evolution under future climate conditions. <span class="citation" data-cites="DestinEHumanHeat">(<a href="references.html#ref-DestinEHumanHeat" role="doc-biblioref"><span>“<span>DestinE</span> for Human Heat Stress: <span>ECMWF</span> Use Case to Tackle Urban Heat Islands”</span> n.d.</a>)</span></li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-1067784336.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption"><strong>Left:</strong> Average 2m air temperature at 23h (moment of max Urban Heat Islands) during all summer months of 1987- 2016. <strong>Right:</strong> UrbCLIM climate model’s output field showing the average daily maximum urban heat island intensity for Amsterdam</figcaption>
-</figure>
-</div>
-<p>Lastly, it is worth noting that depending on the objective of the research, different sensors or types of remote sensing data can be used, purely or mixed and matched.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-3868830033.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">sd</figcaption>
-</figure>
-</div>
+<p>Lastly, SAR data products also come in different flavours. Raw data from Sentinel-1 is povided on a <strong><em>power scale</em></strong>, not suitable for visualisation (too bright, too dark). An <strong><em>amplitude scale</em></strong> (square root of the power scale) allows better visualisation. On the other hand, SAR data provided in GEE is in <strong><em>Decibel scale</em></strong> making it good for identifying differences in dark pixels, but not great for visualisation nor statistical analysis.</p>
 </section>
-<section id="reflection" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
-<p>My first foray into the world of Remote Sensing was eye-opening. For the uninitiated, it is easy to assume that remote sensing purely means orthophotography satellite images that one might see using platforms such as Google Maps, as if the only thing sensors do is snap a simple photo of the planet like a phone camera.</p>
-<p>In reality, it unlocks unseen depths of data beyond mere human perception, not just high-resolution photographs and more spectral signatures, where each pixel holds a universe of information. Building a true-colour composite from all these layers (so that our limited human vision can perceive them) was like seeing the world through a brand-new lens.</p>
-<p>I am particularly excited to get started with Google Earth Engine later on as the primary gateway to access the wealth of remote sensing data and analytics more easily and solve specific problems facing our world today.</p>
+<section id="application" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
+<p>SAR is a powerful type of sensor that is preferred for some applications thanks to its ability to penetrate clouds and few(er) atmospheric interference compared to optical sensors. One of the major applications of SAR is Change Detection by ratioing, improved ratioing, mean ratioing, log ratioing, improved log ratioing images.</p>
+</section>
+<section id="reflection" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-DestinEHumanHeat" class="csl-entry" role="listitem">
-<span>“<span>DestinE</span> for Human Heat Stress: <span>ECMWF</span> Use Case to Tackle Urban Heat Islands.”</span> n.d. Accessed January 29, 2024. <a href="https://stories.ecmwf.int/destine-for-human-heat-stress-ecmwf-use-case-to-tackle-urban-heat-islands/">https://stories.ecmwf.int/destine-for-human-heat-stress-ecmwf-use-case-to-tackle-urban-heat-islands/</a>.
+<div id="ref-earthsciencedatasystemsWhatSyntheticAperture2020" class="csl-entry" role="listitem">
+Earth Science Data Systems, NASA. 2020. <span>“What Is <span>Synthetic Aperture Radar</span>? | <span>Earthdata</span>.”</span> Backgrounder. Earth Science Data Systems, NASA. April 10, 2020. <a href="https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar">https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar</a>.
 </div>
-<div id="ref-earthsciencedatasystemsWhatRemoteSensing2019" class="csl-entry" role="listitem">
-Earth Science Data Systems, NASA. 2019. <span>“What Is <span>Remote Sensing</span>? | <span>Earthdata</span>.”</span> Backgrounder. August 23, 2019. <a href="https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing">https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing</a>.
-</div>
-<div id="ref-RemoteSensingSatellite" class="csl-entry" role="listitem">
-<span>“Remote <span>Sensing</span>, <span>Satellite Imaging Technology</span> | <span>Satellite Imaging Corp</span>.”</span> n.d. Accessed January 27, 2024. <a href="https://www.satimagingcorp.com/services/resources/characterization-of-satellite-remote-sensing-systems/">https://www.satimagingcorp.com/services/resources/characterization-of-satellite-remote-sensing-systems/</a>.
-</div>
-<div id="ref-schumannFloodModelingPrediction2023" class="csl-entry" role="listitem">
-Schumann, Guy, Laura Giustarini, Angelica Tarpanelli, Ben Jarihani, and Sandro Martinis. 2023. <span>“Flood <span>Modeling</span> and <span>Prediction Using Earth Observation Data</span>.”</span> <em>Surveys in Geophysics</em> 44 (5): 1553–78. <a href="https://doi.org/10.1007/s10712-022-09751-y">https://doi.org/10.1007/s10712-022-09751-y</a>.
-</div>
-<div id="ref-wangUrbanDevelopmentAnalysis2021" class="csl-entry" role="listitem">
-Wang, Haibo, Xueshuang Gong, Bingbing Wang, Chao Deng, and Qiong Cao. 2021. <span>“Urban Development Analysis Using Built-up Area Maps Based on Multiple High-Resolution Satellite Data.”</span> <em>International Journal of Applied Earth Observation and Geoinformation</em> 103 (December): 102500. <a href="https://doi.org/10.1016/j.jag.2021.102500">https://doi.org/10.1016/j.jag.2021.102500</a>.
+<div id="ref-InterferometryGetKnow" class="csl-entry" role="listitem">
+<span>“Interferometry | <span>Get</span> to <span>Know SAR</span> – <span>NASA-ISRO SAR Mission</span> (<span>NISAR</span>).”</span> n.d. Accessed March 12, 2024. <a href="https://nisar.jpl.nasa.gov/mission/get-to-know-sar/interferometry/">https://nisar.jpl.nasa.gov/mission/get-to-know-sar/interferometry/</a>.
 </div>
 </div>
 </section>
@@ -702,13 +647,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About me</span>
+      <a href="./week8.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week2.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">A peek into the LiDAR technology</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./glossary.html" class="pagination-link">
+        <span class="nav-page-text">Glossary</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

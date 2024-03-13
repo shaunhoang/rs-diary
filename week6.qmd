@@ -4,7 +4,7 @@
 
 Google Earth Engine is a cloud-based geospatial processing platform with incredible capabilities for environmental monitoring and analysis. It is well-appreciated for its ability to analyse large-scale remote sensing data within seconds without relying on local computers' storage and memory. Data processing in GEE is facilitated by utilizing JavaScript within the platform's web interface (or [Code Editor](https://code.earthengine.google.com/)) or with Google Colab notebook, employing Python API (combined with the visualisation power of the `geemap` library) for a more familiar data science computing environment.
 
-![Source: [@googlee]](images/clipboard-2882732228.png){fig-align="center" width="596"}
+![Source: [@GoogleEarthEnginea]](images/clipboard-2882732228.png){fig-align="center" width="596"}
 
 In summary, the Google Earth Engine (GEE) platform provides users with:
 

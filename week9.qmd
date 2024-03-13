@@ -1,0 +1,33 @@
+# Synthetic Aperture Radar (SAR)
+
+## Summary
+
+Synthetic Aperture Radar in active sensor that can 'see' through the atmosphere including clouds and gives our surface texture data. It emits an electromagnetic signal and records the amount of signal that bounces back.
+
+It is able to capture a large area while moving by imaging pixels in swath multiple times (sweeping and moving), the collection of which will be combined to make 'synthetic aperture'. Different wavelengths are used for different applications because it can affect scattering (3cm - 65 cm)
+
+![Different wavelengths for different applications. Source: @earthsciencedatasystemsWhatSyntheticAperture2020](images/clipboard-2405371711.png){fig-align="center"}
+
+SAR signal contains two types of data: Amplitude and Phase
+
+1.  For **Amplitude**, besides the 'strength' and the wavelength of the backscatter it receives, polarisation is taken into accounts, that is, the orientation of the plane of transmission and that of reception. It could be single (Horizontal or Vertical only), Dual, Mixed (HV, VH). Different surfaces respond differently to the polarizations:
+
+    -   Rough scattering (e.g. bare earth) is most sensitive to VV
+
+    -   Volume scattering (e.g. leaves) is most sensitive to mixed, VH or HV
+
+    -   Double bounce (e.g. trees / buildings) is most sensitive to HH.
+
+![Source: @earthsciencedatasystemsWhatSyntheticAperture2020](images/clipboard-3677836511.png){fig-align="center"}
+
+2.  For **phase**, it records the location of wave on the cycle when the comes back to the sensor to determine elevation. Manipulating phase data using InSAR, essentially combines more SAR images over the same region, can reveal topography or motion (the filed is called *interferometry*). If phase shift comes from topography, and we would like to remove the effect of this, we are looking at DInSAR (the field is called differential inteferometry).
+
+![Source: @InterferometryGetKnow](images/clipboard-3814161217.png){fig-align="center"}
+
+Lastly, SAR data products also come in different flavours. Raw data from Sentinel-1 is povided on a ***power scale***, not suitable for visualisation (too bright, too dark). An ***amplitude scale*** (square root of the power scale) allows better visualisation. On the other hand, SAR data provided in GEE is in ***Decibel scale*** making it good for identifying differences in dark pixels, but not great for visualisation nor statistical analysis.
+
+## Application
+
+SAR is a powerful type of sensor that is preferred for some applications thanks to its ability to penetrate clouds and few(er) atmospheric interference compared to optical sensors. One of the major applications of SAR is Change Detection by ratioing, improved ratioing, mean ratioing, log ratioing, improved log ratioing images.
+
+## Reflection

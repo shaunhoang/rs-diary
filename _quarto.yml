@@ -17,11 +17,6 @@ book:
   repo-url: https://github.com/hanukikanker/rs-diary
   repo-actions: [issue]
   
-  # google-analytics:
-  #   tracking-id: "G-5LZK055F2X"
-  #   anonymize-ip: true
-  # date: "1/19/2023"
-  
   chapters:
     - index.qmd # About me
     - week1.qmd # Intro to RS
@@ -32,7 +27,7 @@ book:
     - week6.qmd # GEE
     - week7.qmd # Classification pt 1
     - week8.qmd # Classification pt 2
-    # - week9.qmd # SAR
+    - week9.qmd # SAR
     - glossary.qmd
     - references.qmd
 
