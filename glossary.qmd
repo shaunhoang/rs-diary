@@ -1,6 +1,6 @@
 # Glossary {.unnumbered}
 
-## **Basic::**
+## **Basics:**
 
 -   **Active Sensor:** A remote sensing system that transmits its own energy (e.g., radio waves, light) towards the target and records the reflected or scattered radiation.
 
