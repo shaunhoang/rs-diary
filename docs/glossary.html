@@ -197,7 +197,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#data-characteristics" id="toc-data-characteristics" class="nav-link active" data-scroll-target="#data-characteristics"><strong>Data Characteristics:</strong></a></li>
+  <li><a href="#basic" id="toc-basic" class="nav-link active" data-scroll-target="#basic"><strong>Basic::</strong></a></li>
   <li><a href="#pre-processing" id="toc-pre-processing" class="nav-link" data-scroll-target="#pre-processing"><strong>Pre-processing:</strong></a></li>
   <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><strong>Analysis:</strong></a></li>
   </ul>
@@ -223,21 +223,22 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="data-characteristics" class="level2">
-<h2 class="anchored" data-anchor-id="data-characteristics"><strong>Data Characteristics:</strong></h2>
+<section id="basic" class="level2">
+<h2 class="anchored" data-anchor-id="basic"><strong>Basic::</strong></h2>
 <ul>
+<li><p><strong>Active Sensor:</strong> A remote sensing system that transmits its own energy (e.g., radio waves, light) towards the target and records the reflected or scattered radiation.</p></li>
 <li><p><strong>Albedo:</strong> The proportion of electromagnetic radiation reflected by a surface.</p></li>
-<li><p><strong>Anisotropy:</strong> Variation in reflectance/emissivity depending on viewing angle.</p></li>
+<li><p><strong>Amplitude Data:</strong> In SAR imagery, refers to the strength of the reflected signal, used to distinguish between different land cover types based on their varying reflectivity properties.</p></li>
+<li><p><strong>Anisotropy:</strong> Variation in reflectance depending on viewing angle.</p></li>
 <li><p><strong>Azimuth:</strong> Horizontal direction of an object relative to an observer (degrees from north).</p></li>
 <li><p><strong>Biosignature:</strong> Spectral signature indicative of biological activity.</p></li>
 <li><p><strong>DEM (Digital Elevation Model):</strong> Digital representation of terrain elevation.</p></li>
-<li><p><strong>Geospatial Data:</strong> Data referenced to a specific location on Earth.</p></li>
 <li><p><strong>Geometric Correction:</strong> Correcting distortions in image geometry.</p></li>
-<li><p><strong>Hyperspectral Imagery:</strong> Imagery with a very high number of spectral bands.</p></li>
 <li><p><strong>Incidence Angle:</strong> The angle at which radiation strikes a surface.</p></li>
 <li><p><strong>LiDAR (Light Detection and Ranging):</strong> Remote sensing technique using lasers to measure distance.</p></li>
-<li><p><strong>Look Angle:</strong> The angle between the sensor’s line of sight and vertical direction.</p></li>
 <li><p><strong>Nadir:</strong> The point directly below an observer, on the opposite side of the Earth.</p></li>
+<li><p><strong>Passive Sensor:</strong> A remote sensing system that detects the naturally occurring energy emitted (from the sun) or reflected from the Earth’s surface and atmosphere.</p></li>
+<li><p><strong>Phase Data:</strong> In SAR imagery, refers to the information about the relative timing of the received signal compared to the transmitted signal, used to generate information about the surface features.</p></li>
 <li><p><strong>Radiance:</strong> Total electromagnetic energy emitted per unit area, solid angle, and time.</p></li>
 <li><p><strong>Reflectance:</strong> The proportion of electromagnetic radiation reflected by a surface.</p></li>
 <li><p><strong>Resolution:</strong></p>
@@ -271,11 +272,13 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="analysis"><strong>Analysis:</strong></h2>
 <ul>
 <li><p><strong>Classification:</strong> Assigning categories (e.g., forest, water) to pixels in an image based on their spectral characteristics.</p></li>
-<li><p><strong>Clustering:</strong> Grouping pixels with similar spectral characteristics together, without predefined classes.</p></li>
+<li><p><strong>Clustering:</strong> Grouping pixels with similar spectral characteristics together without predefined classes.</p></li>
 <li><p><strong>Change Detection:</strong> Identifying and analyzing modifications in land cover or features over time using multi-temporal imagery.</p></li>
+<li><p><strong>Image Classification:</strong> The process of assigning pixels or objects to categories (e.g., LULC)</p></li>
 <li><p><strong>Object-Based Image Analysis (OBIA):</strong> Analyzing imagery based on segmented objects rather than individual pixels, allowing for incorporation of shape and spatial relationships.</p></li>
+<li><p><strong>SLIC (Superpixels Lattice Segmentation):</strong> A segmentation algorithm used to divide an image into smaller, more uniform regions called superpixels.</p></li>
+<li><p><strong>Spatial Autocorrelation:</strong> The degree to which the values at one location in a spatial dataset are statistically related to the values at neighboring locations.</p></li>
 <li><p><strong>Spectral Mixture Analysis (SMA):</strong> Estimating the fractional abundance of different materials within a pixel based on their spectral signatures.</p></li>
-<li><p><strong>Principal Component Analysis (PCA):</strong> A technique for reducing data dimensionality while preserving most of the information, often used for visualization and feature extraction.</p></li>
 </ul>
 
 

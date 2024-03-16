@@ -1,10 +1,14 @@
 # Glossary {.unnumbered}
 
-## **Data Characteristics:**
+## **Basic::**
+
+-   **Active Sensor:** A remote sensing system that transmits its own energy (e.g., radio waves, light) towards the target and records the reflected or scattered radiation.
 
 -   **Albedo:** The proportion of electromagnetic radiation reflected by a surface.
 
--   **Anisotropy:** Variation in reflectance/emissivity depending on viewing angle.
+-   **Amplitude Data:** In SAR imagery, refers to the strength of the reflected signal, used to distinguish between different land cover types based on their varying reflectivity properties.
+
+-   **Anisotropy:** Variation in reflectance depending on viewing angle.
 
 -   **Azimuth:** Horizontal direction of an object relative to an observer (degrees from north).
 
@@ -12,19 +16,17 @@
 
 -   **DEM (Digital Elevation Model):** Digital representation of terrain elevation.
 
--   **Geospatial Data:** Data referenced to a specific location on Earth.
-
 -   **Geometric Correction:** Correcting distortions in image geometry.
-
--   **Hyperspectral Imagery:** Imagery with a very high number of spectral bands.
 
 -   **Incidence Angle:** The angle at which radiation strikes a surface.
 
 -   **LiDAR (Light Detection and Ranging):** Remote sensing technique using lasers to measure distance.
 
--   **Look Angle:** The angle between the sensor's line of sight and vertical direction.
-
 -   **Nadir:** The point directly below an observer, on the opposite side of the Earth.
+
+-   **Passive Sensor:** A remote sensing system that detects the naturally occurring energy emitted (from the sun) or reflected from the Earth's surface and atmosphere.
+
+-   **Phase Data:** In SAR imagery, refers to the information about the relative timing of the received signal compared to the transmitted signal, used to generate information about the surface features.
 
 -   **Radiance:** Total electromagnetic energy emitted per unit area, solid angle, and time.
 
@@ -72,12 +74,16 @@
 
 -   **Classification:** Assigning categories (e.g., forest, water) to pixels in an image based on their spectral characteristics.
 
--   **Clustering:** Grouping pixels with similar spectral characteristics together, without predefined classes.
+-   **Clustering:** Grouping pixels with similar spectral characteristics together without predefined classes.
 
 -   **Change Detection:** Identifying and analyzing modifications in land cover or features over time using multi-temporal imagery.
 
+-   **Image Classification:** The process of assigning pixels or objects to categories (e.g., LULC)
+
 -   **Object-Based Image Analysis (OBIA):** Analyzing imagery based on segmented objects rather than individual pixels, allowing for incorporation of shape and spatial relationships.
 
--   **Spectral Mixture Analysis (SMA):** Estimating the fractional abundance of different materials within a pixel based on their spectral signatures.
+-   **SLIC (Superpixels Lattice Segmentation):** A segmentation algorithm used to divide an image into smaller, more uniform regions called superpixels.
 
--   **Principal Component Analysis (PCA):** A technique for reducing data dimensionality while preserving most of the information, often used for visualization and feature extraction.
+-   **Spatial Autocorrelation:** The degree to which the values at one location in a spatial dataset are statistically related to the values at neighboring locations.
+
+-   **Spectral Mixture Analysis (SMA):** Estimating the fractional abundance of different materials within a pixel based on their spectral signatures.
