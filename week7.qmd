@@ -14,7 +14,7 @@ Identifying land cover classes unknown beforehand by clustering and labelling ba
 
 -   **DBSCAN:** a density-based spatial clustering method. It helps identify clusters of objects or features in an image where the number of classes is unknown.
 
--   **ISODATA**stands for “Iterative Self-Organizing Data Analysis Technique.” It is an iterative method for clustering data elements into different classes while allowing the merging of too similar clusters or elongated clusters in the feature space.
+-   **ISODATA:** stands for “Iterative Self-Organizing Data Analysis Technique.” It is an iterative method for clustering data elements into different classes while allowing the merging of too similar clusters or elongated clusters in the feature space.
 
 ![An example of LULC classification using ISODATA clustering. Clusters are then to be labelled according to cluster properties. [@kganyagoEvaluatingPerformancePixelbased2014]](images/clipboard-3004766091.png){fig-align="center" width="357"}
 
@@ -36,4 +36,22 @@ It is worth noting that classification in remote sensing requires some extra con
 
 ## Application
 
+As seen from the previous section, the most popular use case of classification seems to be **land use and cover (LULC)** classification. The purpose is to quantify urban or rural changes towards scientific or policy-making ends. Methodology varies from one locale to another depending on the nature of the remote sensing data product available, endogenous factors like vegetation species, urban roofs, etc.
+
+-   For example, this study by @talukdarLandUseLandCoverClassification2020 compared six different algorithms for classifying LULC from satellite imagery (supervised classification). These are Support Vector Machine, Minimum Distance, Random Forest, Fuzzy ARTMAP, Artificial Neural Networks, and Spectral Angle Mapper. Among those tested, although Artificial Neural Networks (ANN) was a strong performer, the study concludes that Random Forest is the best option for this particular environment (West Bengal, India), having achieved the highest accuracy (0.89).
+
+![Validation of LULC of different classifiers with satellite data-derived indices (NDVI, NDWI, NDBI). Source: @talukdarLandUseLandCoverClassification2020](images/clipboard-71723564.png){fig-align="center"}
+
+-   Another study by @jansenLanduseDataCollection2003 on Kiambu, Kenya, delved into the idea that supervised classification requires a robust set of classes to train any algorithm that varies depending on the researchers' needs, and that LU/LC are inherently linked but different concepts. This research proposes a method to turn a land cover map into a more useful land use map. Land cover describes physical features (forest, water, etc.) while land use describes how humans interact with those features (agriculture, urban areas, etc.). The final product is a detailed land use map where users can customize how the data is grouped based on their needs.
+
+![Land-use data acquisition procedure including the land cover interpretation. Source: @jansenLanduseDataCollection2003](images/clipboard-2387810218.png){fig-align="center"}
+
+LULC classification in the urban analytics context, when combined with a change detection algorithm, can be used to analyse urban sprawl, urban heat islands, urban physical change, urban climate modelling, and other socio-ecological studies.
+
 ## Reflection
+
+Upon reaching this part of the module, a lot of fragmented pieces of knowledge from different modules I had gathered started to come together nicely. At the start of the module, we learned about the science of remote sensing and the different types of RS data products, which may or may not have gone through corrections and enhancements. However, the final product we receive is only the beginning and opens up a plethora of possibilities for how to bring them into actual academic and real-world applications, such as LULC classification! At the same time, we have built up knowledge about Machine Learning algorithms in a generic context and are now able to see them in action with remote sensing data.
+
+Finally, all this would not have been possible if we did not know how to pose the right research question pertaining to urban spatial properties that can only be solved with RS and not others, e.g. LULC change detection. Besides much theory, being able to apply it seamlessly via Google Earth Engine has made what had seemed inaccessible thus far accessible to the general public. With the advancement in the field, RS data can truly level the playing field, especially for data-poor localities (i.e., with few official spatial datasets)
+
+One remaining question I have before discussing the next few topics is about imputation. Many of the possibilities offered by Remote Sensing data rely on relatively high spatial, temporal, and/or spectral resolution. For example, pixel-based classification methods are especially reliant on spatial resolution, and some change detection goals need high temporal frequency, even hourly. Are there ways to make the most out of free/low-cost RS data with lower than optimal resolution while not sacrificing accuracy?

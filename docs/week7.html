@@ -185,7 +185,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixels and Accuracy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -256,7 +256,7 @@ div.csl-indent {
 <ul>
 <li><p><strong>K-means:</strong> centroid-based clustering method. It groups pixels/objects into pre-defined numbers of groups based on their spectral properties and predetermined distance metrics.</p></li>
 <li><p><strong>DBSCAN:</strong> a density-based spatial clustering method. It helps identify clusters of objects or features in an image where the number of classes is unknown.</p></li>
-<li><p><strong>ISODATA</strong>stands for “Iterative Self-Organizing Data Analysis Technique.” It is an iterative method for clustering data elements into different classes while allowing the merging of too similar clusters or elongated clusters in the feature space.</p></li>
+<li><p><strong>ISODATA:</strong> stands for “Iterative Self-Organizing Data Analysis Technique.” It is an iterative method for clustering data elements into different classes while allowing the merging of too similar clusters or elongated clusters in the feature space.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -285,17 +285,46 @@ div.csl-indent {
 </section>
 <section id="application" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
+<p>As seen from the previous section, the most popular use case of classification seems to be <strong>land use and cover (LULC)</strong> classification. The purpose is to quantify urban or rural changes towards scientific or policy-making ends. Methodology varies from one locale to another depending on the nature of the remote sensing data product available, endogenous factors like vegetation species, urban roofs, etc.</p>
+<ul>
+<li>For example, this study by <span class="citation" data-cites="talukdarLandUseLandCoverClassification2020">Talukdar et al. (<a href="references.html#ref-talukdarLandUseLandCoverClassification2020" role="doc-biblioref">2020</a>)</span> compared six different algorithms for classifying LULC from satellite imagery (supervised classification). These are Support Vector Machine, Minimum Distance, Random Forest, Fuzzy ARTMAP, Artificial Neural Networks, and Spectral Angle Mapper. Among those tested, although Artificial Neural Networks (ANN) was a strong performer, the study concludes that Random Forest is the best option for this particular environment (West Bengal, India), having achieved the highest accuracy (0.89).</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-71723564.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Validation of LULC of different classifiers with satellite data-derived indices (NDVI, NDWI, NDBI). Source: <span class="citation" data-cites="talukdarLandUseLandCoverClassification2020">Talukdar et al. (<a href="references.html#ref-talukdarLandUseLandCoverClassification2020" role="doc-biblioref">2020</a>)</span></figcaption>
+</figure>
+</div>
+<ul>
+<li>Another study by <span class="citation" data-cites="jansenLanduseDataCollection2003">Jansen and Di Gregorio (<a href="references.html#ref-jansenLanduseDataCollection2003" role="doc-biblioref">2003</a>)</span> on Kiambu, Kenya, delved into the idea that supervised classification requires a robust set of classes to train any algorithm that varies depending on the researchers’ needs, and that LU/LC are inherently linked but different concepts. This research proposes a method to turn a land cover map into a more useful land use map. Land cover describes physical features (forest, water, etc.) while land use describes how humans interact with those features (agriculture, urban areas, etc.). The final product is a detailed land use map where users can customize how the data is grouped based on their needs.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2387810218.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Land-use data acquisition procedure including the land cover interpretation. Source: <span class="citation" data-cites="jansenLanduseDataCollection2003">Jansen and Di Gregorio (<a href="references.html#ref-jansenLanduseDataCollection2003" role="doc-biblioref">2003</a>)</span></figcaption>
+</figure>
+</div>
+<p>LULC classification in the urban analytics context, when combined with a change detection algorithm, can be used to analyse urban sprawl, urban heat islands, urban physical change, urban climate modelling, and other socio-ecological studies.</p>
 </section>
 <section id="reflection" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
+<p>Upon reaching this part of the module, a lot of fragmented pieces of knowledge from different modules I had gathered started to come together nicely. At the start of the module, we learned about the science of remote sensing and the different types of RS data products, which may or may not have gone through corrections and enhancements. However, the final product we receive is only the beginning and opens up a plethora of possibilities for how to bring them into actual academic and real-world applications, such as LULC classification! At the same time, we have built up knowledge about Machine Learning algorithms in a generic context and are now able to see them in action with remote sensing data.</p>
+<p>Finally, all this would not have been possible if we did not know how to pose the right research question pertaining to urban spatial properties that can only be solved with RS and not others, e.g.&nbsp;LULC change detection. Besides much theory, being able to apply it seamlessly via Google Earth Engine has made what had seemed inaccessible thus far accessible to the general public. With the advancement in the field, RS data can truly level the playing field, especially for data-poor localities (i.e., with few official spatial datasets)</p>
+<p>One remaining question I have before discussing the next few topics is about imputation. Many of the possibilities offered by Remote Sensing data rely on relatively high spatial, temporal, and/or spectral resolution. For example, pixel-based classification methods are especially reliant on spatial resolution, and some change detection goals need high temporal frequency, even hourly. Are there ways to make the most out of free/low-cost RS data with lower than optimal resolution while not sacrificing accuracy?</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-guoDomaintransferSupportVector2017" class="csl-entry" role="listitem">
 Guo, Yiqing, Xiuping Jia, and David Paull. 2017. <span>“A Domain-Transfer Support Vector Machine for Multi-Temporal Remote Sensing Imagery Classification.”</span> <em>2017 IEEE International Geoscience and Remote Sensing Symposium (IGARSS)</em>, July, 2215–18. <a href="https://doi.org/10.1109/IGARSS.2017.8127428">https://doi.org/10.1109/IGARSS.2017.8127428</a>.
 </div>
+<div id="ref-jansenLanduseDataCollection2003" class="csl-entry" role="listitem">
+Jansen, Louisa J. M, and Antonio Di Gregorio. 2003. <span>“Land-Use Data Collection Using the <span>‘Land Cover Classification System’</span>: Results from a Case Study in <span>Kenya</span>.”</span> <em>Land Use Policy</em> 20 (2): 131–48. <a href="https://doi.org/10.1016/S0264-8377(02)00081-9">https://doi.org/10.1016/S0264-8377(02)00081-9</a>.
+</div>
 <div id="ref-kganyagoEvaluatingPerformancePixelbased2014" class="csl-entry" role="listitem">
 Kganyago, Mahlatse, and Phila Sibandze. 2014. <em>Evaluating the Performance of <span class="nocase">Pixel-based</span> Vs. <span class="nocase">Object-based</span> Classifiers for <span>Extracting High Resolution Land</span> Cover Product from <span>SPOT</span> 6 Imagery (<span class="nocase">Non-peer</span> Reviewed)</em>. <a href="https://doi.org/10.13140/2.1.4177.6002">https://doi.org/10.13140/2.1.4177.6002</a>.
+</div>
+<div id="ref-talukdarLandUseLandCoverClassification2020" class="csl-entry" role="listitem">
+Talukdar, Swapan, Pankaj Singha, Susanta Mahato, Shahfahad, Swades Pal, Yuei-An Liou, and Atiqur Rahman. 2020. <span>“Land-<span>Use Land-Cover Classification</span> by <span>Machine Learning Classifiers</span> for <span>Satellite Observations</span>—<span>A Review</span>.”</span> <em>Remote Sensing</em> 12 (7, 7): 1135. <a href="https://doi.org/10.3390/rs12071135">https://doi.org/10.3390/rs12071135</a>.
 </div>
 </div>
 </section>
@@ -657,7 +686,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./week8.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixels and Accuracy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

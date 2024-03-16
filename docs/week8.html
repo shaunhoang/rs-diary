@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 7&nbsp; Classification II: Beyond the pixel and Accuracy Assessment</title>
+<title>Viewed from Above: An Learning Diary on Remote Sensing &amp; Earth Observation - 7&nbsp; Classification II: Beyond the pixels and Accuracy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,7 +120,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixels and Accuracy</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -185,7 +185,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixels and Accuracy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -232,7 +232,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixels and Accuracy</span></h1>
 </div>
 
 
@@ -249,11 +249,11 @@ div.csl-indent {
 
 <section id="summary" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
-<p>So far, we have examined various methods to classify pixels into different classes via supervised and unsupervised learning. However, for remote sensing data (or geospatial data in general), reality doesn’t just stop at the single-pixel level. This week, we will be looking at two image classification methods before diving into assessing the accuracy of a spatial classification model.</p>
+<p>So far, we have examined various methods to classify pixels into different classes via supervised and unsupervised learning. However, for remote sensing data (or geospatial data in general), reality doesn’t stop at the single-pixel level. This week, we will examine two image classification methods before assessing the accuracy of a spatial classification model.</p>
 <section id="advanced-image-classification-methods" class="level3" data-number="7.1.1">
 <h3 data-number="7.1.1" class="anchored" data-anchor-id="advanced-image-classification-methods"><span class="header-section-number">7.1.1</span> Advanced image classification methods</h3>
 <ul>
-<li><p><strong>Object-Based Image Analysis (aka OBIA or Super-pixel Analysis):</strong> before being fed into a classification algorithm, pixels are first clustered into super-pixels. There are many clustering methods:</p>
+<li><p><strong>Object-Based Image Analysis (aka OBIA or Super-pixel Analysis):</strong> before being fed into a classification algorithm, pixels are first clustered into super-pixels. OBIA allows researchers to extract meaningful objects from imagery by leveraging spectral information (colour) and spatial context (how pixels are arranged). There are many clustering methods:</p>
 <ul>
 <li><p><strong>SLIC</strong> (Simple Linear Iterative Clustering) clusters pixels into superpixels based on the spatial distance among the pixels and colour difference.</p></li>
 <li><p><strong>Supercells</strong> clusters using any dissimilarity measure not just Euclidean distance and based on LAB colour space</p></li>
@@ -266,7 +266,7 @@ div.csl-indent {
 </figure>
 </div>
 <ul>
-<li><strong>Sub-pixel Analysis:</strong> In similar veins but in the opposite direction, sometimes pixels contain more than one class (especially low-resolution data). Therefore, our analysis may benefit from assigning a pixel partial membership with a certain weight for each class. Sub-pixel analysis can be standardised to make the analysis in certain contexts more efficient and interpretable, such as leveraging the V-I-S model in urban areas (three endmembers). On the other hand, it can also be expanded in complexity in the form of Multiple Endmember Spectral Mixture Analysis (MESMA) in which many possible mixture models are examined to produce the best fit</li>
+<li><strong>Sub-pixel Analysis:</strong> In similar veins but in the opposite direction, sometimes pixels contain more than one class (especially low-resolution data). Therefore, our analysis may benefit from assigning a pixel partial membership with a certain weight for each class. Sub-pixel analysis can be standardised to make the analysis in certain contexts more efficient and interpretable, such as leveraging the V-I-S model in urban areas (three end members). On the other hand, it can also be expanded in complexity in the form of Multiple Endmember Spectral Mixture Analysis (MESMA) in which many possible mixture models are examined to produce the best fit</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -288,9 +288,9 @@ div.csl-indent {
 <li><p><strong>Producer’s accuracy (recall)</strong> is defined as the fraction of correctly classified pixels <code>TP</code> compared to ground truth data <code>TP+FN</code>, loosely how many % of the actual values are correctly classified. <em>Error of omission</em> is the inverse of this.</p></li>
 <li><p><strong>User’s accuracy (precision)</strong> is defined as the fraction of correctly classified pixels <code>TP</code> relative to all others classified as a particular land cover <code>TP+FP</code>, loosely how many % of the predicted values are correctly classified. <em>Error of commission</em> is the inverse of this.</p></li>
 <li><p><strong>Overall accuracy</strong> that represents the combined fraction of correctly classified pixels <code>TP+TN</code> across all land cover types <code>TP+TN+FP+FN</code></p></li>
-<li><p><strong>F1 score</strong> combines PA and UA into one measure <code>TP / TP + 0.5*(FP+FN)</code>. F1 score penalises FP and FN, while overall accuracy also awards TN.</p></li>
+<li><p><strong>The F1 score</strong> combines PA and UA into one measure: <code>TP / TP + 0.5*(FP+FN).</code>it penalises <code>FP</code> and <code>FN</code>, while overall accuracy also awards <code>TN</code>.</p></li>
 </ul>
-<p>However, optimising F1-score only may obscure <code>TN</code>, while optimising OA alone conflates <code>TP</code> and <code>TN</code>. In cases where <code>TN</code> is as important (e.g.&nbsp;when there are many classes of different distributions and correctly predicting negatives of each class is necessary), we could use <em>Area under the Receiver Operating Characteristic Curve (AUROC)</em> which essentially both maximises <code>TP</code> and minimises <code>FP</code> (thus, increasing <code>TN</code> rate). AUROC can be used to compare different models more effectively.</p>
+<p>However, optimising F1-score only may obscure <code>TN</code>, while optimising OA alone conflates <code>TP</code> and <code>TN</code>. In cases where <code>TN</code> is as important (e.g., when there are many classes of different distributions and correctly predicting negatives of each class is necessary), we could use <em>Area under the Receiver Operating Characteristic Curve</em> (AUROC), which essentially both maximises <code>TP</code> and minimises <code>FP</code> (thus increasing the <code>TN</code> rate). AUROC can be used to compare different models more effectively.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/clipboard-1530564762.png" class="img-fluid figure-img" width="338"></p>
@@ -300,14 +300,14 @@ div.csl-indent {
 </section>
 <section id="spatial-autocorrelation-in-machine-learning" class="level3" data-number="7.1.3">
 <h3 data-number="7.1.3" class="anchored" data-anchor-id="spatial-autocorrelation-in-machine-learning"><span class="header-section-number">7.1.3</span> Spatial Autocorrelation in Machine Learning</h3>
-<p>One interesting detail from this topic is that machine learning on spatial systems has a distinct issue of <em>spatial correlation</em> that may not be present in other applications. One consequence of this is that the train/test split needs extra care in case the data in each are close to each other spatially, thus causing data leakage, and affecting the accuracy assessment of the model (i.e., making it unfair)</p>
+<p>One interesting detail from this topic is that machine learning on spatial systems has a distinct issue of <em>spatial correlation</em> that may not be present in other applications. One consequence of this is that the train/test split needs extra care in case the data in each are close to each other spatially, thus causing data leakage and affecting the accuracy assessment of the model (i.e., making it unfair)</p>
 <ul>
-<li><p>One method is to perform ML using <em>OBIA</em> instead of pixels since the process of creating superpixels already reduces spatial correlation (pixels close to each other are already bundled into one bigger object different from the one adjecent to it)</p></li>
-<li><p>Another method to apply is <em>spatial cross-validation</em>, where Train/Test splitting is done in a spatially-aware manner, establishing a required boundary between them to minimise the leakage mentioned above. This could also be done using k-means clustering or using SVM.[</p></li>
+<li><p>One method is to perform ML using <em>OBIA</em> instead of pixels since the process of creating superpixels already reduces spatial correlation (pixels close to each other are already bundled into one bigger object different from the one adjacent to it)</p></li>
+<li><p>Another method to apply is <em>spatial cross-validation</em>, where Train/Test splitting is done in a spatially-aware manner, establishing a required boundary between them to minimise the leakage mentioned above. This could also be done using k-means clustering or using SVM.</p></li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clipboard-795351742.png" class="img-fluid figure-img"></p>
+<p><img src="images/clipboard-795351742.png" class="img-fluid figure-img" width="586"></p>
 <figcaption class="figure-caption">Schematic of hyperparameter tuning and performance estimation levels in Cross-Validation. <span class="citation" data-cites="schratzHyperparameterTuningPerformance2019">(<a href="references.html#ref-schratzHyperparameterTuningPerformance2019" role="doc-biblioref">Schratz et al. 2019</a>)</span></figcaption>
 </figure>
 </div>
@@ -315,9 +315,32 @@ div.csl-indent {
 </section>
 <section id="application" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
+<p>Looking beyond the pixels enables many more additional applications than just LULC classification. If pixel-based classification can help detect urban vs rural land use, subpixel analysis and OBIA can map impervious surfaces <span class="citation" data-cites="shaoEmergingIssuesMapping2023">(<a href="references.html#ref-shaoEmergingIssuesMapping2023" role="doc-biblioref">Shao et al. 2023</a>)</span>, granular green spaces such as lawns <span class="citation" data-cites="zhouModelingResidentialLawn2008">(<a href="references.html#ref-zhouModelingResidentialLawn2008" role="doc-biblioref">Zhou, Troy, and Grove 2008</a>)</span>, and building footprint extraction and classification <span class="citation" data-cites="zhangBuildingFootprintHeight2020">(<a href="references.html#ref-zhangBuildingFootprintHeight2020" role="doc-biblioref">Zhang, Han, and Bogus 2020</a>)</span>, etc.</p>
+<p>Let’s take a closer look at <span class="citation" data-cites="zhangBuildingFootprintHeight2020">Zhang, Han, and Bogus (<a href="references.html#ref-zhangBuildingFootprintHeight2020" role="doc-biblioref">2020</a>)</span>’s methodology, as it shows many possibilities made available with OBIA to be fused with other techniques to extract beyond what can be seen, i.e., not just building footprint but also height:</p>
+<ul>
+<li>LiDAR was used to create two 3D models of the area: one representing the surface with everything on it (DSM) and another representing the bare ground (DTM). The ground model was then subtracted from the surface model to get a difference model (DHM) showing the object’s height above the ground.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-62530794.png" class="img-fluid figure-img" width="511"></p>
+<figcaption class="figure-caption">Three generated models (a) DSM, (b) DTM, and (c) DHM. Source: <span class="citation" data-cites="zhangBuildingFootprintHeight2020">(<a href="references.html#ref-zhangBuildingFootprintHeight2020" role="doc-biblioref">Zhang, Han, and Bogus 2020</a>)</span></figcaption>
+</figure>
+</div>
+<ul>
+<li>OBIA applied to first provide the raw set of footprints which went through a series of additional corrections. This was fused with the DHM to identify potential building footprints and heights. This is validated finally with ground-truth data.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-2309107736.png" class="img-fluid figure-img" width="409"></p>
+<figcaption class="figure-caption">Filtering final results to get building footprints (a) Before size selection, (b) After size selection, (c) Polygon dissolving, (d) Eliminating small parts. Source: <span class="citation" data-cites="zhangBuildingFootprintHeight2020">Zhang, Han, and Bogus (<a href="references.html#ref-zhangBuildingFootprintHeight2020" role="doc-biblioref">2020</a>)</span></figcaption>
+</figure>
+</div>
+<p>Finally, on the topic of accuracy assessment, this paper terms PA as Completeness, UA as Correctness, and a modified F1-score as Quality–the denominator is <code>TP+FN+FP</code> instead of <code>TP+0.5*(FN+FP).</code> In addition, the similarity of building shapes extracted using OBIA was assessed using metrics like perimeter ratio <code>r(P)</code> and area ratio <code>r(A)</code>, which tell us how closely the shapes of the detected buildings resemble the actual buildings on the ground. The closer these ratios are to 0, the more similar they are.</p>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
+<p>This week’s investigation into advanced classification, including OBIA, has been eye-opening. It operates upon concepts that humans are most attuned to: We perceive ‘stuff’ as objects instead of a bunch of pixels, and computer vision can now replicate that sort of world perception. It amazes me somewhat how we could bridge the gap between pixel and object detection in remote sensing data using seemingly logical and simplistic assumptions such as colour consistency and continuity to great accuracy results.</p>
+<p>Speaking of accuracy and many gaps present in machine learning on RS data, although it poses more questions than answers, I was intrigued by the level of critical subjective judgment required to be a successful geospatial analyst. For example, what accuracy metric to use for each application has differed much from one academic circle to another, and has no standardised approach. That said, it was reassuring to hear (from Andy’s_ that AUROC has been more widely supported to be an effective accuracy metric based. On a conceptual level, it rightly puts the focus on the users of the insights rather than the data scientists while avoiding a skewed assessment produced by the User’s accuracy metric, which is unreliable for high variances among classes (often the case for RS data). I am interested in finding out newer techniques developed to better perform object detection and overcome data quality or ground truth limitations (i.e., low resolution, unknown classes, etc.).</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
@@ -333,8 +356,17 @@ Degerickx, J., D. A. Roberts, and B. Somers. 2019. <span>“Enhancing the Perfor
 <div id="ref-schratzHyperparameterTuningPerformance2019" class="csl-entry" role="listitem">
 Schratz, Patrick, Jannes Muenchow, Eugenia Iturritxa, Jakob Richter, and Alexander Brenning. 2019. <span>“Hyperparameter Tuning and Performance Assessment of Statistical and Machine-Learning Algorithms Using Spatial Data.”</span> <em>Ecological Modelling</em> 406 (August): 109–20. <a href="https://doi.org/10.1016/j.ecolmodel.2019.06.002">https://doi.org/10.1016/j.ecolmodel.2019.06.002</a>.
 </div>
+<div id="ref-shaoEmergingIssuesMapping2023" class="csl-entry" role="listitem">
+Shao, Zhenfeng, Tao Cheng, Huyan Fu, Deren Li, and Xiao Huang. 2023. <span>“Emerging <span>Issues</span> in <span>Mapping Urban Impervious Surfaces Using High-Resolution Remote Sensing Images</span>.”</span> <em>Remote Sensing</em> 15 (10, 10): 2562. <a href="https://doi.org/10.3390/rs15102562">https://doi.org/10.3390/rs15102562</a>.
+</div>
 <div id="ref-tutorialsInterpretingImagesAccuracy" class="csl-entry" role="listitem">
 Tutorials, Earth Engine. n.d. <span>“Interpreting <span>Images</span> - <span>Accuracy Assessment Quantifying Classification Quality</span>.”</span> Accessed March 12, 2024. <a href="https://google-earth-engine.com/Interpreting-Images/Accuracy-Assessment-Quantifying-Classification-Quality/">https://google-earth-engine.com/Interpreting-Images/Accuracy-Assessment-Quantifying-Classification-Quality/</a>.
+</div>
+<div id="ref-zhangBuildingFootprintHeight2020" class="csl-entry" role="listitem">
+Zhang, Su, Fei Han, and Susan Bogus. 2020. <em>Building <span>Footprint</span> and <span>Height Information Extraction</span> from <span>Airborne LiDAR</span>, <span>Aerial Imagery</span>, and <span class="nocase">Object-based Image Analysis</span></em>. <a href="https://doi.org/10.1061/9780784482865.035">https://doi.org/10.1061/9780784482865.035</a>.
+</div>
+<div id="ref-zhouModelingResidentialLawn2008" class="csl-entry" role="listitem">
+Zhou, Weiqi, Austin Troy, and Morgan Grove. 2008. <span>“Modeling <span>Residential Lawn Fertilization Practices</span>: <span>Integrating High Resolution Remote Sensing</span> with <span>Socioeconomic Data</span>.”</span> <em>Environmental Management</em> 41 (5): 742–52. <a href="https://doi.org/10.1007/s00267-007-9032-z">https://doi.org/10.1007/s00267-007-9032-z</a>.
 </div>
 </div>
 </section>

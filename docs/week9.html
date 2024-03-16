@@ -185,7 +185,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixels and Accuracy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -276,22 +276,56 @@ div.csl-indent {
 <figcaption class="figure-caption">Source: <span class="citation" data-cites="InterferometryGetKnow"><span>“Interferometry | <span>Get</span> to <span>Know SAR</span> – <span>NASA-ISRO SAR Mission</span> (<span>NISAR</span>)”</span> (<a href="references.html#ref-InterferometryGetKnow" role="doc-biblioref">n.d.</a>)</span></figcaption>
 </figure>
 </div>
-<p>Lastly, SAR data products also come in different flavours. Raw data from Sentinel-1 is povided on a <strong><em>power scale</em></strong>, not suitable for visualisation (too bright, too dark). An <strong><em>amplitude scale</em></strong> (square root of the power scale) allows better visualisation. On the other hand, SAR data provided in GEE is in <strong><em>Decibel scale</em></strong> making it good for identifying differences in dark pixels, but not great for visualisation nor statistical analysis.</p>
+<p>Lastly, SAR data products also come in different flavours. Raw data from Sentinel-1 is povided on a <strong><em>power scale</em></strong>, not suitable for visualisation (too bright, too dark). An <strong><em>amplitude scale</em></strong> (square root of the power scale) allows better visualisation. On the other hand, SAR data provided in GEE is on Decibel scale, making it good for identifying differences in dark pixels but not great for visualisation or statistical analysis.</p>
 </section>
 <section id="application" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
-<p>SAR is a powerful type of sensor that is preferred for some applications thanks to its ability to penetrate clouds and few(er) atmospheric interference compared to optical sensors. One of the major applications of SAR is Change Detection by ratioing, improved ratioing, mean ratioing, log ratioing, improved log ratioing images.</p>
+<p>SAR is a powerful type of sensor. Unlike optical sensors, SAR can operate day and night and can penetrate clouds, making it a reliable data source regardless of weather conditions. SAR backscatter is also sensitive to the shapes and materials of urban objects, allowing for detailed characterization of buildings and infrastructure. Finally, SAR data can be integrated with other types of remote sensing data, such as optical imagery, to provide a more comprehensive picture of the urban environment. Issues remain, however, pertaining to its relative complexity in interpretation and likelihood of noise but in many applications, the benefits outweigh the setbacks.</p>
+<p>SAR offers valuable capabilities for urban analytics such as:</p>
+<ul>
+<li><strong>Urban Mapping and Change Detection:</strong> SAR data can be used to create detailed maps of urban areas, including buildings, roads, and other infrastructure. By comparing SAR images from different time periods, researchers can track urban growth and sprawl. In a study by <span class="citation" data-cites="liUrbanBuildingChange2019">Li et al. (<a href="references.html#ref-liUrbanBuildingChange2019" role="doc-biblioref">2019</a>)</span>, SAR for urban change detection used a mixed method combining subtraction and log-ratioing. Then, a Residual U-Net algorithm was trained to detect different extents of urban change, chosen over other image classification architectures for its ability to learn from complex, details-laden images of cities.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-881861407.png" class="img-fluid figure-img" width="336"></p>
+<figcaption class="figure-caption">Urban change detection methodology using SAR images and ResUNet by <span class="citation" data-cites="liUrbanBuildingChange2019">Li et al. (<a href="references.html#ref-liUrbanBuildingChange2019" role="doc-biblioref">2019</a>)</span></figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Land Cover Classification:</strong> By analyzing the backscattered radar signal, SAR can classify different land cover types within an urban environment, such as vegetation, bare soil, impervious surfaces, and water. Although LULC classification can be done with optical imagery, as seen in previous entries, SAR imagery, especially with phase data, has the advantage of also detecting slight geological changes imperceptible to other sensors. However, there is no reason for them to be mutually exclusive. <span class="citation" data-cites="shiLandCoverClassification2020">Shi et al. (<a href="references.html#ref-shiLandCoverClassification2020" role="doc-biblioref">2020</a>)</span> combined Sentinel-1 and Landsat-8 data to perform land cover classification in multiple Asian cities. The results showed superior accuracy compared to using just one of the sensors alone.</li>
+</ul>
+<p>Many research works acknowledged and attempted to overcome SAR’s shortcomings speckle noise). <span class="citation" data-cites="huangLandCoverClassification2023">Huang et al. (<a href="references.html#ref-huangLandCoverClassification2023" role="doc-biblioref">2023</a>)</span> introduced a new dual-polar radar vegetation index (DpRVIm) that considers scattering information and terrain factors. The results show that the new method achieves higher accuracy than traditional methods, especially for farmland and forest. This shows that analysts should not feel bogged down by any seeming limitations but instead have many options to mix and match RS data and classification methodology to accomplish a task.</p>
 </section>
 <section id="reflection" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
+<p>It was fascinating to learn about SAR beyond what I had learned about LiDAR in Week 2. Both are active sensors that use radio frequency emissions to remotely sense the environment. Active sensors are fascinating because they are (usually) specific to certain applications rather than optical imagery that is quite versatile and often free-access. Therefore, this could be a very active field with new technologies emerging as industry needs arise.</p>
+<p>Examples of active sensors from besides SAR and LiDAR are:</p>
+<ul>
+<li><p><strong>Laser and Radar Altimeter:</strong> measures altitude, which is the distance of an object above a fixed level, most commonly sea level.</p></li>
+<li><p><strong>Scatterometer:</strong> A specialized radar that uses high-frequency radio waves to estimate wind speed and direction over oceans.</p></li>
+<li><p><strong>Sounder:</strong> This device examines the atmosphere by analyzing reflected radio waves. It measures things like rain, temperature, humidity, and cloud types.</p></li>
+</ul>
+<p>Worth noting is that many such active remote sensors can be terrestrial and even generated by hand-held devices instead of mounted in space, opening up a world of possibilities for vast, hyper-local remote sensing data sets. <span class="citation" data-cites="zhangUsingPortableActive2019">Zhang et al. (<a href="references.html#ref-zhangUsingPortableActive2019" role="doc-biblioref">2019</a>)</span></p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-earthsciencedatasystemsWhatSyntheticAperture2020" class="csl-entry" role="listitem">
 Earth Science Data Systems, NASA. 2020. <span>“What Is <span>Synthetic Aperture Radar</span>? | <span>Earthdata</span>.”</span> Backgrounder. Earth Science Data Systems, NASA. April 10, 2020. <a href="https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar">https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar</a>.
 </div>
+<div id="ref-huangLandCoverClassification2023" class="csl-entry" role="listitem">
+Huang, Yabo, Mengmeng Meng, Zhuoyan Hou, Lin Wu, Zhengwei Guo, Xiajiong Shen, Wenkui Zheng, and Ning Li. 2023. <span>“Land <span>Cover Classification</span> of <span>SAR Based</span> on <span>1DCNN-MRF Model Using Improved Dual-Polarization Radar Vegetation Index</span>.”</span> <em>Remote Sensing</em> 15 (13, 13): 3221. <a href="https://doi.org/10.3390/rs15133221">https://doi.org/10.3390/rs15133221</a>.
+</div>
 <div id="ref-InterferometryGetKnow" class="csl-entry" role="listitem">
 <span>“Interferometry | <span>Get</span> to <span>Know SAR</span> – <span>NASA-ISRO SAR Mission</span> (<span>NISAR</span>).”</span> n.d. Accessed March 12, 2024. <a href="https://nisar.jpl.nasa.gov/mission/get-to-know-sar/interferometry/">https://nisar.jpl.nasa.gov/mission/get-to-know-sar/interferometry/</a>.
+</div>
+<div id="ref-liUrbanBuildingChange2019" class="csl-entry" role="listitem">
+Li, Lu, Chao Wang, Hong Zhang, Bo Zhang, and Fan Wu. 2019. <span>“Urban <span>Building Change Detection</span> in <span>SAR Images Using Combined Differential Image</span> and <span>Residual U-Net Network</span>.”</span> <em>Remote Sensing</em> 11 (9, 9): 1091. <a href="https://doi.org/10.3390/rs11091091">https://doi.org/10.3390/rs11091091</a>.
+</div>
+<div id="ref-shiLandCoverClassification2020" class="csl-entry" role="listitem">
+Shi, Xiaofei, Zhiyu Deng, Xing Ding, and Li Li. 2020. <span>“Land Cover Classification Combining <span>Sentinel-1</span> and <span>Landsat</span> 8 Imagery Driven by <span>Markov</span> Random Field with Amendment Reliability Factors.”</span> <em>EURASIP Journal on Wireless Communications and Networking</em> 2020 (1): 87. <a href="https://doi.org/10.1186/s13638-020-01713-5">https://doi.org/10.1186/s13638-020-01713-5</a>.
+</div>
+<div id="ref-zhangUsingPortableActive2019" class="csl-entry" role="listitem">
+Zhang, Jiayi, Xia Liu, Yan Liang, Qiang Cao, Yongchao Tian, Yan Zhu, Weixing Cao, and Xiaojun Liu. 2019. <span>“Using a <span>Portable Active Sensor</span> to <span>Monitor Growth Parameters</span> and <span>Predict Grain Yield</span> of <span>Winter Wheat</span>.”</span> <em>Sensors</em> 19 (5, 5): 1108. <a href="https://doi.org/10.3390/s19051108">https://doi.org/10.3390/s19051108</a>.
 </div>
 </div>
 </section>
@@ -648,7 +682,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week8.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixel and Accuracy Assessment</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II: Beyond the pixels and Accuracy</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
