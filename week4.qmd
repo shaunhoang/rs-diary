@@ -9,7 +9,7 @@ Among many well-known strategies to reduce our carbon footprints, such as develo
 How carbon is captured within soil:
 
 -   Plants capture carbon through photosynthesis, and some remain as plant tissue. Dead plant tissue enters the soil as litter and decomposes.
--   Decomposition creates soil organic matter (SOM), the main carbon stored in soil. SOM can hold carbon for a long time or release it back into the atmosphere.
+-   Decomposition creates soil organic matter (SOM), the main carbon stored in soil. SOM can hold carbon for a long time or release it into the atmosphere.
 -   Various factors like climate, vegetation, texture, and drainage influence carbon storage.
 
 Direct human intervention (on-farm activities) could also enhance soil carbon sequestration.
@@ -20,7 +20,7 @@ Globally, there are policies in place to incentivise farmers to undertake on-far
 
 For example, in California's Cap-and-Trade Program, the private sector can buy carbon credits for their offset targets. Downstream, rice farmers, for instance, may volunteer to implement one of three methods included in the protocol to sequester carbon: dry seeding, early drainage, or alternative wetting or drying at the price per ton CO2e was \$7. [@CarbonFarmingOpportunities]
 
-Adoption challenges for these markets include (1) ensuring accurate carbon measurement and (2) verifying "additionality" - that carbon sequestration wouldn't have happened without the market incentive. Between the two main challenges, Remote Sensing technology has the most potential in tackling the first at scale, rather than relying on local field work that is labour-intensive and limited by nature, albeit more precise.
+Adoption challenges for these markets include (1) ensuring accurate carbon measurement and (2) verifying "additionality"—that carbon sequestration wouldn't have happened without the market incentive. Of the two main challenges, Remote Sensing technology has the most potential to tackle the first at scale rather than relying on local field work that is labour-intensive and limited by nature, albeit more precisely.
 
 ## Application
 
@@ -40,7 +40,7 @@ Indeed, a further review of current literature showcases the vast complexity tha
 
 Other works focused on improving the prediction model further with higher spatial resolution input data to correspond with average field size [@mollerScaleSpecificPredictionTopsoil2022], and techniques to overcome vegetation cover [@heidenSoilReflectanceComposites2022]
 
-On the other hand, depth matters when it comes to SOC mapping [@DepthMattersSoil], with best practices requiring soil sampling that encompasses the full crop-rooting zone of a minimum of 30 cm. Therefore, 3D mapping is another frontier where many innovations have emerged. *The pseudo-3D technique* is the building of separate models for individual depth intervals, whose interval predictions are integrated to get the full profile of SOC.
+On the other hand, depth matters when it comes to SOC mapping [@DepthMattersSoil], with best practices requiring soil sampling that encompasses the full crop-rooting zone by a minimum of 30 cm. Therefore, 3D mapping is another frontier where many innovations have emerged. The pseudo-3D technique builds separate models for individual depth intervals, whose interval predictions are integrated to get the full profile of SOC.
 
 ### ...to the public domain
 
@@ -48,7 +48,7 @@ The first [Global Soil Organic Matter map](https://data.apps.fao.org/glosis/?sha
 
 ![Screenshot of the GSOCMap. **Left:** Relative Soil Organic Carbon Sequestration Rates. **Right:** Projected Soil Organic Carbon Stocks](images/clipboard-673964401.png){fig-align="center"}
 
-![Structure of the Implementation process for the Global Soil Partnership (GSP)](images/clipboard-2972257247.png){fig-align="center"}
+![Structure of the Implementation Process for the Global Soil Partnership (GSP)](images/clipboard-2972257247.png){fig-align="center" width="365"}
 
 ## Reflection
 
@@ -56,4 +56,4 @@ A precise and reliable global view of SOC is needed under different UN conventio
 
 That said, scant evidence has been found to show further applications using the GSOC map, or Level-3 EO SOC mapping products, either at the national level at finer spatial resolution or by the private or public sector, as an active component to incentivise stakeholders to take action. In most cases, what GSP was able to produce was a series of guidelines for national stakeholders without imposing shared deliverables and timelines. Instead, the original GSOC maps are used to determine the status quo and rally political interest at the national level and do not possess the spatial resolution needed to make them effective monitoring tools.
 
-Possible reasons may lie in technical competency to effectively produce national soil maps with the right open data policy to allow the public and other innovators to tap into this data.
+Possible reasons may lie in technical competency to effectively produce national soil maps, as well as the right open data policy to allow the public and other innovators to access this data.

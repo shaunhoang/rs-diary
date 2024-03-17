@@ -6,7 +6,7 @@ Synthetic Aperture Radar in active sensor that can 'see' through the atmosphere 
 
 It is able to capture a large area while moving by imaging pixels in swath multiple times (sweeping and moving), the collection of which will be combined to make 'synthetic aperture'. Different wavelengths are used for different applications because it can affect scattering (3cm - 65 cm)
 
-![Different wavelengths for different applications. Source: @earthsciencedatasystemsWhatSyntheticAperture2020](images/clipboard-2405371711.png){fig-align="center"}
+![Different wavelengths for different applications. Source: @earthsciencedatasystemsWhatSyntheticAperture2020](images/clipboard-2405371711.png){fig-align="center" width="749"}
 
 SAR signal contains two types of data: Amplitude and Phase
 
@@ -44,7 +44,7 @@ Many research works acknowledged and attempted to overcome SAR's shortcomings sp
 
 It was fascinating to learn about SAR beyond what I had learned about LiDAR in Week 2. Both are active sensors that use radio frequency emissions to remotely sense the environment. Active sensors are fascinating because they are (usually) specific to certain applications rather than optical imagery that is quite versatile and often free-access. Therefore, this could be a very active field with new technologies emerging as industry needs arise.
 
-Examples of active sensors from besides SAR and LiDAR are:
+Examples of active sensors besides SAR and LiDAR are:
 
 -   **Laser and Radar Altimeter:** measures altitude, which is the distance of an object above a fixed level, most commonly sea level.
 
