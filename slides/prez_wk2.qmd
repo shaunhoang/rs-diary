@@ -16,7 +16,7 @@ bibliography: ../references.bib
 
 ## LiDAR 101 {.center background-image="https://media.licdn.com/dms/image/C5612AQEQEuxtoMi9qw/article-inline_image-shrink_1000_1488/0/1616623031202?e=1712188800&v=beta&t=nMF2mGpAhNdKi1vd0Si1lXMv3MdS1InLoyHItRogdm0" background-opacity="0.3" style="text-align: center;"}
 
-LiDAR (**li**ght **d**etection **a**nd **r**anging) uses laser beams to “see” the world in 3D, providing machines and computers with an accurate representation of the surveyed environment.
+LiDAR (**li**ght **d**etection **a**nd **r**anging) is a type of active sensor technology. It uses laser beams to “see” the world in 3D, providing machines and computers with an accurate representation of the surveyed environment.
 
 ## How Does LiDAR Work? {.smaller}
 
@@ -44,17 +44,17 @@ Installed in an aircraft or helicopter, the infrared light is emitted toward the
 ::: {.column width="50%"}
 #### Topographic {.smaller}
 
-![](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/GUID-DAC09D61-6A8E-4F1D-B164-DB5AECFF2A5C-web.png){fig-align="left" width="364"}
+![](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/GUID-DAC09D61-6A8E-4F1D-B164-DB5AECFF2A5C-web.png){fig-align="left" width="242"}
 
-Used to derive surface models for use in many applications, such as forestry, hydrology, urban planning, landscape ecology, coastal engineering, etc.
+Used to derive surface models for use in many applications, such as forestry, hydrology, urban planning, landscape ecology, coastal engineering, etc. It uses an infrared wavelength of 1,064nm.
 :::
 
 ::: {.column width="50%"}
 #### Bathymetric {.smaller}
 
-![](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/GUID-A93C964C-F417-4523-B391-4931C05AFF31-web.png){fig-align="left" width="366"}
+![](https://desktop.arcgis.com/en/arcmap/latest/manage-data/las-dataset/GUID-A93C964C-F417-4523-B391-4931C05AFF31-web.png){fig-align="left" width="244"}
 
-Provides an airborne survey of the land-water interfac to establish water depths and shoreline elevations.
+Provides an airborne survey of the land-water interface to establish water depths and shoreline elevations, using a green wavelength of 532nm to penetrate the water column for measuring the seafloor.
 :::
 
 ::: footer
